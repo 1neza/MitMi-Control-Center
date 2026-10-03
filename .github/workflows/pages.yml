@@ -24,6 +24,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Validate JavaScript syntax
+        run: node --check agent-control/site/app.js
+      - name: Validate UI interactions
+        run: node agent-control/scripts/validate-ui.mjs
       - name: Build dashboard
         run: node agent-control/scripts/build-data.mjs
       - uses: actions/configure-pages@v5
