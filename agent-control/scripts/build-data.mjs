@@ -1,1 +1,10 @@
-import fs from 'node:fs';import path from 'node:path';const root=process.cwd();const source=path.join(root,'agent-control','agents');const site=path.join(root,'agent-control','site');const out=path.join(root,'agent-control','dist');fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(path.join(out,'data'),{recursive:true});for(const file of ['index.html','styles.css','app.js','.nojekyll'])fs.copyFileSync(path.join(site,file),path.join(out,file));const agents=fs.readdirSync(source).filter(f=>f.endsWith('.json')&&f!=='template.json').sort().map(f=>JSON.parse(fs.readFileSync(path.join(source,f),'utf8')));const snapshot={generatedAt:new Date().toISOString(),schemaVersion:1,agents};fs.writeFileSync(path.join(out,'data','agents.json'),JSON.stringify(snapshot,null,2));console.log('Generated control center for',agents.length,'agents');
+import fs from 'node:fs';import path from 'node:path';
+const root=process.cwd(),base=path.join(root,'agent-control'),source=path.join(base,'agents'),site=path.join(base,'site'),out=path.join(base,'dist');
+fs.rmSync(out,{recursive:true,force:true});fs.mkdirSync(path.join(out,'data'),{recursive:true});
+for(const file of ['index.html','styles.css','app.js','.nojekyll'])fs.copyFileSync(path.join(site,file),path.join(out,file));
+const agents=fs.readdirSync(source).filter(f=>f.endsWith('.json')&&f!=='template.json').sort().map(f=>JSON.parse(fs.readFileSync(path.join(source,f),'utf8')));
+fs.writeFileSync(path.join(out,'data','agents.json'),JSON.stringify({generatedAt:new Date().toISOString(),schemaVersion:2,agents},null,2));
+const projectPath=path.join(base,'project.json');
+const project=fs.existsSync(projectPath)?JSON.parse(fs.readFileSync(projectPath,'utf8')):{};
+fs.writeFileSync(path.join(out,'data','project.json'),JSON.stringify(project,null,2));
+console.log('Generated control center for',agents.length,'agents; project head',project.head||'unknown');
