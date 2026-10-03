@@ -17,7 +17,7 @@ for(const match of html.matchAll(/href="#([^"]+)"/g)){
 if(/href="#"/.test(html))errors.push('Found placeholder href="#"');
 if(/javascript:/i.test(html))errors.push('Found javascript: URL');
 
-for(const match of js.matchAll(/\$\('#([^']+)'\)/g)){
+for(const match of js.matchAll(/\$\('#([A-Za-z0-9_-]+)'\)/g)){
   if(!ids.has(match[1]))errors.push('JavaScript references missing element #'+match[1]);
 }
 
