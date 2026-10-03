@@ -2,17 +2,23 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "working",
-  "currentTask": "Stabilize core flows and unblock CI/runtime regressions.",
-  "latestReport": "Control-center telemetry enabled. Future runs should update this file.",
+  "status": "idle",
+  "currentTask": "Automation currently disabled; lane remains visible for monitoring.",
+  "latestReport": "Core lane is registered in the Control Center and will resume telemetry automatically when re-enabled.",
   "blocker": null,
-  "updatedAt": "2026-10-03T17:54:55.666Z",
+  "updatedAt": "2026-10-03T18:32:00Z",
   "activity": [
     {
       "type": "working",
       "title": "Control center connected",
       "detail": "Agent registered for dashboard telemetry.",
       "at": "2026-10-03T17:54:55.666Z"
+    },
+    {
+      "type": "report",
+      "title": "Core lane idle",
+      "detail": "Automation is currently disabled but remains visible in the dashboard.",
+      "at": "2026-10-03T18:32:00Z"
     }
   ]
 }
