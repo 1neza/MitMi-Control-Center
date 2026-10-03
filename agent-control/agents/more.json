@@ -3,16 +3,28 @@
   "name": "MitMi More Engineer",
   "role": "Profile · Trust · Safety · Location · Offers",
   "status": "working",
-  "currentTask": "Complete secondary features and remove dead actions.",
-  "latestReport": "Control-center telemetry enabled. Future runs should update this file.",
-  "blocker": null,
-  "updatedAt": "2026-10-03T17:54:55.666Z",
+  "currentTask": "Trust/Vibes verification hardening; avatar picker integration retry; camera scan dependency assessment.",
+  "latestReport": "Committed 3ee3ba33 to reset verification state when the challenge changes. expo-image-picker is installed. ProfileScreen avatar wiring was rejected before mutation, and expo-camera is not installed. Current CI #419 exposes a lint regression in trust/verify.tsx.",
+  "blocker": "Avatar wiring: ProfileScreen mutation was rejected in that run; retry later. Camera QR scanning: expo-camera is absent. Current CI also has a trust/verify.tsx set-state-in-effect lint failure.",
+  "updatedAt": "2026-10-03T18:26:15.644Z",
   "activity": [
     {
       "type": "working",
       "title": "Control center connected",
       "detail": "Agent registered for dashboard telemetry.",
       "at": "2026-10-03T17:54:55.666Z"
+    },
+    {
+      "type": "working",
+      "title": "Trust hardening committed",
+      "detail": "Committed challenge-state reset as 3ee3ba33 after avatar write was blocked.",
+      "at": "2026-10-03T18:26:15.644Z"
+    },
+    {
+      "type": "blocked",
+      "title": "CI regression surfaced",
+      "detail": "CI #419 fails lint in trust/verify.tsx; avatar and camera-scan work remain separately blocked.",
+      "at": "2026-10-03T18:32:00Z"
     }
   ]
 }
