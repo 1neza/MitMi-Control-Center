@@ -1,0 +1,11 @@
+{
+  "id": "new-agent",
+  "name": "New Agent",
+  "role": "Describe ownership",
+  "status": "idle",
+  "currentTask": "",
+  "latestReport": "",
+  "blocker": null,
+  "updatedAt": "",
+  "activity": []
+}
