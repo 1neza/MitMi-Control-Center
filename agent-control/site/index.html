@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0d10" />
+  <title>MitMi Agent Control Center</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">MITMI · AUTONOMOUS DEVELOPMENT</p>
+      <h1>Agent Control Center</h1>
+      <p class="subtle">Live project status, agent activity, blockers, reports and command handoff.</p>
+    </div>
+    <div class="top-actions">
+      <span id="overallPill" class="pill">Loading…</span>
+      <button id="refreshBtn" class="button secondary">Refresh</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="metrics" id="metrics"></section>
+
+    <section class="grid two">
+      <article class="panel">
+        <div class="panel-head">
+          <div><p class="eyebrow">AGENTS</p><h2>Current lanes</h2></div>
+          <select id="agentFilter" aria-label="Filter agents"><option value="all">All agents</option></select>
+        </div>
+        <div id="agentGrid" class="agent-grid"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head"><div><p class="eyebrow">CONTROL</p><h2>Builder command console</h2></div></div>
+        <p class="subtle">Commands are handed off as GitHub issues so no private token is stored in this public/static page. The Builder/Master agent can consume and report against them.</p>
+        <label>Target agent
+          <select id="commandTarget"></select>
+        </label>
+        <label>Command
+          <textarea id="commandText" rows="6" placeholder="Example: Prioritize the More navigation regression, verify every route, and report blockers."></textarea>
+        </label>
+        <div class="command-actions">
+          <button id="sendCommandBtn" class="button">Send command</button>
+          <a class="button secondary" href="https://github.com/1neza/MitMi/issues" target="_blank" rel="noreferrer">Open command history</a>
+        </div>
+        <p id="commandHint" class="hint"></p>
+      </article>
+    </section>
+
+    <section class="grid three">
+      <article class="panel chart-panel"><h2>Runs by agent</h2><canvas id="runsChart"></canvas></article>
+      <article class="panel chart-panel"><h2>Outcomes</h2><canvas id="outcomeChart"></canvas></article>
+      <article class="panel chart-panel"><h2>Recent activity</h2><canvas id="activityChart"></canvas></article>
+    </section>
+
+    <section class="grid two">
+      <article class="panel">
+        <div class="panel-head"><div><p class="eyebrow">BLOCKERS</p><h2>Needs attention</h2></div></div>
+        <div id="blockers"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><div><p class="eyebrow">REPORTS</p><h2>Latest results</h2></div></div>
+        <div id="reports"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><p class="eyebrow">PROJECT</p><h2>Quick controls</h2></div>
+        <span id="lastUpdated" class="subtle"></span>
+      </div>
+      <div class="quick-links">
+        <a href="https://github.com/1neza/MitMi/tree/agent-dev" target="_blank" rel="noreferrer">agent-dev branch</a>
+        <a href="https://github.com/1neza/MitMi/actions" target="_blank" rel="noreferrer">CI / Actions</a>
+        <a href="https://github.com/1neza/MitMi/blob/agent-dev/docs/AGENT_BACKLOG.md" target="_blank" rel="noreferrer">Agent backlog</a>
+        <a href="https://github.com/1neza/MitMi/issues/new?labels=agent-command" target="_blank" rel="noreferrer">New command issue</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>MitMi Control Center · status data is generated from <code>agent-control/agents/*.json</code>.</footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
