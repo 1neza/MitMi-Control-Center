@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "source": "1neza/MitMi",
+  "sourceVisibility": "private",
+  "branch": "agent-dev",
+  "head": "848554ffd193aa8d8418f2b2d1be9cf22daec9b9",
+  "latestCommit": "chore(control): update more telemetry",
+  "syncedAt": "2026-10-03T18:27:25Z",
+  "milestone": "MitMi 2.0 UX Transition — Phase 1 Functional Foundation",
+  "ci": {
+    "latestRun": 419,
+    "latestConclusion": "failure",
+    "latestFailure": "Lint: src/app/trust/verify.tsx calls setState synchronously inside an effect.",
+    "successRate": 85.7,
+    "history": [
+      {
+        "number": 419,
+        "conclusion": "failure",
+        "title": "chore(control): update more telemetry",
+        "sha": "848554ffd193aa8d8418f2b2d1be9cf22daec9b9",
+        "updatedAt": "2026-10-03T18:27:25Z"
+      },
+      {
+        "number": 418,
+        "conclusion": "failure",
+        "title": "fix(trust): reset verification state for new challenge",
+        "sha": "3ee3ba33e388b96b5279206773ca23090cb95ddc",
+        "updatedAt": "2026-10-03T18:26:42Z"
+      },
+      {
+        "number": 417,
+        "conclusion": "success",
+        "title": "chore(control): update master telemetry",
+        "sha": "d5d4a01754e85999bc6ca35c2f65b9a3c3b44567",
+        "updatedAt": "2026-10-03T18:03:10Z"
+      },
+      {
+        "number": 416,
+        "conclusion": "success",
+        "title": "chore(control): mark qa telemetry idle",
+        "sha": "c5752976a640d35321ab3310c5d870babd100e88",
+        "updatedAt": "2026-10-03T17:59:52Z"
+      },
+      {
+        "number": 415,
+        "conclusion": "success",
+        "title": "chore(control): mark ui telemetry idle",
+        "sha": "aded3dbd4a883ab54daec79d0738e0428c97bb48",
+        "updatedAt": "2026-10-03T17:59:39Z"
+      },
+      {
+        "number": 414,
+        "conclusion": "success",
+        "title": "fix(control): enable GitHub Pages from workflow",
+        "sha": "90051e052d35b39b7ca39e627a3271aaf73c6013",
+        "updatedAt": "2026-10-03T17:59:02Z"
+      },
+      {
+        "number": 413,
+        "conclusion": "success",
+        "title": "chore(control): update master telemetry",
+        "sha": "08f1a9710bd7f2113ed06559d54aec108ba31636",
+        "updatedAt": "2026-10-03T17:58:35Z"
+      },
+      {
+        "number": 412,
+        "conclusion": "success",
+        "title": "docs(agents): require control-center telemetry",
+        "sha": "69cdf1599120727a20a60eae720c9c5f6360e74f",
+        "updatedAt": "2026-10-03T17:57:16Z"
+      },
+      {
+        "number": 411,
+        "conclusion": "success",
+        "title": "feat(control): add autonomous agent control center",
+        "sha": "e9ef5f09bede6d04757b6eec710c8b257bcd9393",
+        "updatedAt": "2026-10-03T17:57:17Z"
+      },
+      {
+        "number": 410,
+        "conclusion": "success",
+        "title": "fix(ui): hide stale local match results on error",
+        "sha": "c7a2ebc2c0c4cb921ff8539ae8a72cf496b18c42",
+        "updatedAt": "2026-10-03T09:40:02Z"
+      }
+    ]
+  }
+}
