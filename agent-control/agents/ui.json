@@ -1,0 +1,24 @@
+{
+  "id": "ui",
+  "name": "MitMi UI Engineer",
+  "role": "UI / UX",
+  "status": "idle",
+  "currentTask": "Automation currently disabled; telemetry will resume automatically when this agent is enabled.",
+  "latestReport": "Registered in Control Center; not currently scheduled to run.",
+  "blocker": null,
+  "updatedAt": "2026-10-03T17:57:47.389Z",
+  "activity": [
+    {
+      "type": "working",
+      "title": "Control center connected",
+      "detail": "Agent registered for dashboard telemetry.",
+      "at": "2026-10-03T17:54:55.666Z"
+    },
+    {
+      "type": "report",
+      "title": "Agent visible while idle",
+      "detail": "Automation is disabled, but the agent remains registered in the Control Center.",
+      "at": "2026-10-03T17:57:47.389Z"
+    }
+  ]
+}
