@@ -3,16 +3,56 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "df4f057b6d9cbb4f273aea096ce31d9414b5c385",
-  "latestCommit": "chore(control): retire private Pages workflow",
-  "syncedAt": "2026-10-03T19:15:36Z",
+  "head": "65c40c1a88c75546fdfe86900843f915b4290b66",
+  "latestCommit": "docs(qa): reconcile exact-head validation evidence",
+  "syncedAt": "2026-10-03T23:54:37Z",
   "milestone": "MitMi 2.0 UX Transition — Phase 1 Functional Foundation",
   "ci": {
-    "latestRun": 424,
-    "latestConclusion": "failure",
-    "latestFailure": "Authorization regression tests: Chat contract checker cannot find the server-owned send_chat_message, mark_channel_read, and direct-channel RPC boundaries on the current branch.",
-    "successRate": 50,
+    "latestRun": 429,
+    "latestConclusion": "success",
+    "latestFailure": null,
+    "successRate": 33.3,
     "history": [
+      {
+        "number": 429,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(qa): reconcile exact-head validation evidence",
+        "sha": "65c40c1a88c75546fdfe86900843f915b4290b66",
+        "updatedAt": "2026-10-03T23:48:56Z"
+      },
+      {
+        "number": 428,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(chat): reflect Meet admin send permissions",
+        "sha": "0d246b35cbe5f2c900badb332b78cd590a5ef86b",
+        "updatedAt": "2026-10-03T22:03:39Z"
+      },
+      {
+        "number": 427,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(trust): scope verification state to challenge",
+        "sha": "1b69a055df1c125d16cad73cb7e5edc2167b83d5",
+        "updatedAt": "2026-10-03T21:24:31Z"
+      },
+      {
+        "number": 426,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "fix(chat): defer group detail state reset",
+        "sha": "3782eb8116327b12d37e4cb1aebd0f26d0ff8e52",
+        "updatedAt": "2026-10-03T21:04:07Z"
+      },
+      {
+        "number": 425,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "test(auth): allow formatted RPC boundaries",
+        "sha": "d87c8de74942715ba49ca8addc90e8736ae2ffcd",
+        "updatedAt": "2026-10-03T20:06:03Z"
+      },
       {
         "number": 424,
         "status": "completed",
@@ -44,86 +84,6 @@
         "title": "feat(chat): add authorized group details and meet admin controls",
         "sha": "a2288a155215bf1a81121492eb96e581ebca7f6a",
         "updatedAt": "2026-10-03T18:57:46Z"
-      },
-      {
-        "number": 420,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "feat(chat): resolve group domain context safely",
-        "sha": "3050a6531777f3b3e44db46083603d6467b13f68",
-        "updatedAt": "2026-10-03T18:56:33Z"
-      },
-      {
-        "number": 419,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "chore(control): update more telemetry",
-        "sha": "848554ffd193aa8d8418f2b2d1be9cf22daec9b9",
-        "updatedAt": "2026-10-03T18:27:25Z"
-      },
-      {
-        "number": 418,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "fix(trust): reset verification state for new challenge",
-        "sha": "3ee3ba33e388b96b5279206773ca23090cb95ddc",
-        "updatedAt": "2026-10-03T18:26:42Z"
-      },
-      {
-        "number": 417,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "chore(control): update master telemetry",
-        "sha": "d5d4a01754e85999bc6ca35c2f65b9a3c3b44567",
-        "updatedAt": "2026-10-03T18:03:10Z"
-      },
-      {
-        "number": 416,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "chore(control): mark qa telemetry idle",
-        "sha": "c5752976a640d35321ab3310c5d870babd100e88",
-        "updatedAt": "2026-10-03T17:59:52Z"
-      },
-      {
-        "number": 415,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "chore(control): mark ui telemetry idle",
-        "sha": "aded3dbd4a883ab54daec79d0738e0428c97bb48",
-        "updatedAt": "2026-10-03T17:59:39Z"
-      },
-      {
-        "number": 414,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(control): enable GitHub Pages from workflow",
-        "sha": "90051e052d35b39b7ca39e627a3271aaf73c6013",
-        "updatedAt": "2026-10-03T17:59:02Z"
-      },
-      {
-        "number": 413,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "chore(control): update master telemetry",
-        "sha": "08f1a9710bd7f2113ed06559d54aec108ba31636",
-        "updatedAt": "2026-10-03T17:58:35Z"
-      },
-      {
-        "number": 412,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(agents): require control-center telemetry",
-        "sha": "69cdf1599120727a20a60eae720c9c5f6360e74f",
-        "updatedAt": "2026-10-03T17:57:16Z"
-      },
-      {
-        "number": 411,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "feat(control): add autonomous agent control center",
-        "sha": "e9ef5f09bede6d04757b6eec710c8b257bcd9393",
-        "updatedAt": "2026-10-03T17:57:17Z"
       }
     ]
   }
