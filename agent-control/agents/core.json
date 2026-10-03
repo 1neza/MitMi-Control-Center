@@ -1,0 +1,18 @@
+{
+  "id": "core",
+  "name": "MitMi Core Engineer",
+  "role": "Meets · Chat · Travel · Local Match",
+  "status": "working",
+  "currentTask": "Stabilize core flows and unblock CI/runtime regressions.",
+  "latestReport": "Control-center telemetry enabled. Future runs should update this file.",
+  "blocker": null,
+  "updatedAt": "2026-10-03T17:54:55.666Z",
+  "activity": [
+    {
+      "type": "working",
+      "title": "Control center connected",
+      "detail": "Agent registered for dashboard telemetry.",
+      "at": "2026-10-03T17:54:55.666Z"
+    }
+  ]
+}
