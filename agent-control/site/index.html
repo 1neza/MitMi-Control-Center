@@ -3,165 +3,233 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0a0c10" />
+  <meta name="theme-color" content="#0b0d10" />
   <title>MitMi Agent Control Center</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="shell">
+  <div class="app-shell">
     <aside class="sidebar">
       <div class="brand">
-        <div class="brand-mark">M</div>
-        <div>
+        <div class="brand-orb">M</div>
+        <div class="brand-copy">
           <strong>MitMi</strong>
-          <span>Control Center</span>
+          <span>Agent Control Center</span>
         </div>
       </div>
 
-      <nav class="side-nav">
-        <a class="nav-item active" href="#overview"><span>Overview</span><kbd>⌘1</kbd></a>
-        <a class="nav-item" href="#agents"><span>Agents</span><kbd>⌘2</kbd></a>
-        <a class="nav-item" href="#activity"><span>Activity</span><kbd>⌘3</kbd></a>
-        <a class="nav-item" href="#blockers"><span>Blockers</span><kbd>⌘4</kbd></a>
-        <a class="nav-item" href="#builder"><span>Builder Chat</span><kbd>⌘5</kbd></a>
+      <nav class="nav">
+        <a class="nav-link active" href="#overview"><span class="nav-icon">◫</span><span>Overview</span></a>
+        <a class="nav-link" href="#agents"><span class="nav-icon">◎</span><span>Agents</span></a>
+        <a class="nav-link" href="#blockers"><span class="nav-icon">!</span><span>Blockers</span></a>
+        <a class="nav-link" href="#activity"><span class="nav-icon">↗</span><span>Activity</span></a>
+        <a class="nav-link" href="#cicd"><span class="nav-icon">⟲</span><span>CI/CD</span></a>
+        <a class="nav-link" href="#reports"><span class="nav-icon">≡</span><span>Reports</span></a>
+        <a class="nav-link" href="#builder"><span class="nav-icon">✦</span><span>Builder Chat</span></a>
       </nav>
 
-      <div class="side-card">
-        <span class="dot online"></span>
+      <div class="sidebar-spacer"></div>
+
+      <div class="workspace-card">
+        <div class="workspace-dot"></div>
         <div>
-          <strong>agent-dev</strong>
-          <small>Autonomous lane active</small>
+          <small>Connected workspace</small>
+          <strong>MitMi / agent-dev</strong>
         </div>
       </div>
 
-      <div class="side-links">
-        <a href="https://github.com/1neza/MitMi/tree/agent-dev" target="_blank" rel="noreferrer">Private repo</a>
-        <a href="https://github.com/1neza/MitMi/actions" target="_blank" rel="noreferrer">CI / Actions</a>
-        <a href="https://github.com/1neza/MitMi/blob/agent-dev/docs/AGENT_BACKLOG.md" target="_blank" rel="noreferrer">Backlog</a>
+      <div class="profile-card">
+        <div class="avatar">JV</div>
+        <div class="profile-copy">
+          <strong>MitMi Workspace</strong>
+          <span>Private source · public telemetry</span>
+        </div>
+        <span class="chev">›</span>
       </div>
     </aside>
 
-    <div class="workspace">
+    <div class="main-wrap">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">AUTONOMOUS DEVELOPMENT OPERATIONS</p>
+        <div class="title-wrap">
+          <p class="eyebrow">MITMI AUTONOMOUS DEVELOPMENT</p>
           <h1>Agent Control Center</h1>
-          <p class="subtle">Monitor execution, blockers, CI health, reports and builder commands in one place.</p>
         </div>
+
         <div class="top-actions">
-          <span id="overallPill" class="status-pill">Loading status…</span>
-          <button id="refreshBtn" class="icon-button" aria-label="Refresh dashboard">↻</button>
+          <div class="search-shell">
+            <span>⌕</span>
+            <input id="searchBox" type="search" placeholder="Search agents, tasks, reports..." />
+          </div>
+          <div class="sync-chip">
+            <span class="sync-dot"></span>
+            <span id="syncLabel">Syncing…</span>
+          </div>
+          <button id="refreshBtn" class="round-btn" title="Refresh">↻</button>
         </div>
       </header>
 
       <main>
-        <section id="overview">
-          <div class="section-head">
+        <section id="overview" class="section-block">
+          <div class="connection-banner">
             <div>
-              <p class="eyebrow">OVERVIEW</p>
-              <h2>System health</h2>
+              <span class="connection-kicker">LIVE SOURCE</span>
+              <strong id="repoConnectionTitle">MitMi private repository</strong>
+              <span id="repoConnectionMeta">Loading branch and CI status…</span>
             </div>
-            <span id="lastUpdated" class="timestamp"></span>
+            <div class="connection-actions">
+              <span id="branchBadge" class="branch-badge">agent-dev</span>
+              <a href="https://github.com/1neza/MitMi/tree/agent-dev" target="_blank" rel="noreferrer">Open source ↗</a>
+            </div>
           </div>
-          <div class="metrics" id="metrics"></div>
+
+          <div class="metric-grid" id="metrics"></div>
+
+          <div class="analytics-grid">
+            <article class="card chart-card wide">
+              <div class="card-head">
+                <div>
+                  <span class="card-kicker">THROUGHPUT</span>
+                  <h2>Task Throughput</h2>
+                </div>
+                <span class="mini-label">7 days</span>
+              </div>
+              <div class="chart-wrap large"><canvas id="throughputChart"></canvas></div>
+            </article>
+
+            <article class="card chart-card">
+              <div class="card-head">
+                <div>
+                  <span class="card-kicker">UTILIZATION</span>
+                  <h2>Agent Utilization</h2>
+                </div>
+              </div>
+              <div class="chart-wrap donut"><canvas id="utilizationChart"></canvas></div>
+              <div id="utilizationLegend" class="legend-list"></div>
+            </article>
+
+            <article class="card chart-card">
+              <div class="card-head">
+                <div>
+                  <span class="card-kicker">BUILD HEALTH</span>
+                  <h2>Build Health</h2>
+                </div>
+                <span id="ciRatePill" class="mini-label">—</span>
+              </div>
+              <div class="chart-wrap"><canvas id="buildChart"></canvas></div>
+            </article>
+          </div>
         </section>
 
-        <section class="grid hero-grid" id="agents">
-          <article class="panel agents-panel">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">AGENTS</p>
-                <h2>Execution lanes</h2>
-              </div>
-              <select id="agentFilter" class="compact-select" aria-label="Filter agents">
+        <section id="agents" class="section-block">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">AGENTS</span>
+              <h2>Live Agents</h2>
+            </div>
+            <div class="section-controls">
+              <select id="agentFilter" aria-label="Filter agents">
                 <option value="all">All agents</option>
               </select>
             </div>
-            <div id="agentGrid" class="agent-grid"></div>
-          </article>
-
-          <article class="panel builder-panel" id="builder">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">BUILDER</p>
-                <h2>Command console</h2>
-              </div>
-              <span class="live-chip"><span class="dot online"></span>Secure handoff</span>
-            </div>
-            <p class="subtle">Send instructions to a target agent. Commands are handed off through GitHub issues so no control token is exposed in this public page.</p>
-
-            <label>Target agent</label>
-            <select id="commandTarget"></select>
-
-            <label>Command</label>
-            <textarea id="commandText" rows="8" placeholder="Prioritize the More navigation regression, verify every route, fix what is safe, and report blockers."></textarea>
-
-            <div class="command-actions">
-              <button id="sendCommandBtn" class="primary-button">Send command</button>
-              <a class="secondary-button" href="https://github.com/1neza/MitMi/issues" target="_blank" rel="noreferrer">Command history</a>
-            </div>
-            <p id="commandHint" class="hint"></p>
-          </article>
-        </section>
-
-        <section class="grid charts-grid" id="activity">
-          <article class="panel chart-panel">
-            <div class="panel-head compact"><div><p class="eyebrow">THROUGHPUT</p><h2>Runs by agent</h2></div></div>
-            <canvas id="runsChart"></canvas>
-          </article>
-          <article class="panel chart-panel">
-            <div class="panel-head compact"><div><p class="eyebrow">QUALITY</p><h2>Outcomes</h2></div></div>
-            <canvas id="outcomeChart"></canvas>
-          </article>
-          <article class="panel chart-panel">
-            <div class="panel-head compact"><div><p class="eyebrow">PACE</p><h2>7-day activity</h2></div></div>
-            <canvas id="activityChart"></canvas>
-          </article>
-        </section>
-
-        <section class="grid detail-grid" id="blockers">
-          <article class="panel">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">BLOCKERS</p>
-                <h2>Needs attention</h2>
-              </div>
-              <span class="count-badge" id="blockerCount">0</span>
-            </div>
-            <div id="blockers" class="stack-list"></div>
-          </article>
-
-          <article class="panel">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">REPORT STREAM</p>
-                <h2>Latest execution events</h2>
-              </div>
-            </div>
-            <div id="reports" class="timeline"></div>
-          </article>
-        </section>
-
-        <section class="panel quick-panel">
-          <div class="panel-head">
-            <div>
-              <p class="eyebrow">PROJECT CONTROL</p>
-              <h2>Quick access</h2>
-            </div>
           </div>
-          <div class="quick-links">
-            <a href="https://github.com/1neza/MitMi/tree/agent-dev" target="_blank" rel="noreferrer"><span>Branch</span><strong>agent-dev ↗</strong></a>
-            <a href="https://github.com/1neza/MitMi/actions" target="_blank" rel="noreferrer"><span>Pipeline</span><strong>GitHub Actions ↗</strong></a>
-            <a href="https://github.com/1neza/MitMi/blob/agent-dev/docs/AGENT_BACKLOG.md" target="_blank" rel="noreferrer"><span>Planning</span><strong>Agent backlog ↗</strong></a>
-            <a href="https://github.com/1neza/MitMi/issues/new?labels=agent-command" target="_blank" rel="noreferrer"><span>Control</span><strong>New command ↗</strong></a>
-          </div>
+
+          <article class="card table-card">
+            <div class="agent-table-head">
+              <span>Agent</span>
+              <span>Status</span>
+              <span>Current task</span>
+              <span>Last report</span>
+              <span>Updated</span>
+            </div>
+            <div id="agentRows" class="agent-rows"></div>
+          </article>
+        </section>
+
+        <section class="split-grid section-block">
+          <article id="blockers" class="card">
+            <div class="card-head">
+              <div>
+                <span class="card-kicker">BLOCKERS</span>
+                <h2>Needs Attention</h2>
+              </div>
+              <span id="blockerCount" class="count-pill">0</span>
+            </div>
+            <div id="blockerList" class="stack-list"></div>
+          </article>
+
+          <article id="cicd" class="card">
+            <div class="card-head">
+              <div>
+                <span class="card-kicker">CI/CD</span>
+                <h2>Recent Builds</h2>
+              </div>
+              <a class="text-link" href="https://github.com/1neza/MitMi/actions" target="_blank" rel="noreferrer">Open Actions ↗</a>
+            </div>
+            <div id="ciList" class="build-list"></div>
+          </article>
+        </section>
+
+        <section class="split-grid section-block">
+          <article id="reports" class="card">
+            <div class="card-head">
+              <div>
+                <span class="card-kicker">REPORTS</span>
+                <h2>Execution Feed</h2>
+              </div>
+            </div>
+            <div id="reportList" class="timeline"></div>
+          </article>
+
+          <article id="builder" class="card builder-card">
+            <div class="card-head">
+              <div>
+                <span class="card-kicker">BUILDER CHAT</span>
+                <h2>Command the team</h2>
+              </div>
+              <span class="secure-badge">secure handoff</span>
+            </div>
+
+            <div id="builderThread" class="chat-thread">
+              <div class="chat-message system">
+                <div class="msg-avatar">✦</div>
+                <div class="bubble">
+                  <strong>Builder</strong>
+                  <p>Commands are routed to the private MitMi repository. No GitHub token is exposed on this public dashboard.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="composer">
+              <div class="composer-top">
+                <select id="commandTarget"></select>
+              </div>
+              <textarea id="commandText" rows="4" placeholder="Tell the builder what to do next…"></textarea>
+              <div class="composer-actions">
+                <span id="commandHint"></span>
+                <button id="sendCommandBtn" class="send-btn">Send command</button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="activity" class="section-block">
+          <article class="card activity-card">
+            <div class="card-head">
+              <div>
+                <span class="card-kicker">ACTIVITY</span>
+                <h2>Agent Activity Map</h2>
+              </div>
+              <span id="activityCount" class="mini-label">—</span>
+            </div>
+            <div id="activityMap" class="activity-map"></div>
+          </article>
         </section>
       </main>
 
       <footer>
         <span>MitMi Agent Control Center</span>
-        <span>Sanitized telemetry only · no production secrets</span>
+        <span id="footerSync">Sanitized telemetry from the private MitMi development workflow</span>
       </footer>
     </div>
   </div>
