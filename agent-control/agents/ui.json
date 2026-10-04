@@ -2,11 +2,11 @@
   "id": "ui",
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
-  "status": "idle",
-  "currentTask": "Automation currently disabled; telemetry will resume automatically when this agent is enabled.",
-  "latestReport": "Registered in Control Center; not currently scheduled to run.",
-  "blocker": null,
-  "updatedAt": "2026-10-03T17:57:47.389Z",
+  "status": "working",
+  "currentTask": "Phase 1 Location error-state integrity: prevent stale Nearby results from rendering after refresh failure.",
+  "latestReport": "Synced MitMi agent-dev at 1f0e5eec (CI #430 green). Committed UI-only Location fix b5041d44 to hide cached Nearby people/count when a refresh errors. CI #431 is queued; physical-device Location behavior remains unclaimed.",
+  "blocker": "Verification pending CI #431 for b5041d44. Physical-device Location permission/error/refresh presentation remains unchecked until tested on a real device.",
+  "updatedAt": "2026-10-04T03:34:00Z",
   "activity": [
     {
       "type": "working",
@@ -19,6 +19,12 @@
       "title": "Agent visible while idle",
       "detail": "Automation is disabled, but the agent remains registered in the Control Center.",
       "at": "2026-10-03T17:57:47.389Z"
+    },
+    {
+      "type": "working",
+      "title": "Location stale-state fix committed",
+      "detail": "b5041d44 hides cached Nearby results while the refresh error state is active; CI #431 queued.",
+      "at": "2026-10-04T03:34:00Z"
     }
   ]
 }
