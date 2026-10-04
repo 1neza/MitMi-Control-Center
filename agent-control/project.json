@@ -3,87 +3,23 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "65c40c1a88c75546fdfe86900843f915b4290b66",
-  "latestCommit": "docs(qa): reconcile exact-head validation evidence",
-  "syncedAt": "2026-10-03T23:54:37Z",
+  "head": "9beb538057a3a113e3cf37eeeded9839352a6d23",
+  "latestCommit": "fix(ui): avoid stale notifications on load errors",
+  "syncedAt": "2026-10-04T22:56:50Z",
   "milestone": "MitMi 2.0 UX Transition — Phase 1 Functional Foundation",
   "ci": {
-    "latestRun": 429,
+    "latestRun": 435,
     "latestConclusion": "success",
     "latestFailure": null,
-    "successRate": 33.3,
+    "successRate": 90,
     "history": [
       {
-        "number": 429,
+        "number": 435,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(qa): reconcile exact-head validation evidence",
-        "sha": "65c40c1a88c75546fdfe86900843f915b4290b66",
-        "updatedAt": "2026-10-03T23:48:56Z"
-      },
-      {
-        "number": 428,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(chat): reflect Meet admin send permissions",
-        "sha": "0d246b35cbe5f2c900badb332b78cd590a5ef86b",
-        "updatedAt": "2026-10-03T22:03:39Z"
-      },
-      {
-        "number": 427,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(trust): scope verification state to challenge",
-        "sha": "1b69a055df1c125d16cad73cb7e5edc2167b83d5",
-        "updatedAt": "2026-10-03T21:24:31Z"
-      },
-      {
-        "number": 426,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "fix(chat): defer group detail state reset",
-        "sha": "3782eb8116327b12d37e4cb1aebd0f26d0ff8e52",
-        "updatedAt": "2026-10-03T21:04:07Z"
-      },
-      {
-        "number": 425,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "test(auth): allow formatted RPC boundaries",
-        "sha": "d87c8de74942715ba49ca8addc90e8736ae2ffcd",
-        "updatedAt": "2026-10-03T20:06:03Z"
-      },
-      {
-        "number": 424,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "chore(control): retire private Pages workflow",
-        "sha": "df4f057b6d9cbb4f273aea096ce31d9414b5c385",
-        "updatedAt": "2026-10-03T19:15:36Z"
-      },
-      {
-        "number": 423,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "docs(agents): make public control center canonical telemetry target",
-        "sha": "b81366b157a832361cd0ad9570453df57492f5ba",
-        "updatedAt": "2026-10-03T19:15:28Z"
-      },
-      {
-        "number": 422,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "chore(control): record core CI blocker",
-        "sha": "5bd92aefb108bb9f024aa72f8ac5f083a247bcd2",
-        "updatedAt": "2026-10-03T19:03:09Z"
-      },
-      {
-        "number": 421,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "feat(chat): add authorized group details and meet admin controls",
-        "sha": "a2288a155215bf1a81121492eb96e581ebca7f6a",
-        "updatedAt": "2026-10-03T18:57:46Z"
+        "title": "fix(ui): avoid stale notifications on load errors",
+        "sha": "9beb538057a3a113e3cf37eeeded9839352a6d23",
+        "updatedAt": "2026-10-04T20:40:23Z"
       }
     ]
   }
