@@ -3,10 +3,10 @@
   "name": "MitMi More Engineer",
   "role": "Profile · Trust · Safety · Location · Offers",
   "status": "working",
-  "currentTask": "Trust/Vibes QR scan remains dependency-blocked; continuing independent More correctness and device-readiness work.",
-  "latestReport": "Pushed MitMi agent-dev commit 4cbee240b20cfe5c101a47e5bd21ce5214b62a35. Trust/Vibes now clears stale viewer identity, verified interactions, Vibes and sharing consent after a failed load or refresh, preventing outdated trust actions from appearing current. GitHub had not exposed CI/status checks for the new commit at report time; physical-device validation remains open.",
-  "blocker": "Integrated camera QR scanning still requires an SDK 57-compatible expo-camera dependency and regenerated lockfile. This does not block independent More work. Physical Trust/Vibes replay, duplicate, self-interaction and failed-refresh validation remains pending.",
-  "updatedAt": "2026-10-05T16:40:02.397Z",
+  "currentTask": "Continue Trust/Vibes QR display/scan UX and remaining More device-readiness work.",
+  "latestReport": "Pushed MitMi agent-dev commit 027745a39b688b578e3fdf504e41b07277487258. Trust verification sharing now creates runtime-aware links: Expo Go receives the current exp:// route and installed builds receive mitmi://trust/verify. Parsing accepts the supported runtime URL forms while retaining the UUID and exact-route validation. CI #448 passed authorization regressions, lint, TypeScript and Android Expo bundle. Physical-device validation remains open.",
+  "blocker": "Integrated camera QR scanning still requires an SDK 57-compatible expo-camera dependency and regenerated lockfile. This does not block independent More work. Physical Trust/Vibes link opening, scan, expiry, replay, duplicate and self-interaction validation remains pending.",
+  "updatedAt": "2026-10-05T17:29:21.053Z",
   "activity": [
     {
       "type": "working",
@@ -41,6 +41,12 @@
       "title": "Trust error state fixed",
       "detail": "Pushed 4cbee240; stale Trust history and viewer-derived actions now clear after load failure. CI signal pending; device validation open.",
       "at": "2026-10-05T16:40:02.397Z"
+    },
+    {
+      "type": "success",
+      "title": "Trust verification links repaired",
+      "detail": "Pushed 027745a3; runtime-aware Expo Go/app links passed full CI #448. Device validation remains open.",
+      "at": "2026-10-05T17:29:21.053Z"
     }
   ]
 }
