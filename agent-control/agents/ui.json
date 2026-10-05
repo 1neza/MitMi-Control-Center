@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "Phase 1 functional UI stabilization; Travel truthful load-error state is code-complete and CI-verified. Continue non-device visible-action/loading/empty/error/readability audit without overlapping Core or More.",
-  "latestReport": "agent-dev exact head ce9d3faefc184ff8d7636187bfa4a00a7de47b21. Travel stale-state correction landed and CI #440 passed clean install, npm test authorization contracts, lint, TypeScript and Android Expo bundle. Physical-device Travel lifecycle/error/retry behavior remains unclaimed.",
-  "blocker": "No repository/CI blocker. Physical-device Travel proof remains open; resume condition: load Travel successfully on a real device, force discovery/refresh failure, verify stale trips/memberships/participants/profile-derived actions disappear and error/retry is shown, then retry and verify current data returns.",
-  "updatedAt": "2026-10-05T15:31:00Z",
+  "currentTask": "Continue Phase 1 Local Match/Discover presentation and remaining visible-action stabilization without overlapping Core conversation ownership.",
+  "latestReport": "Pushed MitMi agent-dev commits d83ea304fd84e4a0fcc389746f9c50cc2b4a7a6c and 5ae2f61a8592ce204966926262fe9ece9ac1a5f5. Local Match now replaces manual city/country-code availability entry with one foreground device-location reading, reverse-geocodes a city-level area, scopes discovery truthfully to that area, and restores active availability areas. CI #450 passed authorization contracts, lint, TypeScript and Android Expo bundle.",
+  "blocker": "No repository or CI blocker. Physical-device Local Match location permission, reverse-geocode, publish, discover, request/accept and conversation-entry behavior remains unchecked; iOS runtime validation also remains open.",
+  "updatedAt": "2026-10-05T17:41:18.176Z",
   "activity": [
     {
       "type": "working",
@@ -31,6 +31,12 @@
       "title": "Travel truthful error state verified",
       "detail": "ce9d3fae clears stale Travel state on load failure; CI #440 passed test, lint, TypeScript and Android Expo bundle. Device proof remains open.",
       "at": "2026-10-05T15:31:00Z"
+    },
+    {
+      "type": "success",
+      "title": "Local Match device-area discovery shipped",
+      "detail": "d83ea304 + 5ae2f61 replace manual country-code entry with foreground city-level area selection; CI #450 is green. Device proof remains open.",
+      "at": "2026-10-05T17:41:18.176Z"
     }
   ]
 }
