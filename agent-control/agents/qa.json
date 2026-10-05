@@ -4,9 +4,9 @@
   "role": "QA / Integration",
   "status": "working",
   "currentTask": "Validate newly pushed Core/UI/More changes and repair cross-domain integration regressions.",
-  "latestReport": "Validated new Core commit f7341b4 (Meet creator messaging permissions) and More commit 4cbee240 (truthful Trust load errors). Reproduced the stale Meet restriction path when switching to direct chat, pushed integration fix a9c7357d83b64d32ced1160823ddda934e08a70e, and verified CI #443 success: install, authorization tests, lint, TypeScript and Android bundle all passed. Physical-device and iOS checks remain open.",
-  "blocker": null,
-  "updatedAt": "2026-10-05T16:51:18.256Z",
+  "latestReport": "Validated UI Local Match device-area commits d83ea304 and 5ae2f61a against the real availability service. Found that Update area changed only the client discovery filter while an active server availability continued advertising the old city. Pushed integration repair c693d63d58f688bdccce1e4aa2eeb96b27cb0ba4 so active area updates are persisted while preserving the note and renewing the four-hour window. CI #451 passed authorization contracts, lint, TypeScript and Android Expo bundle.",
+  "blocker": "No repository or CI blocker. Physical-device Local Match permission, reverse-geocode, active-area update, request/accept and conversation-entry verification remains open; iOS runtime validation remains open.",
+  "updatedAt": "2026-10-05T17:55:58.345Z",
   "activity": [
     {
       "type": "working",
@@ -25,6 +25,12 @@
       "title": "Chat transition regression fixed",
       "detail": "Pushed a9c7357d and verified CI #443 green across install, auth tests, lint, TypeScript and Android bundle.",
       "at": "2026-10-05T16:51:18.256Z"
+    },
+    {
+      "type": "success",
+      "title": "Active Local Match area update repaired",
+      "detail": "QA pushed c693d63d after finding client/server area divergence; CI #451 is fully green. Device proof remains open.",
+      "at": "2026-10-05T17:55:58.345Z"
     }
   ]
 }
