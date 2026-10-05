@@ -5,10 +5,10 @@
   "branch": "agent-dev",
   "head": "10cdad5090ed3ccbe552c63ede59b0136d43cba8",
   "latestCommit": "fix(core): gate group chat on resolved domain permissions",
-  "syncedAt": "2026-10-05T09:03:22Z",
+  "syncedAt": "2026-10-05T12:01:29Z",
   "milestone": "MitMi 2.0 UX Transition — Phase 1 Functional Foundation",
   "ci": {
-    "latestRun": 437,
+    "latestRun": 438,
     "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
