@@ -3,23 +3,23 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "9beb538057a3a113e3cf37eeeded9839352a6d23",
-  "latestCommit": "fix(ui): avoid stale notifications on load errors",
-  "syncedAt": "2026-10-04T22:56:50Z",
+  "head": "10cdad5090ed3ccbe552c63ede59b0136d43cba8",
+  "latestCommit": "fix(core): gate group chat on resolved domain permissions",
+  "syncedAt": "2026-10-05T09:03:22Z",
   "milestone": "MitMi 2.0 UX Transition — Phase 1 Functional Foundation",
   "ci": {
-    "latestRun": 435,
+    "latestRun": 437,
     "latestConclusion": "success",
     "latestFailure": null,
-    "successRate": 90,
+    "successRate": 100,
     "history": [
       {
-        "number": 435,
+        "number": 437,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(ui): avoid stale notifications on load errors",
-        "sha": "9beb538057a3a113e3cf37eeeded9839352a6d23",
-        "updatedAt": "2026-10-04T20:40:23Z"
+        "title": "Last verified exact-head CI before current Core commit",
+        "sha": "7679362e436a737220ee9bbd66226bd2de5b0c1f",
+        "updatedAt": "2026-10-05T04:55:11Z"
       }
     ]
   }
