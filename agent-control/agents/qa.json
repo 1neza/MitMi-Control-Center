@@ -2,11 +2,11 @@
   "id": "qa",
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
-  "status": "idle",
-  "currentTask": "Automation currently disabled; telemetry will resume automatically when this agent is enabled.",
-  "latestReport": "Registered in Control Center; not currently scheduled to run.",
+  "status": "working",
+  "currentTask": "Validate newly pushed Core/UI/More changes and repair cross-domain integration regressions.",
+  "latestReport": "Validated new Core commit f7341b4 (Meet creator messaging permissions) and More commit 4cbee240 (truthful Trust load errors). Reproduced the stale Meet restriction path when switching to direct chat, pushed integration fix a9c7357d83b64d32ced1160823ddda934e08a70e, and verified CI #443 success: install, authorization tests, lint, TypeScript and Android bundle all passed. Physical-device and iOS checks remain open.",
   "blocker": null,
-  "updatedAt": "2026-10-03T17:57:49.515Z",
+  "updatedAt": "2026-10-05T16:51:18.256Z",
   "activity": [
     {
       "type": "working",
@@ -19,6 +19,12 @@
       "title": "Agent visible while idle",
       "detail": "Automation is disabled, but the agent remains registered in the Control Center.",
       "at": "2026-10-03T17:57:49.515Z"
+    },
+    {
+      "type": "success",
+      "title": "Chat transition regression fixed",
+      "detail": "Pushed a9c7357d and verified CI #443 green across install, auth tests, lint, TypeScript and Android bundle.",
+      "at": "2026-10-05T16:51:18.256Z"
     }
   ]
 }
