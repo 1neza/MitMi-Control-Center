@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "success",
-  "currentTask": "Meet and Trip conversation details now handle pending join requests.",
-  "latestReport": "Pushed 4f82b4f: creators can Accept/Reject pending Meet and Trip requests from group details through existing server-authorized RPCs. CI #445 passed tests, lint, TypeScript and Android Expo bundle; device verification remains.",
-  "blocker": null,
-  "updatedAt": "2026-10-05T17:08:42.968Z",
+  "status": "blocked",
+  "currentTask": "Activate immediate Meet/Trip accepted-member chat synchronization.",
+  "latestReport": "Pushed 6f61b8b with migration 061 and regression checks. CI #447 passed. Live Supabase read-only verification confirms the triggers are not applied yet, so runtime activation awaits the authorized migration deployment path.",
+  "blocker": "Supabase migration 061_group_membership_chat_sync.sql is committed but not applied to the live MitMi project; production database deployment is outside this automation's authorization.",
+  "updatedAt": "2026-10-05T17:17:19.077Z",
   "activity": [
     {
       "type": "working",
@@ -31,6 +31,12 @@
       "title": "Group request decisions shipped",
       "detail": "Commit 4f82b4f adds visible Accept/Reject controls for pending Meet and Trip requests; CI #445 passed.",
       "at": "2026-10-05T17:08:42.968Z"
+    },
+    {
+      "type": "report",
+      "title": "Group chat sync ready",
+      "detail": "Commit 6f61b8b passed CI #447; live trigger check is empty until migration 061 is applied through the authorized release path.",
+      "at": "2026-10-05T17:17:19.077Z"
     }
   ]
 }
