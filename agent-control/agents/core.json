@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "blocked",
-  "currentTask": "Activate immediate Meet/Trip accepted-member chat synchronization.",
-  "latestReport": "Pushed 6f61b8b with migration 061 and regression checks. CI #447 passed. Live Supabase read-only verification confirms the triggers are not applied yet, so runtime activation awaits the authorized migration deployment path.",
-  "blocker": "Supabase migration 061_group_membership_chat_sync.sql is committed but not applied to the live MitMi project; production database deployment is outside this automation's authorization.",
-  "updatedAt": "2026-10-05T17:17:19.077Z",
+  "status": "success",
+  "currentTask": "Meet and Trip members can leave from conversation details.",
+  "latestReport": "Pushed 9eb60e7: accepted non-creators get two-step Leave Meet/Trip controls in Chat details, backed by the live server-authorized leave RPCs. CI #453 passed tests, lint, TypeScript and Android Expo bundle.",
+  "blocker": "Migration 061 for automatic accepted-member chat synchronization remains committed but unapplied to the live Supabase project; this does not block the new Leave controls.",
+  "updatedAt": "2026-10-05T18:10:11.577Z",
   "activity": [
     {
       "type": "working",
@@ -37,6 +37,12 @@
       "title": "Group chat sync ready",
       "detail": "Commit 6f61b8b passed CI #447; live trigger check is empty until migration 061 is applied through the authorized release path.",
       "at": "2026-10-05T17:17:19.077Z"
+    },
+    {
+      "type": "success",
+      "title": "Group leave controls shipped",
+      "detail": "Commit 9eb60e7 adds confirmed Leave Meet/Trip actions in conversation details; CI #453 passed.",
+      "at": "2026-10-05T18:10:11.577Z"
     }
   ]
 }
