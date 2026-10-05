@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "idle",
-  "currentTask": "Automation currently disabled; lane remains visible for monitoring.",
-  "latestReport": "Core lane is registered in the Control Center and will resume telemetry automatically when re-enabled.",
+  "status": "success",
+  "currentTask": "Meet conversation details now include creator-controlled messaging permissions.",
+  "latestReport": "Pushed f7341b4: Meet creators can switch Everyone/Admins-only messaging through the server-enforced settings RPC. CI #442 passed tests, lint, TypeScript and Android Expo bundle; device verification remains.",
   "blocker": null,
-  "updatedAt": "2026-10-03T18:32:00Z",
+  "updatedAt": "2026-10-05T16:41:30.574Z",
   "activity": [
     {
       "type": "working",
@@ -19,6 +19,12 @@
       "title": "Core lane idle",
       "detail": "Automation is currently disabled but remains visible in the dashboard.",
       "at": "2026-10-03T18:32:00Z"
+    },
+    {
+      "type": "success",
+      "title": "Meet chat permissions shipped",
+      "detail": "Commit f7341b4 adds visible creator controls for Everyone/Admins-only messaging; CI #442 passed.",
+      "at": "2026-10-05T16:41:30.574Z"
     }
   ]
 }
