@@ -3,23 +3,63 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "10cdad5090ed3ccbe552c63ede59b0136d43cba8",
-  "latestCommit": "fix(core): gate group chat on resolved domain permissions",
-  "syncedAt": "2026-10-05T12:01:29Z",
+  "head": "176285fba052f542f8cbb8538826e592cfb363f7",
+  "latestCommit": "fix(local-match): refresh requests while discovery is open",
+  "syncedAt": "2026-10-05T17:03:20.735Z",
   "milestone": "MitMi 2.0 UX Transition — Phase 1 Functional Foundation",
   "ci": {
-    "latestRun": 438,
+    "latestRun": 444,
     "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
     "history": [
       {
-        "number": 437,
+        "number": 444,
         "status": "completed",
         "conclusion": "success",
-        "title": "Last verified exact-head CI before current Core commit",
-        "sha": "7679362e436a737220ee9bbd66226bd2de5b0c1f",
-        "updatedAt": "2026-10-05T04:55:11Z"
+        "title": "fix(local-match): refresh requests while discovery is open",
+        "sha": "176285fba052f542f8cbb8538826e592cfb363f7",
+        "updatedAt": "2026-10-05T17:03:20.735Z"
+      },
+      {
+        "number": 443,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(chat): isolate Meet restrictions to group channels",
+        "sha": "a9c7357d83b64d32ced1160823ddda934e08a70e",
+        "updatedAt": "2026-10-05T16:50:26Z"
+      },
+      {
+        "number": 442,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "feat(chat): manage Meet messaging permissions",
+        "sha": "f7341b4b468dfc4077e1c906b6aa5c82f32b3e6e",
+        "updatedAt": "2026-10-05T16:40:42Z"
+      },
+      {
+        "number": 441,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(trust): clear stale history after load errors",
+        "sha": "4cbee240b20cfe5c101a47e5bd21ce5214b62a35",
+        "updatedAt": "2026-10-05T16:39:31Z"
+      },
+      {
+        "number": 440,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(ui): clear stale travel state on load errors",
+        "sha": "ce9d3faefc184ff8d7636187bfa4a00a7de47b21",
+        "updatedAt": "2026-10-05T14:43:14Z"
+      },
+      {
+        "number": 439,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs: reconcile QA exact-head CI anchor",
+        "sha": "7d64ed16add4a53c0bc544fb9cd0d76cd08c8a82",
+        "updatedAt": "2026-10-05T13:09:04Z"
       }
     ]
   }
