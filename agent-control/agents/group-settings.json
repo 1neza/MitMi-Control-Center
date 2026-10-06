@@ -1,0 +1,17 @@
+{
+  "id": "group-settings",
+  "name": "Group Settings Engineer",
+  "role": "Meet and Trip group info presentation and safe member controls",
+  "status": "success",
+  "currentTask": "GROUP-INFO-01 code-complete and awaiting QA/device verification.",
+  "latestReport": "Pushed 700113748e7db45c14c50daf4f72f57024077735. Tapping a group conversation header now opens dedicated Group Info with context, members, truthful creator/admin/member labels, Meet chat permissions, request moderation, and non-creator leave. CI #465 passed.",
+  "blocker": "Physical Android/iOS role/action verification remains required; Trip admin promotion is intentionally absent because no server-enforced contract exists.",
+  "updatedAt": "2026-10-06T04:18:00Z",
+  "activity": [
+    {
+      "at": "2026-10-06T04:18:00Z",
+      "status": "success",
+      "summary": "Delivered dedicated Meet/Trip group info screen at 7001137; exact-head CI #465 passed."
+    }
+  ]
+}
