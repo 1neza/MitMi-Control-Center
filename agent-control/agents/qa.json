@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "success",
-  "currentTask": "CHAT-LIST-01 QA gate complete; returned realtime list-refresh gap to Chat UI.",
-  "latestReport": "FAILED_QA for automatic conversation-list updates at fca9cc2. CI #462 is green, but source review proves the only message subscription is created after an active conversation opens; while the Chats list remains visible, incoming messages cannot update previews, ordering or unread state until refocus/manual refresh.",
-  "blocker": "Chat UI owner must add list-level realtime invalidation/subscription without changing domain authorization. Physical Android/iOS interaction remains DEVICE_VERIFY.",
-  "updatedAt": "2026-10-06T03:11:11.761Z",
+  "currentTask": "QA-GATE-01: Chat list pair statically passed; physical two-account realtime verification remains.",
+  "latestReport": "DEVICE_VERIFY for fca9cc2 + 6d62e72. Rich rows and list-level realtime invalidation are present, cleanup is correct, and exact-head f2e6fb7 passed CI #464. No QA app code was pushed.",
+  "blocker": "Physical Android/iOS two-account test is required to prove incoming preview, ordering, unread state, row opening, and reconnect behavior.",
+  "updatedAt": "2026-10-06T04:13:00Z",
   "activity": [
     {
       "type": "working",
@@ -37,6 +37,11 @@
       "title": "Chat list realtime gap confirmed",
       "detail": "fca9cc2 passed CI #462, but QA returned automatic list updates: subscriptions exist only for the open channel, not while the list is visible.",
       "at": "2026-10-06T03:11:11.761Z"
+    },
+    {
+      "at": "2026-10-06T04:13:00Z",
+      "status": "success",
+      "summary": "Marked Chat list delivery DEVICE_VERIFY after source review and exact-head CI #464; no app code pushed."
     }
   ]
 }
