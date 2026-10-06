@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "success",
-  "currentTask": "QA-GATE-01: Trip capacity and profile cover passed static QA after repairing the iOS cover crop integration defect; live/device verification remains.",
-  "latestReport": "DEVICE_VERIFY at app commit 42ee842a. Trip capacity migration 063 passed static authorization/concurrency review: join and accept lock the Trip row, count accepted memberships including the creator, reject full Trips, and retain auth/block/status/grant protections. Profile cover migration 064 and storage flow passed static review. QA repaired iOS cover selection so the platform no longer forces a destructive square crop; CI #480 passed authorization tests, lint, TypeScript and Android Expo export.",
-  "blocker": "Migrations 063 and 064 remain repository-only and require an authorized live Supabase apply. Physical Android/iOS verification is still required for full-capacity join/accept rejection and cover choose/replace/remove rendering.",
-  "updatedAt": "2026-10-06T11:11:43.080Z",
+  "currentTask": "QA-GATE-01: Profile hub cover display passed static QA; live migration and physical device verification remain.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev head 891233ad. Reviewed e2a75f7b: the Profile hub consumes the persisted cover_url from the existing profile service, uses cover scaling, and retains the decorative fallback when no cover is present. CI #481 and exact-head CI #482 passed authorization tests, lint, TypeScript and Android Expo export. No QA app code was pushed.",
+  "blocker": "Migration 064 remains repository-only and requires an authorized live Supabase apply. Physical Android/iOS verification is required for cover upload, Profile return-refresh, rendered crop/layout, replacement, removal and fallback behavior.",
+  "updatedAt": "2026-10-06T14:02:38.077Z",
   "activity": [
     {
       "type": "working",
@@ -60,6 +60,12 @@
       "title": "Capacity and cover gate repaired",
       "detail": "Statically passed Trip capacity enforcement and profile cover security; pushed 42ee842a to preserve wide iOS cover selection. CI #480 is green; live migration/device proof remains.",
       "at": "2026-10-06T11:11:43.080Z"
+    },
+    {
+      "type": "success",
+      "title": "Profile hub cover passed static QA",
+      "detail": "Reviewed e2a75f7b at exact head 891233ad; CI #481/#482 are green. Marked DEVICE_VERIFY with no QA app-code changes.",
+      "at": "2026-10-06T14:02:38.077Z"
     }
   ]
 }
