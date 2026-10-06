@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "success",
-  "currentTask": "Profile/Create: optional Trip capacity delivered; awaiting QA and device verification.",
-  "latestReport": "Pushed MitMi agent-dev commit 204a1623c8262ffebd294764fc08cbd1c85d581e. Trip creation now accepts an optional 2–50 traveler capacity, validates and persists max_travelers through the existing create_trip contract, resets after publishing and displays capacity on cards. CI #475 passed authorization tests, lint, TypeScript and Android Expo export.",
-  "blocker": "No repository or CI blocker. Physical Android/iOS input, validation, persistence and card-layout verification remain unchecked.",
-  "updatedAt": "2026-10-06T09:20:52.822Z",
+  "currentTask": "CREATE-UX-02: editable public profile cover image shipped; awaiting migration release and device verification.",
+  "latestReport": "Pushed dbb9c36f on agent-dev. Profile editor now supports a separate 16:9 cover image with SDK-57 media picking, MIME/signature/5 MB validation, owner-scoped upload, replacement cleanup and removal. CI #478 passed authorization tests, lint, TypeScript and Android Expo export.",
+  "blocker": "Migration 064 must be applied through an authorized database release before cover_url works live; physical Android/iOS picker, crop, upload, replacement, removal and layout remain unchecked.",
+  "updatedAt": "2026-10-06T10:21:10.406Z",
   "activity": [
     {
       "type": "working",
@@ -49,6 +49,12 @@
       "title": "Trip capacity shipped",
       "detail": "204a162 adds optional validated 2–50 Trip capacity and card display through the existing service contract; CI #475 is green. Device proof remains open.",
       "at": "2026-10-06T09:20:52.822Z"
+    },
+    {
+      "type": "success",
+      "title": "Editable profile cover shipped",
+      "detail": "Pushed dbb9c36f; CI #478 passed. Live migration and physical-device media behavior remain DEVICE_VERIFY.",
+      "at": "2026-10-06T10:21:10.406Z"
     }
   ]
 }
