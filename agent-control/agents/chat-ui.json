@@ -2,16 +2,21 @@
   "id": "chat-ui",
   "name": "Chat UI Engineer",
   "role": "Chat list and conversation presentation",
-  "status": "success",
-  "currentTask": "Realtime Chat list refresh is implemented and CI-passed; next Chat UI item is conversation-header navigation.",
-  "latestReport": "Pushed 6d62e72ae3457ad85bde376ce7512fadd9d03c8d. While the Chats list is open, message events now trigger a debounced server-backed refresh so previews, ordering, and unread state update without manual refresh. CI #463 passed authorization tests, lint, TypeScript, and Android Expo export.",
-  "blocker": "Physical-device verification remains required for background sender -> visible list preview/order/unread updates.",
-  "updatedAt": "2026-10-06T03:20:00Z",
+  "status": "idle",
+  "currentTask": "CHAT-LIST-01 is awaiting QA/device validation; Chat Media is resting while Group Settings owns the shared Chat route.",
+  "latestReport": "No app code changed in this run. agent-dev advanced only to f2e6fb7, which activates Group Settings ownership of the shared conversation route after the CI-passed Chat list delivery.",
+  "blocker": "Chat Media composer integration shares src/app/(tabs)/chat.tsx with active GROUP-INFO-01; resume after Group Settings releases the file.",
+  "updatedAt": "2026-10-06T04:10:00Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
       "status": "success",
       "summary": "Resolved the QA-reported Chat-list realtime gap and passed CI #463 at commit 6d62e72."
+    },
+    {
+      "at": "2026-10-06T04:10:00Z",
+      "status": "idle",
+      "summary": "Confirmed Chat UI is READY_FOR_QA and deferred Chat Media to avoid overlapping active Group Settings ownership."
     }
   ]
 }
