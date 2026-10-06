@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "success",
-  "currentTask": "QA-GATE-01: Chat list pair statically passed; physical two-account realtime verification remains.",
-  "latestReport": "DEVICE_VERIFY for fca9cc2 + 6d62e72. Rich rows and list-level realtime invalidation are present, cleanup is correct, and exact-head f2e6fb7 passed CI #464. No QA app code was pushed.",
-  "blocker": "Physical Android/iOS two-account test is required to prove incoming preview, ordering, unread state, row opening, and reconnect behavior.",
-  "updatedAt": "2026-10-06T04:13:00Z",
+  "currentTask": "QA-GATE-02: Trip optional end-date implementation statically passed; physical native-picker verification remains.",
+  "latestReport": "DEVICE_VERIFY for app commit 0f4a0063 at exact agent-dev head b1d4c9da. Date ordering, ends_on service wiring, reset behavior and card range display passed review; CI #472 and exact-head CI #473 passed authorization tests, lint, TypeScript and Android Expo export. No QA app code was pushed.",
+  "blocker": "Physical Android/iOS testing is required to verify native start/end picker interaction, clearing, persistence and rendered date ranges.",
+  "updatedAt": "2026-10-06T09:06:31.507Z",
   "activity": [
     {
       "type": "working",
@@ -42,6 +42,12 @@
       "at": "2026-10-06T04:13:00Z",
       "status": "success",
       "summary": "Marked Chat list delivery DEVICE_VERIFY after source review and exact-head CI #464; no app code pushed."
+    },
+    {
+      "type": "success",
+      "title": "Trip date range passed static QA",
+      "detail": "Reviewed 0f4a0063 and exact head b1d4c9da; CI #472/#473 are green. Marked DEVICE_VERIFY with no QA app-code changes.",
+      "at": "2026-10-06T09:06:31.507Z"
     }
   ]
 }
