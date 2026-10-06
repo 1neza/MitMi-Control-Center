@@ -3,15 +3,21 @@
   "name": "Group Settings Engineer",
   "role": "Meet and Trip group info presentation and safe member controls",
   "status": "success",
-  "currentTask": "GROUP-INFO-01 code-complete and awaiting QA/device verification.",
-  "latestReport": "Pushed 700113748e7db45c14c50daf4f72f57024077735. Tapping a group conversation header now opens dedicated Group Info with context, members, truthful creator/admin/member labels, Meet chat permissions, request moderation, and non-creator leave. CI #465 passed.",
-  "blocker": "Physical Android/iOS role/action verification remains required; Trip admin promotion is intentionally absent because no server-enforced contract exists.",
-  "updatedAt": "2026-10-06T04:18:00Z",
+  "currentTask": "Group Info Meet manager settings and domain-aligned moderation controls.",
+  "latestReport": "Pushed MitMi agent-dev commits 028f637ca256c2a0a9cd98d9e4f3517b464accad and adb3e6db7895447d29b0e6210fc1c5a8dc912983. Group Info now recognizes Meet admins for server-authorized request/chat-mode actions while keeping role promotion creator-only, and lets Meet managers edit title/description through the existing secure settings RPC. CI #470 passed authorization tests, lint, TypeScript and Android Expo bundle.",
+  "blocker": "No repository or CI blocker. Physical creator/admin/member Meet and Trip cases, leave behavior, keyboard editing and iOS runtime remain unchecked; Trip details stay read-only because no server-enforced edit contract exists.",
+  "updatedAt": "2026-10-06T05:18:29.563Z",
   "activity": [
     {
       "at": "2026-10-06T04:18:00Z",
       "status": "success",
       "summary": "Delivered dedicated Meet/Trip group info screen at 7001137; exact-head CI #465 passed."
+    },
+    {
+      "type": "success",
+      "title": "Group Info manager settings shipped",
+      "detail": "028f637 aligns admin controls with domain authorization; adb3e6d adds server-backed Meet title/description editing. CI #470 is green; device proof remains open.",
+      "at": "2026-10-06T05:18:29.563Z"
     }
   ]
 }
