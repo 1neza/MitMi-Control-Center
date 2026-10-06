@@ -2,11 +2,11 @@
   "id": "group-settings",
   "name": "Group Settings Engineer",
   "role": "Meet and Trip group info presentation and safe member controls",
-  "status": "success",
-  "currentTask": "Group Info Meet manager settings and domain-aligned moderation controls.",
-  "latestReport": "Pushed MitMi agent-dev commits 028f637ca256c2a0a9cd98d9e4f3517b464accad and adb3e6db7895447d29b0e6210fc1c5a8dc912983. Group Info now recognizes Meet admins for server-authorized request/chat-mode actions while keeping role promotion creator-only, and lets Meet managers edit title/description through the existing secure settings RPC. CI #470 passed authorization tests, lint, TypeScript and Android Expo bundle.",
-  "blocker": "No repository or CI blocker. Physical creator/admin/member Meet and Trip cases, leave behavior, keyboard editing and iOS runtime remain unchecked; Trip details stay read-only because no server-enforced edit contract exists.",
-  "updatedAt": "2026-10-06T05:18:29.563Z",
+  "status": "blocked",
+  "currentTask": "TRIP-LEAVE-01 live release gate after Group Info moved to READY_FOR_QA.",
+  "latestReport": "No app code pushed. Live read-only verification shows migration 062 and migration 061 triggers are not deployed. The active leave_trip RPC performs member status/chat cleanup but lacks the repository repair's explicit creator guard; two current Trip creator membership rows make that guard materially necessary. Aggregate consistency currently shows zero accepted members missing chat access and zero inactive members retaining it.",
+  "blocker": "Authorized deployment of repository migrations 061/062 is required, followed by physical-device non-creator leave/rejoin and creator-safety verification. Production was not changed.",
+  "updatedAt": "2026-10-06T09:16:40.603Z",
   "activity": [
     {
       "at": "2026-10-06T04:18:00Z",
@@ -18,6 +18,12 @@
       "title": "Group Info manager settings shipped",
       "detail": "028f637 aligns admin controls with domain authorization; adb3e6d adds server-backed Meet title/description editing. CI #470 is green; device proof remains open.",
       "at": "2026-10-06T05:18:29.563Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Trip leave release gap reconfirmed",
+      "detail": "Live read-only inspection found migrations 061/062 absent and the older leave_trip function active. No data or production schema was changed; authorized release and device proof remain required.",
+      "at": "2026-10-06T09:16:40.603Z"
     }
   ]
 }
