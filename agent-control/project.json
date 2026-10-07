@@ -5,11 +5,11 @@
   "branch": "agent-dev",
   "head": "05647452d7ec7da2d60449f944606dbcf9314f75",
   "latestCommit": "docs(coordination): gate local-session sign out",
-  "syncedAt": "2026-10-07T16:02:41.517Z",
+  "syncedAt": "2026-10-07T16:04:34.962Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 520,
-    "latestConclusion": null,
+    "latestConclusion": "success",
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -19,11 +19,11 @@
     "history": [
       {
         "number": 520,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): gate local-session sign out",
         "sha": "05647452d7ec7da2d60449f944606dbcf9314f75",
-        "updatedAt": "2026-10-07T16:02:20Z"
+        "updatedAt": "2026-10-07T16:03:49Z"
       },
       {
         "number": 519,
