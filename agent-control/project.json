@@ -3,13 +3,13 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "bb1fe700199281949a3b8fb7063a4c48afa816d3",
-  "latestCommit": "docs(coordination): gate clear chat repair and connected UI",
-  "syncedAt": "2026-10-07T11:04:10.446Z",
+  "head": "5dad9acca6f0cf25805859813449d0f2bbdc0ca3",
+  "latestCommit": "docs(coordination): gate home strip and profile sign out",
+  "syncedAt": "2026-10-07T15:02:04.889Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 515,
-    "latestConclusion": "success",
+    "latestRun": 518,
+    "latestConclusion": null,
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -17,6 +17,30 @@
     },
     "successRate": 100,
     "history": [
+      {
+        "number": 518,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): gate home strip and profile sign out",
+        "sha": "5dad9acca6f0cf25805859813449d0f2bbdc0ca3",
+        "updatedAt": "2026-10-07T15:00:06Z"
+      },
+      {
+        "number": 517,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(profile): restore visible sign out",
+        "sha": "3d3a88a67b37de9311fdc23aa285dca398a66e19",
+        "updatedAt": "2026-10-07T14:22:59Z"
+      },
+      {
+        "number": 516,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(discovery): stabilize category strip layout",
+        "sha": "5e4bc2da9050969581d878d7e8d6c99727b0ecbf",
+        "updatedAt": "2026-10-07T13:35:54Z"
+      },
       {
         "number": 515,
         "status": "completed",
@@ -40,30 +64,6 @@
         "title": "feat(group): connect notification preferences",
         "sha": "dd12a4e995df7fadfa3190da9695f1ef8d361a27",
         "updatedAt": "2026-10-07T10:18:58Z"
-      },
-      {
-        "number": 512,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(chat): restore clear-history RPC write boundary",
-        "sha": "db010e02b38f2b6231a0a9db0ebf4e07882fc450",
-        "updatedAt": "2026-10-07T10:14:06Z"
-      },
-      {
-        "number": 511,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate clear chat and safety readability",
-        "sha": "1fe8fad2ee0888944c2c7c5d4ad6cf99a0112fc2",
-        "updatedAt": "2026-10-07T10:02:28Z"
-      },
-      {
-        "number": 510,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(safety): enforce readable black and white presentation",
-        "sha": "6b4282002bafeca42b6b4289eb40f0769fd35531",
-        "updatedAt": "2026-10-07T09:28:37Z"
       }
     ]
   }
