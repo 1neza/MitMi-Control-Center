@@ -3,13 +3,13 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "05647452d7ec7da2d60449f944606dbcf9314f75",
-  "latestCommit": "docs(coordination): gate local-session sign out",
-  "syncedAt": "2026-10-07T17:02:51.688Z",
+  "head": "7a27a8a1a8761857b9aa246a979d99d268e3b777",
+  "latestCommit": "docs(coordination): gate local match auth coverage",
+  "syncedAt": "2026-10-07T18:03:00.982Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 520,
-    "latestConclusion": "success",
+    "latestRun": 522,
+    "latestConclusion": null,
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -17,6 +17,22 @@
     },
     "successRate": 100,
     "history": [
+      {
+        "number": 522,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): gate local match auth coverage",
+        "sha": "7a27a8a1a8761857b9aa246a979d99d268e3b777",
+        "updatedAt": "2026-10-07T18:02:19Z"
+      },
+      {
+        "number": 521,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(core): gate local match chat authorization",
+        "sha": "9388a2dc8ec13afbd069ae8556a01424fba8eb9c",
+        "updatedAt": "2026-10-07T17:10:02Z"
+      },
       {
         "number": 520,
         "status": "completed",
@@ -48,22 +64,6 @@
         "title": "fix(profile): restore visible sign out",
         "sha": "3d3a88a67b37de9311fdc23aa285dca398a66e19",
         "updatedAt": "2026-10-07T14:22:59Z"
-      },
-      {
-        "number": 516,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(discovery): stabilize category strip layout",
-        "sha": "5e4bc2da9050969581d878d7e8d6c99727b0ecbf",
-        "updatedAt": "2026-10-07T13:35:54Z"
-      },
-      {
-        "number": 515,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate clear chat repair and connected UI",
-        "sha": "bb1fe700199281949a3b8fb7063a4c48afa816d3",
-        "updatedAt": "2026-10-07T11:03:22Z"
       }
     ]
   }
