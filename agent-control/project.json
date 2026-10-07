@@ -5,11 +5,11 @@
   "branch": "agent-dev",
   "head": "7a27a8a1a8761857b9aa246a979d99d268e3b777",
   "latestCommit": "docs(coordination): gate local match auth coverage",
-  "syncedAt": "2026-10-07T18:03:00.982Z",
+  "syncedAt": "2026-10-07T18:04:30.129Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 522,
-    "latestConclusion": null,
+    "latestConclusion": "success",
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -19,11 +19,11 @@
     "history": [
       {
         "number": 522,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): gate local match auth coverage",
         "sha": "7a27a8a1a8761857b9aa246a979d99d268e3b777",
-        "updatedAt": "2026-10-07T18:02:19Z"
+        "updatedAt": "2026-10-07T18:03:56Z"
       },
       {
         "number": 521,
