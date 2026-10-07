@@ -3,10 +3,10 @@
   "name": "MitMi Master",
   "role": "Coordinator",
   "status": "working",
-  "currentTask": "Gate per-member clear chat and Safety readability, preserve exclusive Chat ownership, and coordinate migration/device validation.",
-  "latestReport": "MitMi application head 6b42820 passed CI #510 after 5da80bd passed CI #509. Group Info now offers membership-scoped per-member clear chat without deleting shared messages, and Safety has a black/white readability pass. Both are READY_FOR_QA; migration 067 and physical-device behavior remain unproven. Board head 1fe8fad passed CI #511.",
+  "currentTask": "Gate the clear-history authorization repair, connected Group/Local UI, and remaining migration/device validation while Chat Media retains exclusive Chat ownership.",
+  "latestReport": "MitMi application head 227ed1e passed CI #514. db010e0 repaired the clear-history server write boundary discovered in source review, dd12a4e linked Group Info to existing notification preferences, and 227ed1e fixed Local’s screen surface readability. Board bb1fe70 is running CI #515; migrations 061–067 and device behavior remain unproven.",
   "blocker": null,
-  "updatedAt": "2026-10-07T10:03:19.780Z",
+  "updatedAt": "2026-10-07T11:02:14.318Z",
   "activity": [
     {
       "type": "working",
@@ -109,6 +109,12 @@
       "title": "Clear chat and Safety readability gated",
       "detail": "5da80bd and 6b42820 passed CI #509/#510. Board 1fe8fad records migration 067 and two-account/device gates, passed CI #511, and keeps Chat Media as the exclusive active Chat owner.",
       "at": "2026-10-07T10:02:15.372Z"
+    },
+    {
+      "type": "success",
+      "title": "Clear-chat repair and connected UI gated",
+      "detail": "db010e0, dd12a4e and 227ed1e passed CI #512–#514. The original clear-chat slice is recorded FAILED_QA and superseded by the authorization repair; board bb1fe70 is in CI.",
+      "at": "2026-10-07T11:02:14.318Z"
     }
   ]
 }
