@@ -3,10 +3,10 @@
   "name": "MitMi Master",
   "role": "Coordinator",
   "status": "working",
-  "currentTask": "Gate Home category-strip and Profile sign-out fixes, continue Chat Media, and validate migrations 061–067 plus device behavior.",
-  "latestReport": "Application commits 5e4bc2d and 3d3a88a passed CI #516/#517, stabilizing the Home category strip and restoring visible confirmed Profile sign out. Board 5dad9ac passed CI #518, including authorization regression tests, lint, type check, and Android bundle. Slot 5 remains READY_FOR_QA; migrations 061–067 and device behavior remain unproven.",
+  "currentTask": "Gate current-session-only Profile sign out, continue Chat Media, and validate migrations 061–067 plus device behavior.",
+  "latestReport": "Application head 01e3e2d limits Profile sign out to the current device session and passed CI #519. Board 0564745 records the device/two-session QA gate; CI #520 is running. Three lanes remain ACTIVE and migrations 061–067 remain unapplied/unproven.",
   "blocker": null,
-  "updatedAt": "2026-10-07T15:02:59.957Z",
+  "updatedAt": "2026-10-07T16:02:41.517Z",
   "activity": [
     {
       "type": "working",
@@ -121,6 +121,12 @@
       "title": "Home strip and Profile sign out gated",
       "detail": "5e4bc2d and 3d3a88a passed CI #516/#517. Board 5dad9ac passed CI #518; device proof and migrations 061–067 remain open.",
       "at": "2026-10-07T15:02:59.957Z"
+    },
+    {
+      "type": "working",
+      "title": "Local-session sign out gated",
+      "detail": "01e3e2d passed CI #519. Board 0564745 is in CI #520; local exit, second-device retention and migrations 061–067 remain unproven.",
+      "at": "2026-10-07T16:02:41.517Z"
     }
   ]
 }
