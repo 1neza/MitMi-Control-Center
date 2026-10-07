@@ -5,7 +5,7 @@
   "branch": "agent-dev",
   "head": "05647452d7ec7da2d60449f944606dbcf9314f75",
   "latestCommit": "docs(coordination): gate local-session sign out",
-  "syncedAt": "2026-10-07T16:04:34.962Z",
+  "syncedAt": "2026-10-07T17:02:51.688Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 520,
