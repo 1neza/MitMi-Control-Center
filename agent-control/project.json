@@ -3,13 +3,13 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "feec945b6b7dad9f1c7b3d3bb861d0216563d683",
-  "latestCommit": "docs(coordination): gate profile cleanup and trust readability",
-  "syncedAt": "2026-10-07T09:05:13.062Z",
+  "head": "1fe8fad2ee0888944c2c7c5d4ad6cf99a0112fc2",
+  "latestCommit": "docs(coordination): gate clear chat and safety readability",
+  "syncedAt": "2026-10-07T10:02:34.026Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 508,
-    "latestConclusion": "success",
+    "latestRun": 511,
+    "latestConclusion": null,
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -17,6 +17,30 @@
     },
     "successRate": 100,
     "history": [
+      {
+        "number": 511,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): gate clear chat and safety readability",
+        "sha": "1fe8fad2ee0888944c2c7c5d4ad6cf99a0112fc2",
+        "updatedAt": "2026-10-07T10:00:39Z"
+      },
+      {
+        "number": 510,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(safety): enforce readable black and white presentation",
+        "sha": "6b4282002bafeca42b6b4289eb40f0769fd35531",
+        "updatedAt": "2026-10-07T09:28:37Z"
+      },
+      {
+        "number": 509,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "feat(group): add per-member clear chat",
+        "sha": "5da80bd0511e6912c3e91df7374d7f00eedf90e1",
+        "updatedAt": "2026-10-07T09:20:45Z"
+      },
       {
         "number": 508,
         "status": "completed",
@@ -40,30 +64,6 @@
         "title": "fix(profile): remove duplicate discovery destinations",
         "sha": "8c57ba14442ae5842f632300e92b7e7268294c48",
         "updatedAt": "2026-10-07T05:10:23Z"
-      },
-      {
-        "number": 505,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): rotate delivered profile and trust lanes",
-        "sha": "1eda2acf3d73fce6663098771653d9869e14c036",
-        "updatedAt": "2026-10-07T05:02:17Z"
-      },
-      {
-        "number": 504,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(profile): restore reliable primary photo flow",
-        "sha": "049dac9f38b66ad969fabeb566642da91a32a361",
-        "updatedAt": "2026-10-07T04:25:09Z"
-      },
-      {
-        "number": 503,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "feat(trust): support secure Vibe withdrawal",
-        "sha": "496db6f487f8d9f3e8d46d832fbbee2d873cdacb",
-        "updatedAt": "2026-10-07T04:20:21Z"
       }
     ]
   }
