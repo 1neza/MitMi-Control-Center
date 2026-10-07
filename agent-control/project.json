@@ -5,11 +5,11 @@
   "branch": "agent-dev",
   "head": "feec945b6b7dad9f1c7b3d3bb861d0216563d683",
   "latestCommit": "docs(coordination): gate profile cleanup and trust readability",
-  "syncedAt": "2026-10-07T06:00:13.035Z",
+  "syncedAt": "2026-10-07T06:01:40.311Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 508,
-    "latestConclusion": null,
+    "latestConclusion": "success",
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -19,11 +19,11 @@
     "history": [
       {
         "number": 508,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): gate profile cleanup and trust readability",
         "sha": "feec945b6b7dad9f1c7b3d3bb861d0216563d683",
-        "updatedAt": "2026-10-07T05:59:12Z"
+        "updatedAt": "2026-10-07T06:00:54Z"
       },
       {
         "number": 507,
