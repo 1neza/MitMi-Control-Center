@@ -5,11 +5,11 @@
   "branch": "agent-dev",
   "head": "5dad9acca6f0cf25805859813449d0f2bbdc0ca3",
   "latestCommit": "docs(coordination): gate home strip and profile sign out",
-  "syncedAt": "2026-10-07T15:02:04.889Z",
+  "syncedAt": "2026-10-07T15:02:59.957Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 518,
-    "latestConclusion": null,
+    "latestConclusion": "success",
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -19,11 +19,11 @@
     "history": [
       {
         "number": 518,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): gate home strip and profile sign out",
         "sha": "5dad9acca6f0cf25805859813449d0f2bbdc0ca3",
-        "updatedAt": "2026-10-07T15:00:06Z"
+        "updatedAt": "2026-10-07T15:02:07Z"
       },
       {
         "number": 517,
