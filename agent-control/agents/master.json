@@ -4,9 +4,9 @@
   "role": "Coordinator",
   "status": "working",
   "currentTask": "Gate current-session-only Profile sign out, continue Chat Media, and validate migrations 061–067 plus device behavior.",
-  "latestReport": "Application head 01e3e2d limits Profile sign out to the current device session and passed CI #519. Board 0564745 records the device/two-session QA gate; CI #520 is running. Three lanes remain ACTIVE and migrations 061–067 remain unapplied/unproven.",
+  "latestReport": "Application head 01e3e2d limits Profile sign out to the current device session and passed CI #519. Board 0564745 passed CI #520, including authorization regression tests, lint, type check and Android bundle. Three lanes remain ACTIVE; local exit, second-device retention, migrations 061–067 and device behavior remain unproven.",
   "blocker": null,
-  "updatedAt": "2026-10-07T16:02:41.517Z",
+  "updatedAt": "2026-10-07T16:04:34.962Z",
   "activity": [
     {
       "type": "working",
@@ -123,10 +123,10 @@
       "at": "2026-10-07T15:02:59.957Z"
     },
     {
-      "type": "working",
+      "type": "success",
       "title": "Local-session sign out gated",
-      "detail": "01e3e2d passed CI #519. Board 0564745 is in CI #520; local exit, second-device retention and migrations 061–067 remain unproven.",
-      "at": "2026-10-07T16:02:41.517Z"
+      "detail": "01e3e2d passed CI #519 and board 0564745 passed CI #520. Local exit, second-device retention and migrations 061–067 remain unproven.",
+      "at": "2026-10-07T16:04:34.962Z"
     }
   ]
 }
