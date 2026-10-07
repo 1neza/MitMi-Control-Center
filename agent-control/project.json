@@ -5,11 +5,11 @@
   "branch": "agent-dev",
   "head": "bb1fe700199281949a3b8fb7063a4c48afa816d3",
   "latestCommit": "docs(coordination): gate clear chat repair and connected UI",
-  "syncedAt": "2026-10-07T11:02:31.776Z",
+  "syncedAt": "2026-10-07T11:04:10.446Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 515,
-    "latestConclusion": null,
+    "latestConclusion": "success",
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -19,11 +19,11 @@
     "history": [
       {
         "number": 515,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): gate clear chat repair and connected UI",
         "sha": "bb1fe700199281949a3b8fb7063a4c48afa816d3",
-        "updatedAt": "2026-10-07T11:01:49Z"
+        "updatedAt": "2026-10-07T11:03:22Z"
       },
       {
         "number": 514,
