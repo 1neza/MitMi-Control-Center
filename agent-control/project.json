@@ -3,13 +3,13 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "5dad9acca6f0cf25805859813449d0f2bbdc0ca3",
-  "latestCommit": "docs(coordination): gate home strip and profile sign out",
-  "syncedAt": "2026-10-07T15:02:59.957Z",
+  "head": "05647452d7ec7da2d60449f944606dbcf9314f75",
+  "latestCommit": "docs(coordination): gate local-session sign out",
+  "syncedAt": "2026-10-07T16:02:41.517Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 518,
-    "latestConclusion": "success",
+    "latestRun": 520,
+    "latestConclusion": null,
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -17,6 +17,22 @@
     },
     "successRate": 100,
     "history": [
+      {
+        "number": 520,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): gate local-session sign out",
+        "sha": "05647452d7ec7da2d60449f944606dbcf9314f75",
+        "updatedAt": "2026-10-07T16:02:20Z"
+      },
+      {
+        "number": 519,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(auth): limit profile sign out to current session",
+        "sha": "01e3e2df9985c14a0bb3c3da6bdf2907a68bf79d",
+        "updatedAt": "2026-10-07T15:21:49Z"
+      },
       {
         "number": 518,
         "status": "completed",
@@ -48,22 +64,6 @@
         "title": "docs(coordination): gate clear chat repair and connected UI",
         "sha": "bb1fe700199281949a3b8fb7063a4c48afa816d3",
         "updatedAt": "2026-10-07T11:03:22Z"
-      },
-      {
-        "number": 514,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(local): enforce readable screen surface",
-        "sha": "227ed1ef1119e8ea3c4a80f2d95bc3403a8c8ffa",
-        "updatedAt": "2026-10-07T10:26:45Z"
-      },
-      {
-        "number": 513,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "feat(group): connect notification preferences",
-        "sha": "dd12a4e995df7fadfa3190da9695f1ef8d361a27",
-        "updatedAt": "2026-10-07T10:18:58Z"
       }
     ]
   }
