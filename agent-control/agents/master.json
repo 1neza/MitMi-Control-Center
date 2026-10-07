@@ -4,9 +4,9 @@
   "role": "Coordinator",
   "status": "working",
   "currentTask": "Gate Local Match chat authorization coverage, continue Chat Media, and validate migrations 061–067 plus device behavior.",
-  "latestReport": "Application head 9388a2d adds static authorization regression gates for Local Match chat and passed CI #521. Board 7a27a8a records the static-only/device distinction; CI #522 is running. Three lanes remain ACTIVE and migrations 061–067 remain unapplied/unproven.",
+  "latestReport": "Application head 9388a2d adds static authorization regression gates for Local Match chat and passed CI #521. Board 7a27a8a passed CI #522, including authorization tests, lint, type check and Android bundle. Three lanes remain ACTIVE; Local Match device behavior and migrations 061–067 remain unproven.",
   "blocker": null,
-  "updatedAt": "2026-10-07T18:03:00.982Z",
+  "updatedAt": "2026-10-07T18:04:30.129Z",
   "activity": [
     {
       "type": "working",
@@ -135,10 +135,10 @@
       "at": "2026-10-07T17:02:51.688Z"
     },
     {
-      "type": "working",
+      "type": "success",
       "title": "Local Match chat authorization gated",
-      "detail": "9388a2d passed CI #521. Board 7a27a8a is in CI #522; accepted-match opening, block sync and two-account behavior remain device-only proof.",
-      "at": "2026-10-07T18:03:00.982Z"
+      "detail": "9388a2d passed CI #521 and board 7a27a8a passed CI #522. Accepted-match opening, block sync and two-account behavior remain device-only proof.",
+      "at": "2026-10-07T18:04:30.129Z"
     }
   ]
 }
