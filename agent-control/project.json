@@ -3,67 +3,67 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "857448a01c05f8a91ac3eb219f9e911518a053f8",
-  "latestCommit": "feat(local-match): show relationship actions in discovery",
-  "syncedAt": "2026-10-05T18:00:39.916Z",
-  "milestone": "MitMi 2.0 UX Transition — Phase 1 Functional Foundation",
+  "head": "feec945b6b7dad9f1c7b3d3bb861d0216563d683",
+  "latestCommit": "docs(coordination): gate profile cleanup and trust readability",
+  "syncedAt": "2026-10-07T06:00:13.035Z",
+  "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 452,
-    "latestConclusion": "success",
+    "latestRun": 508,
+    "latestConclusion": null,
     "latestFailure": {
-      "number": 449,
-      "title": "feat(local-match): use device area for discovery",
-      "summary": "Lint treated the useCurrentArea event handler as a React Hook; repaired immediately in 5ae2f61a and CI #450 passed."
+      "number": 494,
+      "title": "fix(navigation): keep stack routes outside native tabs",
+      "summary": "The moved Travel screen retained a broken relative service import; repaired in 91c82fa and CI #495 passed."
     },
-    "successRate": 90,
+    "successRate": 100,
     "history": [
       {
-        "number": 452,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "feat(local-match): show relationship actions in discovery",
-        "sha": "857448a01c05f8a91ac3eb219f9e911518a053f8",
-        "updatedAt": "2026-10-05T18:00:39.916Z"
+        "number": 508,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): gate profile cleanup and trust readability",
+        "sha": "feec945b6b7dad9f1c7b3d3bb861d0216563d683",
+        "updatedAt": "2026-10-07T05:59:12Z"
       },
       {
-        "number": 451,
+        "number": 507,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(local-match): persist active area updates",
-        "sha": "c693d63d58f688bdccce1e4aa2eeb96b27cb0ba4",
-        "updatedAt": "2026-10-05T17:55:00Z"
+        "title": "fix(trust): enforce readable black and white presentation",
+        "sha": "f2ade3f828f7bc2e04894d4927390191a43ab08f",
+        "updatedAt": "2026-10-07T05:19:52Z"
       },
       {
-        "number": 450,
+        "number": 506,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(local-match): name area event handler safely",
-        "sha": "5ae2f61a8592ce204966926262fe9ece9ac1a5f5",
-        "updatedAt": "2026-10-05T17:40:00Z"
+        "title": "fix(profile): remove duplicate discovery destinations",
+        "sha": "8c57ba14442ae5842f632300e92b7e7268294c48",
+        "updatedAt": "2026-10-07T05:10:23Z"
       },
       {
-        "number": 449,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "feat(local-match): use device area for discovery",
-        "sha": "d83ea304fd84e4a0fcc389746f9c50cc2b4a7a6c",
-        "updatedAt": "2026-10-05T17:38:00Z"
-      },
-      {
-        "number": 448,
+        "number": 505,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(trust): create verification links for current runtime",
-        "sha": "027745a39b688b578e3fdf504e41b07277487258",
-        "updatedAt": "2026-10-05T17:27:00Z"
+        "title": "docs(coordination): rotate delivered profile and trust lanes",
+        "sha": "1eda2acf3d73fce6663098771653d9869e14c036",
+        "updatedAt": "2026-10-07T05:02:17Z"
       },
       {
-        "number": 447,
+        "number": 504,
         "status": "completed",
         "conclusion": "success",
-        "title": "test(chat): cover group membership synchronization",
-        "sha": "6f61b8b524dcc980806ea09f4bca8bb5ebfe76e5",
-        "updatedAt": "2026-10-05T17:15:00Z"
+        "title": "fix(profile): restore reliable primary photo flow",
+        "sha": "049dac9f38b66ad969fabeb566642da91a32a361",
+        "updatedAt": "2026-10-07T04:25:09Z"
+      },
+      {
+        "number": 503,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "feat(trust): support secure Vibe withdrawal",
+        "sha": "496db6f487f8d9f3e8d46d832fbbee2d873cdacb",
+        "updatedAt": "2026-10-07T04:20:21Z"
       }
     ]
   }
