@@ -5,7 +5,7 @@
   "branch": "agent-dev",
   "head": "feec945b6b7dad9f1c7b3d3bb861d0216563d683",
   "latestCommit": "docs(coordination): gate profile cleanup and trust readability",
-  "syncedAt": "2026-10-07T06:01:40.311Z",
+  "syncedAt": "2026-10-07T09:05:13.062Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 508,
