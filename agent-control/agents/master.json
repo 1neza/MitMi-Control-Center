@@ -3,10 +3,10 @@
   "name": "MitMi Master",
   "role": "Coordinator",
   "status": "working",
-  "currentTask": "Gate the clear-history authorization repair, connected Group/Local UI, and remaining migration/device validation while Chat Media retains exclusive Chat ownership.",
-  "latestReport": "MitMi application head 227ed1e passed CI #514. db010e0 repaired the clear-history server write boundary discovered in source review, dd12a4e linked Group Info to existing notification preferences, and 227ed1e fixed Local’s screen surface readability. Board bb1fe70 passed CI #515; migrations 061–067 and device behavior remain unproven.",
+  "currentTask": "Gate Home category-strip and Profile sign-out fixes, continue Chat Media, and validate migrations 061–067 plus device behavior.",
+  "latestReport": "Application commits 5e4bc2d and 3d3a88a passed CI #516/#517, stabilizing the Home category strip and restoring visible confirmed Profile sign out. Board 5dad9ac records Slot 5 READY_FOR_QA; CI #518 is running Android bundle after authorization tests, lint, and type check passed. Migrations 061–067 and device behavior remain unproven.",
   "blocker": null,
-  "updatedAt": "2026-10-07T11:03:57.953Z",
+  "updatedAt": "2026-10-07T15:02:04.889Z",
   "activity": [
     {
       "type": "working",
@@ -115,6 +115,12 @@
       "title": "Clear-chat repair and connected UI gated",
       "detail": "db010e0, dd12a4e and 227ed1e passed CI #512–#514. The original clear-chat slice is FAILED_QA and superseded by the authorization repair; board bb1fe70 passed CI #515.",
       "at": "2026-10-07T11:02:14.318Z"
+    },
+    {
+      "type": "working",
+      "title": "Home strip and Profile sign out gated",
+      "detail": "5e4bc2d and 3d3a88a passed CI #516/#517. Board 5dad9ac is in CI #518 with Android bundle running; device proof and migrations 061–067 remain open.",
+      "at": "2026-10-07T15:02:04.889Z"
     }
   ]
 }
