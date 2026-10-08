@@ -2,11 +2,11 @@
   "id": "master",
   "name": "MitMi Master",
   "role": "Coordinator",
-  "status": "working",
-  "currentTask": "Await physical-test evidence while keeping Local Match, Chat Media and migration-dependent gates truthfully open.",
-  "latestReport": "agent-dev remains 7a27a8a. A duplicate push-triggered exact-head CI #523 also passed; no new code, command issue, device result or ownership change was found. Physical testing is pending and migrations 061–067 remain unapplied/unproven.",
+  "status": "idle",
+  "currentTask": "Paused by explicit user instruction; resume only on request.",
+  "latestReport": "All five MitMi automation slots are disabled. agent-dev board commit 792fb396 marks every logical lane RESTING while preserving unresolved migration, QA and device gates. No feature code was changed.",
   "blocker": null,
-  "updatedAt": "2026-10-07T19:01:53.012Z",
+  "updatedAt": "2026-10-08T14:03:54.638Z",
   "activity": [
     {
       "type": "working",
@@ -145,6 +145,12 @@
       "title": "Physical-test evidence pending",
       "detail": "agent-dev remains 7a27a8a; duplicate exact-head CI #523 passed. No device result or new implementation landed, so DEVICE_VERIFY gates remain open.",
       "at": "2026-10-07T19:01:53.012Z"
+    },
+    {
+      "type": "idle",
+      "title": "All MitMi agent lanes paused",
+      "detail": "Explicit user pause enforced: Slots 1–5 automations disabled; board 792fb396 records 0 ACTIVE lanes without closing unfinished gates.",
+      "at": "2026-10-08T14:03:54.638Z"
     }
   ]
 }
