@@ -3,13 +3,13 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "7a27a8a1a8761857b9aa246a979d99d268e3b777",
-  "latestCommit": "docs(coordination): gate local match auth coverage",
-  "syncedAt": "2026-10-07T19:01:53.012Z",
+  "head": "792fb39603910c0fa15d00206b08f03762bb54bf",
+  "latestCommit": "docs(coordination): pause all MitMi agent lanes",
+  "syncedAt": "2026-10-08T14:03:54.638Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 523,
-    "latestConclusion": "success",
+    "latestRun": 524,
+    "latestConclusion": "queued",
     "latestFailure": {
       "number": 494,
       "title": "fix(navigation): keep stack routes outside native tabs",
@@ -17,6 +17,14 @@
     },
     "successRate": 100,
     "history": [
+      {
+        "number": 524,
+        "status": "queued",
+        "conclusion": null,
+        "title": "docs(coordination): pause all MitMi agent lanes",
+        "sha": "792fb39603910c0fa15d00206b08f03762bb54bf",
+        "updatedAt": "2026-10-08T14:03:41Z"
+      },
       {
         "number": 523,
         "status": "completed",
@@ -56,14 +64,6 @@
         "title": "fix(auth): limit profile sign out to current session",
         "sha": "01e3e2df9985c14a0bb3c3da6bdf2907a68bf79d",
         "updatedAt": "2026-10-07T15:21:49Z"
-      },
-      {
-        "number": 518,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate home strip and profile sign out",
-        "sha": "5dad9acca6f0cf25805859813449d0f2bbdc0ca3",
-        "updatedAt": "2026-10-07T15:02:07Z"
       }
     ]
   }
