@@ -3,20 +3,36 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "792fb39603910c0fa15d00206b08f03762bb54bf",
-  "latestCommit": "docs(coordination): pause all MitMi agent lanes",
-  "syncedAt": "2026-10-08T14:05:41.101Z",
+  "head": "aeb452531e1be2f0926390a3d25af333956a2a47",
+  "latestCommit": "docs(coordination): resume lanes after migration deployment",
+  "syncedAt": "2026-10-10T19:01:59.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 524,
-    "latestConclusion": "success",
+    "latestRun": 526,
+    "latestConclusion": "failure",
     "latestFailure": {
-      "number": 494,
-      "title": "fix(navigation): keep stack routes outside native tabs",
-      "summary": "The moved Travel screen retained a broken relative service import; repaired in 91c82fa and CI #495 passed."
+      "number": 526,
+      "title": "docs(coordination): resume lanes after migration deployment",
+      "summary": "Authorization regression tests fail because scripts/check-domain-auth-contracts.cjs still hardcodes removed short migration path 067_clear_chat_history.sql after timestamp normalization; QA owns repair."
     },
     "successRate": 100,
     "history": [
+      {
+        "number": 526,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "docs(coordination): resume lanes after migration deployment",
+        "sha": "aeb452531e1be2f0926390a3d25af333956a2a47",
+        "updatedAt": "2026-10-10T19:01:27Z"
+      },
+      {
+        "number": 525,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "fix: align Supabase migration history and apply pending backend fixes",
+        "sha": "e299e93207fd08ec288367a19ecf04e28b6ae5b9",
+        "updatedAt": "2026-10-10T16:27:53Z"
+      },
       {
         "number": 524,
         "status": "completed",
@@ -48,22 +64,6 @@
         "title": "test(core): gate local match chat authorization",
         "sha": "9388a2dc8ec13afbd069ae8556a01424fba8eb9c",
         "updatedAt": "2026-10-07T17:10:02Z"
-      },
-      {
-        "number": 520,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate local-session sign out",
-        "sha": "05647452d7ec7da2d60449f944606dbcf9314f75",
-        "updatedAt": "2026-10-07T16:03:49Z"
-      },
-      {
-        "number": 519,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(auth): limit profile sign out to current session",
-        "sha": "01e3e2df9985c14a0bb3c3da6bdf2907a68bf79d",
-        "updatedAt": "2026-10-07T15:21:49Z"
       }
     ]
   }
