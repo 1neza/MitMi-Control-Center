@@ -2,11 +2,11 @@
   "id": "master",
   "name": "MitMi Master",
   "role": "Coordinator",
-  "status": "idle",
-  "currentTask": "Paused by explicit user instruction; resume only on request.",
-  "latestReport": "All five MitMi automation slots are disabled. agent-dev board commit 792fb396 marks every logical lane RESTING while preserving unresolved migration, QA and device gates; exact-head CI #524 passed. No feature code was changed.",
-  "blocker": null,
-  "updatedAt": "2026-10-08T14:05:41.101Z",
+  "status": "working",
+  "currentTask": "Coordinate five active lanes; QA owns the timestamped-migration test-path repair blocking CI.",
+  "latestReport": "agent-dev is aeb45253. Six backend migrations are deployed and committed with normalized history. CI #526 failed at npm test because the authorization script still opens removed 067_clear_chat_history.sql; QA owns the narrow repair. Runtime behavior remains device verification.",
+  "blocker": "CI authorization test hardcodes removed migration path supabase/migrations/067_clear_chat_history.sql after timestamp normalization.",
+  "updatedAt": "2026-10-10T19:01:59.000Z",
   "activity": [
     {
       "type": "working",
@@ -151,6 +151,12 @@
       "title": "All MitMi agent lanes paused",
       "detail": "Explicit user pause enforced: Slots 1–5 automations disabled; board 792fb396 records 0 ACTIVE lanes, preserves unfinished gates, and passed exact-head CI #524.",
       "at": "2026-10-08T14:03:54.638Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Lanes resumed; CI path repair assigned",
+      "detail": "Five slots active. Board aeb45253 records deployed migrations and assigns CI #525/#526 ENOENT repair exclusively to QA; device gates stay open.",
+      "at": "2026-10-10T19:01:59.000Z"
     }
   ]
 }
