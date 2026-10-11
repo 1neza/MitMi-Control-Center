@@ -1,12 +1,12 @@
 {
   "id": "chat-ui",
   "name": "Chat UI Engineer",
-  "role": "Chat list and conversation presentation",
-  "status": "idle",
-  "currentTask": "CHAT-COMPOSER-01 remains READY_FOR_QA; Chat UI and Chat Media are resting until QA classifies the shared Chat delivery.",
-  "latestReport": "No app code changed or pushed. Exact agent-dev head 0e52781d leaves Chat files unchanged; quick emoji 546cc10 and Chat UI fca9cc2/6d62e72 still await QA/device evidence.",
-  "blocker": "QA classification and physical Android/iOS composer, keyboard, send and two-account realtime evidence are required before stacking another shared-screen media capability.",
-  "updatedAt": "2026-10-06T11:07:19.100Z",
+  "role": "Chat UI / Chat Media",
+  "status": "success",
+  "currentTask": "CHAT-MEDIA-02 delivered private file attachment picking, upload, message rendering and signed-link opening.",
+  "latestReport": "DEVICE_VERIFY at agent-dev 1f2f1e88. The compact + now offers working Photo and File actions; PDF, TXT, DOC and DOCX files up to 10 MB use the existing member-authorized private storage/RPC contract. CI #538 passed authorization tests, lint, TypeScript and Android Expo export.",
+  "blocker": "Physical Android/iOS picker, upload, recipient open, failure recovery and two-account authorization behavior remain DEVICE_VERIFY.",
+  "updatedAt": "2026-10-11T04:14:30Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -27,6 +27,11 @@
       "at": "2026-10-06T11:07:19.100Z",
       "status": "idle",
       "summary": "Confirmed the shared Chat delivery remains READY_FOR_QA at head 0e52781d; no overlapping media change started."
+    },
+    {
+      "at": "2026-10-11T04:14:30Z",
+      "status": "success",
+      "summary": "Delivered private PDF/TXT/DOC/DOCX attachments at 1f2f1e88; CI #538 passed all repository gates."
     }
   ]
 }
