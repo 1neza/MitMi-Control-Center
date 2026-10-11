@@ -3,10 +3,10 @@
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
   "status": "success",
-  "currentTask": "CHAT-MEDIA-02 delivered private file attachment picking, upload, message rendering and signed-link opening.",
-  "latestReport": "DEVICE_VERIFY at agent-dev 1f2f1e88. The compact + now offers working Photo and File actions; PDF, TXT, DOC and DOCX files up to 10 MB use the existing member-authorized private storage/RPC contract. CI #538 passed authorization tests, lint, TypeScript and Android Expo export.",
-  "blocker": "Physical Android/iOS picker, upload, recipient open, failure recovery and two-account authorization behavior remain DEVICE_VERIFY.",
-  "updatedAt": "2026-10-11T04:14:30Z",
+  "currentTask": "CHAT-UI-03 fixed newest-message following so incoming realtime messages do not interrupt readers browsing older history.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev head 8fdc89c2. Initial load and successful own sends still follow the newest message; incoming realtime messages auto-follow only when the reader is already near the bottom. CI #540 passed npm test, lint, TypeScript and Android Expo export.",
+  "blocker": "Physical Android/iOS two-account testing remains required for initial newest-message position, upward-scroll preservation, own send following, incoming realtime following near the bottom, and text/photo/file behavior.",
+  "updatedAt": "2026-10-11T05:16:00Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -32,6 +32,11 @@
       "at": "2026-10-11T04:14:30Z",
       "status": "success",
       "summary": "Delivered private PDF/TXT/DOC/DOCX attachments at 1f2f1e88; CI #538 passed all repository gates."
+    },
+    {
+      "at": "2026-10-11T05:16:00Z",
+      "status": "success",
+      "summary": "Fixed realtime newest-message following at 8fdc89c2 so readers browsing history are not forced to the bottom; CI #540 passed all repository gates."
     }
   ]
 }
