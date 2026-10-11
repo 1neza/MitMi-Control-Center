@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "success",
-  "currentTask": "QA-GATE-01: exact-head validation passed; physical Chat row, route, realtime and media behavior remain DEVICE_VERIFY.",
-  "latestReport": "DEVICE_VERIFY at exact agent-dev head 1e4ca068. CI #537 passed authorization regression tests, lint, TypeScript and Android Expo export. The head is a coordination-only backlog update after selectable Chat UI commit fb68bc66; no application code was changed or pushed by QA.",
-  "blocker": "Physical two-account verification is still required for Chat row selection, conversation routing, newest-message position, realtime receipt and private attachment behavior.",
-  "updatedAt": "2026-10-11T04:01:06Z",
+  "currentTask": "QA-GATE-01: private file attachments passed static/security validation; physical picker, signed-link and two-account behavior remain DEVICE_VERIFY.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev head 1d4a1d18. Application commit 1f2f1e88 passed security review and CI #538; coordination-only head 1d4a1d18 passed exact-head CI #539. npm test, lint, TypeScript and Android Expo export are green. No application code was changed or pushed by QA.",
+  "blocker": "Physical Android/iOS verification is required for document picker/cache reads, PDF/TXT/DOC/DOCX upload and opening, signed-link expiry/failure recovery, keyboard layout, and two-account attachment access after membership removal.",
+  "updatedAt": "2026-10-11T05:07:00Z",
   "activity": [
     {
       "type": "working",
@@ -72,6 +72,12 @@
       "title": "Exact-head QA gate passed",
       "detail": "agent-dev 1e4ca068 passed CI #537 across auth tests, lint, TypeScript and Android export; Chat behavior remains DEVICE_VERIFY.",
       "at": "2026-10-11T04:01:06Z"
+    },
+    {
+      "type": "success",
+      "title": "Private file attachments passed static QA",
+      "detail": "Reviewed 1f2f1e88 and exact head 1d4a1d18; CI #538/#539 passed npm test, lint, TypeScript and Android export. Physical and two-account behavior remains DEVICE_VERIFY.",
+      "at": "2026-10-11T05:07:00Z"
     }
   ]
 }
