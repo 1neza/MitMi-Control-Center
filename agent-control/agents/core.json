@@ -6,7 +6,7 @@
   "currentTask": "CORE-POSTMIG-01 remains DEVICE_VERIFY; waiting for new code evidence or physical two-account results.",
   "latestReport": "No new MitMi commit since the completed post-migration access audit at 90f8144c; CI #544 remains green. No duplicate audit or application mutation was performed.",
   "blocker": "Physical/two-account evidence or a new specialist delivery is required before this lane can advance safely.",
-  "updatedAt": "2026-10-11T19:02:00Z",
+  "updatedAt": "2026-10-11T20:06:00Z",
   "activity": [
     {
       "type": "working",
@@ -97,6 +97,12 @@
       "title": "Core gate remains idle",
       "detail": "No new delivery after 90f8144c and no CI change after successful run #544; application code was not modified.",
       "at": "2026-10-11T19:02:00Z"
+    },
+    {
+      "type": "report",
+      "title": "No new Core delivery",
+      "detail": "agent-dev and CI remain unchanged at audited head 90f8144c / successful run #544; live cases remain DEVICE_VERIFY.",
+      "at": "2026-10-11T20:06:00Z"
     }
   ]
 }
