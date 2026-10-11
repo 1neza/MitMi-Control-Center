@@ -3,67 +3,63 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "aeb452531e1be2f0926390a3d25af333956a2a47",
-  "latestCommit": "docs(coordination): resume lanes after migration deployment",
-  "syncedAt": "2026-10-10T19:01:59.000Z",
+  "head": "90f8144cc71b0a19680f419a524630864cc8e2c1",
+  "latestCommit": "docs(coordination): gate camera attachments",
+  "syncedAt": "2026-10-11T20:00:19.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 526,
-    "latestConclusion": "failure",
-    "latestFailure": {
-      "number": 526,
-      "title": "docs(coordination): resume lanes after migration deployment",
-      "summary": "Authorization regression tests fail because scripts/check-domain-auth-contracts.cjs still hardcodes removed short migration path 067_clear_chat_history.sql after timestamp normalization; QA owns repair."
-    },
+    "latestRun": 544,
+    "latestConclusion": "success",
+    "latestFailure": null,
     "successRate": 100,
     "history": [
       {
-        "number": 526,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "docs(coordination): resume lanes after migration deployment",
-        "sha": "aeb452531e1be2f0926390a3d25af333956a2a47",
-        "updatedAt": "2026-10-10T19:01:27Z"
-      },
-      {
-        "number": 525,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "fix: align Supabase migration history and apply pending backend fixes",
-        "sha": "e299e93207fd08ec288367a19ecf04e28b6ae5b9",
-        "updatedAt": "2026-10-10T16:27:53Z"
-      },
-      {
-        "number": 524,
+        "number": 544,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): pause all MitMi agent lanes",
-        "sha": "792fb39603910c0fa15d00206b08f03762bb54bf",
-        "updatedAt": "2026-10-08T14:05:25Z"
+        "title": "docs(coordination): gate camera attachments",
+        "sha": "90f8144cc71b0a19680f419a524630864cc8e2c1",
+        "updatedAt": "2026-10-11T10:05:34Z"
       },
       {
-        "number": 523,
+        "number": 543,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): gate local match auth coverage",
-        "sha": "7a27a8a1a8761857b9aa246a979d99d268e3b777",
-        "updatedAt": "2026-10-07T18:04:45Z"
+        "title": "feat(chat): add camera attachments",
+        "sha": "1d067d81ecffaafbda7fe008dcdc108c81e14144",
+        "updatedAt": "2026-10-11T09:13:57Z"
       },
       {
-        "number": 522,
+        "number": 542,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): gate local match auth coverage",
-        "sha": "7a27a8a1a8761857b9aa246a979d99d268e3b777",
-        "updatedAt": "2026-10-07T18:03:56Z"
+        "title": "docs(coordination): gate chat follow and shared media",
+        "sha": "361ec29cdff4f80aa9ddb9b72b31968fbf5f1f55",
+        "updatedAt": "2026-10-11T06:00:08Z"
       },
       {
-        "number": 521,
+        "number": 541,
         "status": "completed",
         "conclusion": "success",
-        "title": "test(core): gate local match chat authorization",
-        "sha": "9388a2dc8ec13afbd069ae8556a01424fba8eb9c",
-        "updatedAt": "2026-10-07T17:10:02Z"
+        "title": "feat(groups): show shared media in group info",
+        "sha": "e40cd5f14d1f24c6e873c2955ffcf7ee8b6e897e",
+        "updatedAt": "2026-10-11T05:20:12Z"
+      },
+      {
+        "number": 540,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(chat): respect readers browsing history",
+        "sha": "8fdc89c22515b75914c965c61b000a749ca9ce7e",
+        "updatedAt": "2026-10-11T05:15:49Z"
+      },
+      {
+        "number": 539,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): gate private file sharing",
+        "sha": "1d4a1d18a7f79e365ef80d551b7064e1a6efdc87",
+        "updatedAt": "2026-10-11T05:06:54Z"
       }
     ]
   }
