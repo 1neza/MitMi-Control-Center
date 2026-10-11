@@ -3,10 +3,10 @@
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
   "status": "success",
-  "currentTask": "CHAT-UI-03 fixed newest-message following so incoming realtime messages do not interrupt readers browsing older history.",
-  "latestReport": "DEVICE_VERIFY at exact agent-dev head 8fdc89c2. Initial load and successful own sends still follow the newest message; incoming realtime messages auto-follow only when the reader is already near the bottom. CI #540 passed npm test, lint, TypeScript and Android Expo export.",
-  "blocker": "Physical Android/iOS two-account testing remains required for initial newest-message position, upward-scroll preservation, own send following, incoming realtime following near the bottom, and text/photo/file behavior.",
-  "updatedAt": "2026-10-11T05:16:00Z",
+  "currentTask": "CHAT-MEDIA-03 added a working Camera action to the compact attachment menu using the existing private image path.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev commit 1d067d81. Camera permission denial is surfaced, captured photos use the existing private attachment upload/RPC path, and CI #543 passed authorization tests, lint, TypeScript and Android Expo export.",
+  "blocker": "Physical Android/iOS testing remains required for camera permission grant/deny, capture/cancel, private upload, and two-account signed-URL rendering.",
+  "updatedAt": "2026-10-11T09:14:00Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -37,6 +37,11 @@
       "at": "2026-10-11T05:16:00Z",
       "status": "success",
       "summary": "Fixed realtime newest-message following at 8fdc89c2 so readers browsing history are not forced to the bottom; CI #540 passed all repository gates."
+    },
+    {
+      "at": "2026-10-11T09:14:00Z",
+      "status": "success",
+      "summary": "Delivered compact camera attachments at 1d067d81 through the private image path; CI #543 passed all repository gates."
     }
   ]
 }
