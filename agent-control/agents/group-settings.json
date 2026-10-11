@@ -2,11 +2,11 @@
   "id": "group-settings",
   "name": "Group Settings Engineer",
   "role": "Meet and Trip group info presentation and safe member controls",
-  "status": "blocked",
-  "currentTask": "TRIP-LEAVE-01 live release gate after Group Info moved to READY_FOR_QA.",
-  "latestReport": "No app code pushed. Live read-only verification shows migration 062 and migration 061 triggers are not deployed. The active leave_trip RPC performs member status/chat cleanup but lacks the repository repair's explicit creator guard; two current Trip creator membership rows make that guard materially necessary. Aggregate consistency currently shows zero accepted members missing chat access and zero inactive members retaining it.",
-  "blocker": "Authorized deployment of repository migrations 061/062 is required, followed by physical-device non-creator leave/rejoin and creator-safety verification. Production was not changed.",
-  "updatedAt": "2026-10-06T09:16:40.603Z",
+  "status": "success",
+  "currentTask": "GROUP-CONTROLS-03 delivered real shared media and file visibility inside the existing Group Info screen.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev head e40cd5f1. Group Info now lists photos and files from the member's visible chat history and opens them only through existing private signed URLs. CI #541 passed npm test, lint, TypeScript and Android Expo export.",
+  "blocker": "Physical Android/iOS and two-account verification remains required for media visibility, authorized opening, cleared-history isolation, membership removal access loss, expired-link behavior and empty/error states.",
+  "updatedAt": "2026-10-11T05:20:00Z",
   "activity": [
     {
       "at": "2026-10-06T04:18:00Z",
@@ -24,6 +24,12 @@
       "title": "Trip leave release gap reconfirmed",
       "detail": "Live read-only inspection found migrations 061/062 absent and the older leave_trip function active. No data or production schema was changed; authorized release and device proof remain required.",
       "at": "2026-10-06T09:16:40.603Z"
+    },
+    {
+      "type": "success",
+      "title": "Group media visibility shipped",
+      "detail": "Group Info now shows authorized photos/files from visible chat history at e40cd5f1; CI #541 passed all repository gates. Device and two-account proof remain open.",
+      "at": "2026-10-11T05:20:00Z"
     }
   ]
 }
