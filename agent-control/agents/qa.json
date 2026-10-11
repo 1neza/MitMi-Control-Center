@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "success",
-  "currentTask": "QA-GATE-01: Profile hub cover display passed static QA; live migration and physical device verification remain.",
-  "latestReport": "DEVICE_VERIFY at exact agent-dev head 891233ad. Reviewed e2a75f7b: the Profile hub consumes the persisted cover_url from the existing profile service, uses cover scaling, and retains the decorative fallback when no cover is present. CI #481 and exact-head CI #482 passed authorization tests, lint, TypeScript and Android Expo export. No QA app code was pushed.",
-  "blocker": "Migration 064 remains repository-only and requires an authorized live Supabase apply. Physical Android/iOS verification is required for cover upload, Profile return-refresh, rendered crop/layout, replacement, removal and fallback behavior.",
-  "updatedAt": "2026-10-06T14:02:38.077Z",
+  "currentTask": "QA-GATE-01: exact-head validation passed; physical Chat row, route, realtime and media behavior remain DEVICE_VERIFY.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev head 1e4ca068. CI #537 passed authorization regression tests, lint, TypeScript and Android Expo export. The head is a coordination-only backlog update after selectable Chat UI commit fb68bc66; no application code was changed or pushed by QA.",
+  "blocker": "Physical two-account verification is still required for Chat row selection, conversation routing, newest-message position, realtime receipt and private attachment behavior.",
+  "updatedAt": "2026-10-11T04:01:06Z",
   "activity": [
     {
       "type": "working",
@@ -66,6 +66,12 @@
       "title": "Profile hub cover passed static QA",
       "detail": "Reviewed e2a75f7b at exact head 891233ad; CI #481/#482 are green. Marked DEVICE_VERIFY with no QA app-code changes.",
       "at": "2026-10-06T14:02:38.077Z"
+    },
+    {
+      "type": "success",
+      "title": "Exact-head QA gate passed",
+      "detail": "agent-dev 1e4ca068 passed CI #537 across auth tests, lint, TypeScript and Android export; Chat behavior remains DEVICE_VERIFY.",
+      "at": "2026-10-11T04:01:06Z"
     }
   ]
 }
