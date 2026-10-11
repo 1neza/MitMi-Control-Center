@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "success",
-  "currentTask": "Meet and Trip members can leave from conversation details.",
-  "latestReport": "Pushed 9eb60e7: accepted non-creators get two-step Leave Meet/Trip controls in Chat details, backed by the live server-authorized leave RPCs. CI #453 passed tests, lint, TypeScript and Android Expo bundle.",
-  "blocker": "Migration 061 for automatic accepted-member chat synchronization remains committed but unapplied to the live Supabase project; this does not block the new Leave controls.",
-  "updatedAt": "2026-10-05T18:10:11.577Z",
+  "status": "idle",
+  "currentTask": "CORE-POSTMIG-01: audited deployed Trip/group and Local Match conversation-access contracts; no missing server boundary was proven.",
+  "latestReport": "DEVICE_VERIFY at agent-dev 90f8144c. Accepted Trip membership is mirrored into channel_members, leave/decline removes derived access, creators cannot leave, cancellation clears membership, and Local Match opening requires an accepted unblocked participant. Existing authorization tests and exact-head CI #544 are green; no application code was pushed.",
+  "blocker": "Runtime proof requires physical/two-account cases against the deployed Supabase project: accept then open chat, leave then lose chat, creator leave rejection, cancellation cleanup, and blocked Local Match denial.",
+  "updatedAt": "2026-10-11T11:02:00Z",
   "activity": [
     {
       "type": "working",
@@ -43,6 +43,12 @@
       "title": "Group leave controls shipped",
       "detail": "Commit 9eb60e7 adds confirmed Leave Meet/Trip actions in conversation details; CI #453 passed.",
       "at": "2026-10-05T18:10:11.577Z"
+    },
+    {
+      "type": "report",
+      "title": "Post-migration access audit complete",
+      "detail": "At 90f8144c, deployed Trip/group sync and Local Match channel contracts cover the required static boundaries; CI #544 is green. Runtime cases remain DEVICE_VERIFY and no app code was pushed.",
+      "at": "2026-10-11T11:02:00Z"
     }
   ]
 }
