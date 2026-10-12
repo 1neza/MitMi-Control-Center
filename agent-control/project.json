@@ -5,7 +5,7 @@
   "branch": "agent-dev",
   "head": "90f8144cc71b0a19680f419a524630864cc8e2c1",
   "latestCommit": "docs(coordination): gate camera attachments",
-  "syncedAt": "2026-10-12T14:06:31.000Z",
+  "syncedAt": "2026-10-12T14:59:59.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 544,
