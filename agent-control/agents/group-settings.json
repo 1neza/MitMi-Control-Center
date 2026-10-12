@@ -3,10 +3,10 @@
   "name": "Group Settings Engineer",
   "role": "Meet and Trip group info presentation and safe member controls",
   "status": "success",
-  "currentTask": "GROUP-CONTROLS-03 delivered real shared media and file visibility inside the existing Group Info screen.",
-  "latestReport": "DEVICE_VERIFY at exact agent-dev head e40cd5f1. Group Info now lists photos and files from the member's visible chat history and opens them only through existing private signed URLs. CI #541 passed npm test, lint, TypeScript and Android Expo export.",
-  "blocker": "Physical Android/iOS and two-account verification remains required for media visibility, authorized opening, cleared-history isolation, membership removal access loss, expired-link behavior and empty/error states.",
-  "updatedAt": "2026-10-11T05:20:00Z",
+  "currentTask": "DOMAIN-PARTICIPANTS-04 server boundary delivered; consolidated Group Info add-participant UI remains the next owned slice.",
+  "latestReport": "Commit f4d257d adds an authenticated manager-only Meet participant RPC with active/upcoming, profile, block and duplicate gates; CI #546 passed.",
+  "blocker": "Migration 20261012181314_add_meet_participant.sql is not deployed; live add/chat-sync behavior remains DEVICE_VERIFY.",
+  "updatedAt": "2026-10-12T18:16:00Z",
   "activity": [
     {
       "at": "2026-10-06T04:18:00Z",
@@ -30,6 +30,12 @@
       "title": "Group media visibility shipped",
       "detail": "Group Info now shows authorized photos/files from visible chat history at e40cd5f1; CI #541 passed all repository gates. Device and two-account proof remain open.",
       "at": "2026-10-11T05:20:00Z"
+    },
+    {
+      "type": "success",
+      "title": "Meet participant add boundary shipped",
+      "detail": "f4d257d passed CI #546 with authorization tests, lint, TypeScript and Android Expo export; production was not changed.",
+      "at": "2026-10-12T18:16:00Z"
     }
   ]
 }
