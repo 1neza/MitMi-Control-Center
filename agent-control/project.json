@@ -3,63 +3,63 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "3334716a2a7db0c2af81616eec06a726dc241906",
-  "latestCommit": "docs(coordination): gate attachment caption safety",
-  "syncedAt": "2026-10-12T19:59:40.000Z",
+  "head": "262351617c3eaa0e47b81bf1d2f8154a3911f059",
+  "latestCommit": "docs(coordination): gate participant add and captions",
+  "syncedAt": "2026-10-12T23:06:50.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 544,
+    "latestRun": 552,
     "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
     "history": [
       {
-        "number": 544,
+        "number": 552,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): gate camera attachments",
-        "sha": "90f8144cc71b0a19680f419a524630864cc8e2c1",
-        "updatedAt": "2026-10-11T10:05:34Z"
+        "title": "docs(coordination): gate participant add and captions",
+        "sha": "262351617c3eaa0e47b81bf1d2f8154a3911f059",
+        "updatedAt": "2026-10-12T23:06:37Z"
       },
       {
-        "number": 543,
+        "number": 551,
         "status": "completed",
         "conclusion": "success",
-        "title": "feat(chat): add camera attachments",
-        "sha": "1d067d81ecffaafbda7fe008dcdc108c81e14144",
-        "updatedAt": "2026-10-11T09:13:57Z"
+        "title": "feat(groups): add server-authorized Meet participants",
+        "sha": "0e0eba39ccca4f150a9c265e45aec7f26ccb0009",
+        "updatedAt": "2026-10-12T22:19:00Z"
       },
       {
-        "number": 542,
+        "number": 550,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): gate chat follow and shared media",
-        "sha": "361ec29cdff4f80aa9ddb9b72b31968fbf5f1f55",
-        "updatedAt": "2026-10-11T06:00:08Z"
+        "title": "fix(chat): align attachment caption spacing",
+        "sha": "0e7de3f5703f2c6f8a00ff5a35b8e944ded4b650",
+        "updatedAt": "2026-10-12T22:14:16Z"
       },
       {
-        "number": 541,
+        "number": 549,
         "status": "completed",
         "conclusion": "success",
-        "title": "feat(groups): show shared media in group info",
-        "sha": "e40cd5f14d1f24c6e873c2955ffcf7ee8b6e897e",
-        "updatedAt": "2026-10-11T05:20:12Z"
+        "title": "docs(coordination): gate attachment caption safety",
+        "sha": "3334716a2a7db0c2af81616eec06a726dc241906",
+        "updatedAt": "2026-10-12T20:02:27Z"
       },
       {
-        "number": 540,
+        "number": 548,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(chat): respect readers browsing history",
-        "sha": "8fdc89c22515b75914c965c61b000a749ca9ce7e",
-        "updatedAt": "2026-10-11T05:15:49Z"
+        "title": "fix(chat): preserve attachment caption edits",
+        "sha": "fd303d01d18dd19022954dce819f29314f8f5e85",
+        "updatedAt": "2026-10-12T19:17:05Z"
       },
       {
-        "number": 539,
+        "number": 547,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): gate private file sharing",
-        "sha": "1d4a1d18a7f79e365ef80d551b7064e1a6efdc87",
-        "updatedAt": "2026-10-11T05:06:54Z"
+        "title": "docs(coordination): gate chat and participant deliveries",
+        "sha": "0a97b6b55b7a9202204e2e35bb0f1b1407eb4e34",
+        "updatedAt": "2026-10-12T19:04:52Z"
       }
     ]
   }
