@@ -3,10 +3,10 @@
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
   "status": "success",
-  "currentTask": "CHAT-MEDIA-03 added a working Camera action to the compact attachment menu using the existing private image path.",
-  "latestReport": "DEVICE_VERIFY at exact agent-dev commit 1d067d81. Camera permission denial is surfaced, captured photos use the existing private attachment upload/RPC path, and CI #543 passed authorization tests, lint, TypeScript and Android Expo export.",
-  "blocker": "Physical Android/iOS testing remains required for camera permission grant/deny, capture/cancel, private upload, and two-account signed-URL rendering.",
-  "updatedAt": "2026-10-11T09:14:00Z",
+  "currentTask": "CHAT-MEDIA-04 completed truthful Photo/File/Camera caption handling without adding unsupported voice UI.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev commit fd303d01. Attachment sends now snapshot the caption, clear only the text actually sent, preserve edits typed during upload, and identify caption use in the compact menu. CI #548 passed authorization tests, lint, TypeScript and Android Expo export.",
+  "blocker": "Physical Android/iOS verification remains required for captions, picker/camera cancellation, edits during upload, compact keyboard layout and two-account delivery.",
+  "updatedAt": "2026-10-12T19:17:10Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -42,6 +42,11 @@
       "at": "2026-10-11T09:14:00Z",
       "status": "success",
       "summary": "Delivered compact camera attachments at 1d067d81 through the private image path; CI #543 passed all repository gates."
+    },
+    {
+      "at": "2026-10-12T19:17:10Z",
+      "status": "success",
+      "summary": "Delivered race-safe Photo/File/Camera captions at fd303d01; CI #548 passed all repository gates."
     }
   ]
 }
