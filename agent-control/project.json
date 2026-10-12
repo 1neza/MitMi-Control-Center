@@ -3,9 +3,9 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "0a97b6b55b7a9202204e2e35bb0f1b1407eb4e34",
-  "latestCommit": "docs(coordination): gate chat and participant deliveries",
-  "syncedAt": "2026-10-12T19:00:52.000Z",
+  "head": "3334716a2a7db0c2af81616eec06a726dc241906",
+  "latestCommit": "docs(coordination): gate attachment caption safety",
+  "syncedAt": "2026-10-12T19:59:40.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 544,
