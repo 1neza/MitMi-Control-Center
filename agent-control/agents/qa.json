@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "success",
-  "currentTask": "QA-GATE-02: camera attachments passed static/security validation; physical permission, capture, upload and two-account behavior remain DEVICE_VERIFY.",
-  "latestReport": "DEVICE_VERIFY at exact agent-dev head 90f8144c. Application commit 1d067d81 passed SDK/API, permission-config and private attachment-path review; CI #543 and coordination-only exact-head CI #544 passed npm test, lint, TypeScript and Android Expo export. No application code was changed or pushed by QA.",
-  "blocker": "Physical Android/iOS verification is required for camera permission grant/deny, capture/cancel, upload/render, draft preservation, keyboard layout, and two-account access after membership removal.",
-  "updatedAt": "2026-10-11T10:10:00Z",
+  "currentTask": "QA-GATE-02: Meet participant-add authorization passed static/security validation; deployment and creator/admin/member device behavior remain DEVICE_VERIFY.",
+  "latestReport": "DEVICE_VERIFY at exact agent-dev head 0a97b6b5. Application commit f4d257d1 enforces authenticated manager-only participant add, active/upcoming state, block/duplicate checks, capacity enforcement and accepted-member chat sync; CI #546 and coordination-only exact-head CI #547 passed npm test, lint, TypeScript and Android Expo export. No application code was changed or pushed by QA.",
+  "blocker": "Migration 20261012181314 is not proven deployed. Physical two-account verification is required for creator/admin authorization, unauthorized member rejection, capacity/duplicate/block failures, participant count, and derived conversation access.",
+  "updatedAt": "2026-10-12T19:05:00Z",
   "activity": [
     {
       "type": "working",
@@ -84,6 +84,12 @@
       "title": "Camera attachments passed static QA",
       "detail": "Reviewed 1d067d81 and exact head 90f8144c; CI #543/#544 passed npm test, lint, TypeScript and Android export. Physical behavior remains DEVICE_VERIFY.",
       "at": "2026-10-11T10:10:00Z"
+    },
+    {
+      "type": "success",
+      "title": "Meet participant add passed static QA",
+      "detail": "Reviewed f4d257d1 at exact head 0a97b6b5; CI #546/#547 passed npm test, lint, TypeScript and Android export. Migration deployment and two-account behavior remain DEVICE_VERIFY.",
+      "at": "2026-10-12T19:05:00Z"
     }
   ]
 }
