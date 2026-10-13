@@ -3,16 +3,32 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "9d8fa538c9da8ee8b053421bc0ce1369ff8db8c6",
-  "latestCommit": "docs(coordination): gate Meet settings consolidation",
-  "syncedAt": "2026-10-13T12:00:49.076Z",
+  "head": "cfe78a4fb16254ece606e3ac2a41386845bfdef9",
+  "latestCommit": "docs(coordination): gate Meet departure coverage",
+  "syncedAt": "2026-10-13T13:11:00.183Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 556,
+    "latestRun": 558,
     "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
     "history": [
+      {
+        "number": 558,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): gate Meet departure coverage",
+        "sha": "cfe78a4fb16254ece606e3ac2a41386845bfdef9",
+        "updatedAt": "2026-10-13T13:10:18Z"
+      },
+      {
+        "number": 557,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(domain): guard Meet departure synchronization",
+        "sha": "58329143b10b5f00d20f593874231f093d4748a8",
+        "updatedAt": "2026-10-13T12:20:42Z"
+      },
       {
         "number": 556,
         "status": "completed",
@@ -44,22 +60,6 @@
         "title": "test(meets): cover participant add invariants",
         "sha": "76b21a424850b4998e8bc04d5b78a4ca9b4fe4a3",
         "updatedAt": "2026-10-12T23:13:30Z"
-      },
-      {
-        "number": 552,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate participant add and captions",
-        "sha": "262351617c3eaa0e47b81bf1d2f8154a3911f059",
-        "updatedAt": "2026-10-12T23:06:37Z"
-      },
-      {
-        "number": 551,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "feat(groups): add server-authorized Meet participants",
-        "sha": "0e0eba39ccca4f150a9c265e45aec7f26ccb0009",
-        "updatedAt": "2026-10-12T22:19:00Z"
       }
     ]
   }
