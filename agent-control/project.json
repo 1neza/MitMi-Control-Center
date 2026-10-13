@@ -3,16 +3,32 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "5092c9810af1464acb01feb975299aa191b960d1",
-  "latestCommit": "docs(coordination): gate participant invariants",
-  "syncedAt": "2026-10-13T00:00:35.000Z",
+  "head": "9d8fa538c9da8ee8b053421bc0ce1369ff8db8c6",
+  "latestCommit": "docs(coordination): gate Meet settings consolidation",
+  "syncedAt": "2026-10-13T04:04:17.926Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 554,
-    "latestConclusion": "success",
+    "latestRun": 556,
+    "latestConclusion": null,
     "latestFailure": null,
     "successRate": 100,
     "history": [
+      {
+        "number": 556,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): gate Meet settings consolidation",
+        "sha": "9d8fa538c9da8ee8b053421bc0ce1369ff8db8c6",
+        "updatedAt": "2026-10-13T04:04:17.926Z"
+      },
+      {
+        "number": 555,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "refactor(meets): consolidate settings in group info",
+        "sha": "27a049adf236d1720cc69317829ee323b0d946ea",
+        "updatedAt": "2026-10-13T00:16:40Z"
+      },
       {
         "number": 554,
         "status": "completed",
@@ -44,22 +60,6 @@
         "title": "feat(groups): add server-authorized Meet participants",
         "sha": "0e0eba39ccca4f150a9c265e45aec7f26ccb0009",
         "updatedAt": "2026-10-12T22:19:00Z"
-      },
-      {
-        "number": 550,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(chat): align attachment caption spacing",
-        "sha": "0e7de3f5703f2c6f8a00ff5a35b8e944ded4b650",
-        "updatedAt": "2026-10-12T22:14:16Z"
-      },
-      {
-        "number": 549,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate attachment caption safety",
-        "sha": "3334716a2a7db0c2af81616eec06a726dc241906",
-        "updatedAt": "2026-10-12T20:02:27Z"
       }
     ]
   }
