@@ -5,7 +5,7 @@
   "branch": "agent-dev",
   "head": "9d8fa538c9da8ee8b053421bc0ce1369ff8db8c6",
   "latestCommit": "docs(coordination): gate Meet settings consolidation",
-  "syncedAt": "2026-10-13T05:03:30.506Z",
+  "syncedAt": "2026-10-13T06:05:49.597Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 556,
