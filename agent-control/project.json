@@ -3,16 +3,32 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "262351617c3eaa0e47b81bf1d2f8154a3911f059",
-  "latestCommit": "docs(coordination): gate participant add and captions",
-  "syncedAt": "2026-10-12T23:06:50.000Z",
+  "head": "5092c9810af1464acb01feb975299aa191b960d1",
+  "latestCommit": "docs(coordination): gate participant invariants",
+  "syncedAt": "2026-10-13T00:00:35.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 552,
+    "latestRun": 554,
     "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
     "history": [
+      {
+        "number": 554,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): gate participant invariants",
+        "sha": "5092c9810af1464acb01feb975299aa191b960d1",
+        "updatedAt": "2026-10-13T00:00:21Z"
+      },
+      {
+        "number": 553,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(meets): cover participant add invariants",
+        "sha": "76b21a424850b4998e8bc04d5b78a4ca9b4fe4a3",
+        "updatedAt": "2026-10-12T23:13:30Z"
+      },
       {
         "number": 552,
         "status": "completed",
@@ -44,22 +60,6 @@
         "title": "docs(coordination): gate attachment caption safety",
         "sha": "3334716a2a7db0c2af81616eec06a726dc241906",
         "updatedAt": "2026-10-12T20:02:27Z"
-      },
-      {
-        "number": 548,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(chat): preserve attachment caption edits",
-        "sha": "fd303d01d18dd19022954dce819f29314f8f5e85",
-        "updatedAt": "2026-10-12T19:17:05Z"
-      },
-      {
-        "number": 547,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate chat and participant deliveries",
-        "sha": "0a97b6b55b7a9202204e2e35bb0f1b1407eb4e34",
-        "updatedAt": "2026-10-12T19:04:52Z"
       }
     ]
   }
