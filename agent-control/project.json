@@ -3,16 +3,32 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "cfe78a4fb16254ece606e3ac2a41386845bfdef9",
-  "latestCommit": "docs(coordination): gate Meet departure coverage",
-  "syncedAt": "2026-10-13T16:03:49.863Z",
+  "head": "5ff98087cfcd1d6de8142521ae3407da82471c38",
+  "latestCommit": "docs(coordination): gate creator leave guard",
+  "syncedAt": "2026-10-13T17:01:27.473Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 558,
+    "latestRun": 560,
     "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
     "history": [
+      {
+        "number": 560,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): gate creator leave guard",
+        "sha": "5ff98087cfcd1d6de8142521ae3407da82471c38",
+        "updatedAt": "2026-10-13T17:00:46Z"
+      },
+      {
+        "number": 559,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(meets): prevent creator departure",
+        "sha": "46145df0391464bc10b702e8a06c9bb31dbbaa5c",
+        "updatedAt": "2026-10-13T16:12:22Z"
+      },
       {
         "number": 558,
         "status": "completed",
@@ -44,22 +60,6 @@
         "title": "refactor(meets): consolidate settings in group info",
         "sha": "27a049adf236d1720cc69317829ee323b0d946ea",
         "updatedAt": "2026-10-13T00:16:40Z"
-      },
-      {
-        "number": 554,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate participant invariants",
-        "sha": "5092c9810af1464acb01feb975299aa191b960d1",
-        "updatedAt": "2026-10-13T00:00:21Z"
-      },
-      {
-        "number": 553,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(meets): cover participant add invariants",
-        "sha": "76b21a424850b4998e8bc04d5b78a4ca9b4fe4a3",
-        "updatedAt": "2026-10-12T23:13:30Z"
       }
     ]
   }
