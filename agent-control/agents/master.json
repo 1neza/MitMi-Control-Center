@@ -3,10 +3,10 @@
   "name": "MitMi Master",
   "role": "Coordinator",
   "status": "working",
-  "currentTask": "Gate Meet participant invariants, keep five non-overlapping slots active, and preserve migration/device verification boundaries.",
-  "latestReport": "76b21a42 added regression coverage for serialized Meet capacity and accepted-member chat synchronization; CI #553 passed. Board 5092c981 rotates Slot 4 to Group Settings, restores Slots 3 and 5, and passed CI #554.",
+  "currentTask": "Gate the consolidated Meet settings route, keep five non-overlapping slots active, and preserve device-verification boundaries.",
+  "latestReport": "27a049ad retired the duplicate Home Meet editor in favor of Group Info and CI #555 passed. Board 9d8fa538 rotates Slot 4 to Meet/Trip Domain, restores Slots 3–5, and CI #556 is still running.",
   "blocker": null,
-  "updatedAt": "2026-10-13T00:00:35.000Z",
+  "updatedAt": "2026-10-13T04:04:17.926Z",
   "activity": [
     {
       "type": "working",
@@ -319,6 +319,12 @@
       "title": "Meet participant invariants gated",
       "detail": "76b21a42 passed CI #553 with capacity and accepted-member chat-sync coverage. Board 5092c981 rotates Group Settings, restores Slots 3/5 and passed CI #554; live/device proof remains open.",
       "at": "2026-10-13T00:00:35.000Z"
+    },
+    {
+      "type": "working",
+      "title": "Meet settings consolidated",
+      "detail": "27a049ad routes managers to Group Info and passed CI #555. Board 9d8fa538 assigns QA gating and the next Meet-domain invariant; CI #556 is in progress.",
+      "at": "2026-10-13T04:04:17.926Z"
     }
   ]
 }
