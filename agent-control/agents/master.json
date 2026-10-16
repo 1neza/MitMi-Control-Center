@@ -4,16 +4,10 @@
   "role": "Coordinator",
   "status": "working",
   "currentTask": "Watch the creator-leave gate and keep actionable, non-overlapping lanes enabled.",
-  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 2, 3 and 5 were restored because QA-GATE-11, CHAT-MEDIA-05 and SHELL-NAV-04 remain ACTIVE. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
+  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 3 and 5 were restored because CHAT-MEDIA-05 and SHELL-NAV-04 remain ACTIVE; Slot 2 stayed enabled. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
   "blocker": null,
-  "updatedAt": "2026-10-16T11:04:25.000Z",
+  "updatedAt": "2026-10-16T11:59:28.000Z",
   "activity": [
-    {
-      "type": "success",
-      "title": "Local Match chat authorization gated",
-      "detail": "9388a2d passed CI #521 and board 7a27a8a passed CI #522. Accepted-match opening, block sync and two-account behavior remain device-only proof.",
-      "at": "2026-10-07T18:04:30.129Z"
-    },
     {
       "type": "working",
       "title": "Physical-test evidence pending",
@@ -607,6 +601,12 @@
       "title": "Restored three active specialist lanes",
       "detail": "Slots 2, 3 and 5 had disabled despite ACTIVE ownership, so all three were re-enabled. agent-dev remains 5ff98087 with CI #560 successful; Slot 4 stays paused at READY_FOR_QA and no Agent Command issues are open.",
       "at": "2026-10-16T11:04:25.000Z"
+    },
+    {
+      "type": "working",
+      "title": "Restored active chat and navigation lanes",
+      "detail": "Slots 3 and 5 had disabled despite ACTIVE ownership, so both were re-enabled. Slot 2 remained enabled; agent-dev remains 5ff98087 with CI #560 successful, Slot 4 stays paused at READY_FOR_QA, and no Agent Command issues are open.",
+      "at": "2026-10-16T11:59:28.000Z"
     }
   ]
 }
