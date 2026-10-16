@@ -4,16 +4,10 @@
   "role": "Coordinator",
   "status": "working",
   "currentTask": "Watch the creator-leave gate and keep actionable, non-overlapping lanes enabled.",
-  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 1, 2, 3 and 5 remain enabled with ACTIVE board ownership; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
+  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 2 and 5 were restored because QA-GATE-11 and SHELL-NAV-04 remain ACTIVE. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
   "blocker": null,
-  "updatedAt": "2026-10-16T03:57:26.974Z",
+  "updatedAt": "2026-10-16T05:05:18.553Z",
   "activity": [
-    {
-      "type": "success",
-      "title": "Profile and Trust UI slices gated",
-      "detail": "8c57ba1 and f2ade3f passed CI #506/#507. Board feec945 marks both READY_FOR_QA and passed CI #508; migration and device gates remain open.",
-      "at": "2026-10-07T05:59:52.309Z"
-    },
     {
       "type": "working",
       "title": "Exact head unchanged and green",
@@ -607,6 +601,12 @@
       "title": "Exact head and lanes stable",
       "detail": "agent-dev remains 5ff98087 with CI #560 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. No Agent Command issues are open.",
       "at": "2026-10-16T03:57:26.974Z"
+    },
+    {
+      "type": "working",
+      "title": "Restored active QA and navigation lanes",
+      "detail": "Slots 2 and 5 had disabled despite ACTIVE ownership, so both were re-enabled. agent-dev remains 5ff98087 with CI #560 successful; Slot 4 stays paused at READY_FOR_QA and no Agent Command issues are open.",
+      "at": "2026-10-16T05:05:18.553Z"
     }
   ]
 }
