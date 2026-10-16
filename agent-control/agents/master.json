@@ -4,16 +4,10 @@
   "role": "Coordinator",
   "status": "working",
   "currentTask": "Watch the creator-leave gate and keep actionable, non-overlapping lanes enabled.",
-  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 3 and 5 were restored because CHAT-MEDIA-05 and SHELL-NAV-04 remain ACTIVE; Slot 2 stayed enabled. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
+  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 2, 3 and 5 were restored because QA-GATE-11, CHAT-MEDIA-05 and SHELL-NAV-04 remain ACTIVE. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
   "blocker": null,
-  "updatedAt": "2026-10-16T11:59:28.000Z",
+  "updatedAt": "2026-10-16T13:00:38.000Z",
   "activity": [
-    {
-      "type": "working",
-      "title": "Physical-test evidence pending",
-      "detail": "agent-dev remains 7a27a8a; duplicate exact-head CI #523 passed. No device result or new implementation landed, so DEVICE_VERIFY gates remain open.",
-      "at": "2026-10-07T19:01:53.012Z"
-    },
     {
       "type": "idle",
       "title": "All MitMi agent lanes paused",
@@ -607,6 +601,12 @@
       "title": "Restored active chat and navigation lanes",
       "detail": "Slots 3 and 5 had disabled despite ACTIVE ownership, so both were re-enabled. Slot 2 remained enabled; agent-dev remains 5ff98087 with CI #560 successful, Slot 4 stays paused at READY_FOR_QA, and no Agent Command issues are open.",
       "at": "2026-10-16T11:59:28.000Z"
+    },
+    {
+      "type": "working",
+      "title": "Restored three active specialist lanes",
+      "detail": "Slots 2, 3 and 5 had disabled despite ACTIVE ownership, so all three were re-enabled. agent-dev remains 5ff98087 with CI #560 successful; Slot 4 stays paused at READY_FOR_QA and no Agent Command issues are open.",
+      "at": "2026-10-16T13:00:38.000Z"
     }
   ]
 }
