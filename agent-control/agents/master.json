@@ -6,14 +6,8 @@
   "currentTask": "Watch the creator-leave gate and keep actionable, non-overlapping lanes enabled.",
   "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slot 3 was restored because its board task remains ACTIVE; Slots 1, 2 and 5 remain enabled, and Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
   "blocker": null,
-  "updatedAt": "2026-10-15T22:55:55.268Z",
+  "updatedAt": "2026-10-16T00:05:37.778Z",
   "activity": [
-    {
-      "type": "working",
-      "title": "Safety error-state fix landed",
-      "detail": "agent-dev advanced to 76b1eb32; stale Safety activity is cleared on load errors. No Builder commands are open; Core and More were resumed.",
-      "at": "2026-10-04T19:04:30Z"
-    },
     {
       "type": "working",
       "title": "CI #437 green; lanes resumed",
@@ -607,6 +601,12 @@
       "title": "Active Chat lane restored",
       "detail": "Slot 3 was re-enabled after stopping despite its ACTIVE board task. Slots 1, 2 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. Head 5ff98087 and CI #560 are unchanged.",
       "at": "2026-10-15T22:55:55.268Z"
+    },
+    {
+      "type": "working",
+      "title": "Active Chat lane restored",
+      "detail": "Slot 3 was re-enabled after stopping despite its ACTIVE board task. Slots 1, 2 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. Head 5ff98087 and CI #560 are unchanged.",
+      "at": "2026-10-16T00:05:37.778Z"
     }
   ]
 }
