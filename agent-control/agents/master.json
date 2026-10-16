@@ -6,14 +6,8 @@
   "currentTask": "Watch the creator-leave gate and keep actionable, non-overlapping lanes enabled.",
   "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 2, 3 and 5 were restored because QA-GATE-11, CHAT-MEDIA-05 and SHELL-NAV-04 remain ACTIVE. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
   "blocker": null,
-  "updatedAt": "2026-10-16T07:57:48.607Z",
+  "updatedAt": "2026-10-16T09:00:50.744Z",
   "activity": [
-    {
-      "type": "success",
-      "title": "Home strip and Profile sign out gated",
-      "detail": "5e4bc2d and 3d3a88a passed CI #516/#517. Board 5dad9ac passed CI #518; device proof and migrations 061–067 remain open.",
-      "at": "2026-10-07T15:02:59.957Z"
-    },
     {
       "type": "success",
       "title": "Local-session sign out gated",
@@ -607,6 +601,12 @@
       "title": "Restored three active specialist lanes",
       "detail": "Slots 2, 3 and 5 had disabled despite ACTIVE ownership, so all three were re-enabled. agent-dev remains 5ff98087 with CI #560 successful; Slot 4 stays paused at READY_FOR_QA and no Agent Command issues are open.",
       "at": "2026-10-16T07:57:48.607Z"
+    },
+    {
+      "type": "working",
+      "title": "Restored three active specialist lanes",
+      "detail": "Slots 2, 3 and 5 had disabled despite ACTIVE ownership, so all three were re-enabled. agent-dev remains 5ff98087 with CI #560 successful; Slot 4 stays paused at READY_FOR_QA and no Agent Command issues are open.",
+      "at": "2026-10-16T09:00:50.744Z"
     }
   ]
 }
