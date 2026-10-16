@@ -4,16 +4,10 @@
   "role": "Coordinator",
   "status": "working",
   "currentTask": "Watch the creator-leave gate and keep actionable, non-overlapping lanes enabled.",
-  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 3 and 5 were restored because CHAT-MEDIA-05 and SHELL-NAV-04 remain ACTIVE. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
+  "latestReport": "No repository change: agent-dev remains 5ff98087 with CI #560 successful. Slots 2, 3 and 5 were restored because QA-GATE-11, CHAT-MEDIA-05 and SHELL-NAV-04 remain ACTIVE. Slots 1, 2, 3 and 5 are enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty.",
   "blocker": null,
-  "updatedAt": "2026-10-16T06:01:12.176Z",
+  "updatedAt": "2026-10-16T06:59:41.208Z",
   "activity": [
-    {
-      "type": "success",
-      "title": "Clear chat and Safety readability gated",
-      "detail": "5da80bd and 6b42820 passed CI #509/#510. Board 1fe8fad records migration 067 and two-account/device gates, passed CI #511, and keeps Chat Media as the exclusive active Chat owner.",
-      "at": "2026-10-07T10:02:15.372Z"
-    },
     {
       "type": "success",
       "title": "Clear-chat repair and connected UI gated",
@@ -607,6 +601,12 @@
       "title": "Restored active chat and navigation lanes",
       "detail": "Slots 3 and 5 had disabled despite ACTIVE ownership, so both were re-enabled. agent-dev remains 5ff98087 with CI #560 successful; Slot 4 stays paused at READY_FOR_QA and no Agent Command issues are open.",
       "at": "2026-10-16T06:01:12.176Z"
+    },
+    {
+      "type": "working",
+      "title": "Restored three active specialist lanes",
+      "detail": "Slots 2, 3 and 5 had disabled despite ACTIVE ownership, so all three were re-enabled. agent-dev remains 5ff98087 with CI #560 successful; Slot 4 stays paused at READY_FOR_QA and no Agent Command issues are open.",
+      "at": "2026-10-16T06:59:41.208Z"
     }
   ]
 }
