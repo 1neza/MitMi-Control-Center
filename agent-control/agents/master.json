@@ -6,14 +6,8 @@
   "currentTask": "Gate the new navigation-shell commit while keeping active ownership non-overlapping.",
   "latestReport": "No repository change: agent-dev remains 118474ed with CI #561 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty. Physical navigation behavior remains DEVICE_VERIFY.",
   "blocker": null,
-  "updatedAt": "2026-10-18T18:57:09.000Z",
+  "updatedAt": "2026-10-18T19:55:58.000Z",
   "activity": [
-    {
-      "type": "success",
-      "title": "Meet creator departure blocked",
-      "detail": "46145df0 adds an authenticated server-owned leave override that rejects creators and preserves caller-scoped member/chat cleanup. CI #559 and board CI #560 passed; migration/device proof remains open.",
-      "at": "2026-10-13T17:01:27.473Z"
-    },
     {
       "type": "working",
       "title": "Active lanes restored",
@@ -607,6 +601,12 @@
       "title": "Navigation head and lanes stable",
       "detail": "agent-dev remains 118474ed with CI #561 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. No Agent Command issues are open; device behavior remains unproven.",
       "at": "2026-10-18T18:57:09.000Z"
+    },
+    {
+      "type": "working",
+      "title": "Navigation head and lanes stable",
+      "detail": "agent-dev remains 118474ed with CI #561 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. No Agent Command issues are open; device behavior remains unproven.",
+      "at": "2026-10-18T19:55:58.000Z"
     }
   ]
 }
