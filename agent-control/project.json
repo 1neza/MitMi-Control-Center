@@ -5,7 +5,7 @@
   "branch": "agent-dev",
   "head": "5ff98087cfcd1d6de8142521ae3407da82471c38",
   "latestCommit": "docs(coordination): gate creator leave guard",
-  "syncedAt": "2026-10-18T00:56:34.000Z",
+  "syncedAt": "2026-10-18T01:58:29.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 560,
