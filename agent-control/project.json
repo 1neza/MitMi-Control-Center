@@ -5,7 +5,7 @@
   "branch": "agent-dev",
   "head": "118474edb15332d62dda23ab169561fb96a8ec47",
   "latestCommit": "fix(navigation): align web tabs with app shell",
-  "syncedAt": "2026-10-20T09:00:07.000Z",
+  "syncedAt": "2026-10-20T10:00:42.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 561,
