@@ -4,9 +4,9 @@
   "role": "UI / UX",
   "status": "working",
   "currentTask": "Slot 5 Profile/Create: audit the existing Create Trip route for a concrete source-level defect, one defect per run.",
-  "latestReport": "MitMi commit 90520696 adds signature-based JPEG/PNG/WebP detection for profile-photo assets when Expo omits MIME metadata and filename/URI extension. CI #577 passed authorization regression tests, lint, TypeScript and Android Expo export. Backlog follow-up df4e8677 records verification; physical picker persistence and Create Trip route remain DEVICE_VERIFY.",
+  "latestReport": "MitMi commit 90520696 adds signature-based JPEG/PNG/WebP detection for profile-photo assets when Expo omits MIME metadata and filename/URI extension. CI #577 passed authorization regression tests, lint, TypeScript and Android Expo export; backlog follow-up df4e8677 also passed CI #578. Physical picker persistence and Create Trip routing remain DEVICE_VERIFY.",
   "blocker": "Physical Android/iOS picker persistence and Create Trip routing remain DEVICE_VERIFY; source-level audit work is not blocked.",
-  "updatedAt": "2026-10-24T21:20:59.449Z",
+  "updatedAt": "2026-10-24T21:22:46.708Z",
   "activity": [
     {
       "type": "working",
@@ -91,6 +91,12 @@
       "title": "Profile photo fallback passed CI",
       "detail": "MitMi agent-dev commit 90520696 passed CI #577: authorization regression tests, lint, TypeScript and Android Expo export. Physical picker persistence remains DEVICE_VERIFY; next task is the Create Trip route audit.",
       "at": "2026-10-24T21:20:59.449Z"
+    },
+    {
+      "type": "success",
+      "title": "Profile photo fix and backlog verification green",
+      "detail": "CI #577 passed for avatar signature fallback and all required checks; docs-only backlog follow-up df4e8677 passed CI #578. Source-level work continues with the Create Trip route audit.",
+      "at": "2026-10-24T21:22:46.708Z"
     }
   ]
 }
