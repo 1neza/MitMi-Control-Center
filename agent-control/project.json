@@ -3,23 +3,87 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "7ccf541248c06023368543df297ade1ddfd26758",
-  "latestCommit": "docs(coordination): clarify code baseline and live head telemetry",
-  "syncedAt": "2026-10-24T22:00:26.000Z",
+  "head": "52e515be2a3cf33a4213b7dabb1099e132dafd34",
+  "latestCommit": "docs(coordination): reconcile exact head and rotate Trip UI ownership",
+  "syncedAt": "2026-10-24T23:00:05.948Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 580,
+    "latestRun": 588,
     "latestConclusion": "in_progress",
     "latestFailure": null,
     "successRate": 89,
     "history": [
       {
-        "number": 580,
+        "number": 588,
         "status": "in_progress",
         "conclusion": null,
+        "title": "docs(coordination): reconcile exact head and rotate Trip UI ownership",
+        "sha": "52e515be2a3cf33a4213b7dabb1099e132dafd34",
+        "updatedAt": "2026-10-24T22:58:54Z"
+      },
+      {
+        "number": 587,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): rotate Slot 5 to discovery label audit",
+        "sha": "3780573844d1bde9842dbd9b6461bfeaedd9ba80",
+        "updatedAt": "2026-10-24T22:28:31Z"
+      },
+      {
+        "number": 586,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(test): correct Trip geocoding guard regex",
+        "sha": "3c2b303ebae0698cee5885e2afa0e3e78764f223",
+        "updatedAt": "2026-10-24T22:26:08Z"
+      },
+      {
+        "number": 585,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "test(travel): guard Android-only geocoding permission",
+        "sha": "08a07198aa1ebfc191cce76f1dc1cdb1319dc05a",
+        "updatedAt": "2026-10-24T22:24:36Z"
+      },
+      {
+        "number": 584,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(travel): request geocoding permission only on Android",
+        "sha": "c2affd55832b48881d2b6edf445b428e88d9c4b9",
+        "updatedAt": "2026-10-24T22:25:27Z"
+      },
+      {
+        "number": 583,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(chat): record stale inbox load race fix",
+        "sha": "914065f8a7fe080e126be63bb7df63cbff919d1e",
+        "updatedAt": "2026-10-24T22:18:55Z"
+      },
+      {
+        "number": 582,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(chat): clear stale refresh state on close",
+        "sha": "df9e878108f90ae5ac12302b06bb404df48040bd",
+        "updatedAt": "2026-10-24T22:16:29Z"
+      },
+      {
+        "number": 581,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(chat): ignore stale inbox loads after close",
+        "sha": "5e1b8699924dce778c64e3395fb86a50136c4a67",
+        "updatedAt": "2026-10-24T22:13:37Z"
+      },
+      {
+        "number": 580,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): clarify code baseline and live head telemetry",
         "sha": "7ccf541248c06023368543df297ade1ddfd26758",
-        "updatedAt": "2026-10-24T22:05:47Z"
+        "updatedAt": "2026-10-24T22:07:03Z"
       },
       {
         "number": 579,
@@ -28,76 +92,12 @@
         "title": "docs(coordination): reconcile exact head and CI evidence",
         "sha": "0bb0ef6537e00acb883f69468c66f191c9259ee6",
         "updatedAt": "2026-10-24T22:05:33Z"
-      },
-      {
-        "number": 578,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record profile photo fallback verification",
-        "sha": "df4e8677bf9c92b9ab86a8fc2bc80bb1d7603b53",
-        "updatedAt": "2026-10-24T21:22:37Z"
-      },
-      {
-        "number": 577,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(profile): infer avatar type from file signature",
-        "sha": "9052069614c845bc5ea7ac9ead4766fb6eb1f37a",
-        "updatedAt": "2026-10-24T21:20:23Z"
-      },
-      {
-        "number": 576,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record chat routing regression guards",
-        "sha": "dbbcb9a15c3a8bc833d3a360ac5147bf978b4132",
-        "updatedAt": "2026-10-24T21:14:43Z"
-      },
-      {
-        "number": 575,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(chat): guard conversation routing and realtime UX",
-        "sha": "c2cfe7038a5ae5edc2fab5dc464cb6080162ac6e",
-        "updatedAt": "2026-10-24T21:14:28Z"
-      },
-      {
-        "number": 574,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(qa): record Trip lifecycle gate evidence",
-        "sha": "d789611a87bb30249e0bffa85b96aa1676c9f6cc",
-        "updatedAt": "2026-10-24T21:13:38Z"
-      },
-      {
-        "number": 573,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(test): correct domain channel contract regexes",
-        "sha": "91c256f4ec4baee544a8c9f01376f670a5979c3e",
-        "updatedAt": "2026-10-24T21:12:36Z"
-      },
-      {
-        "number": 572,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "test(auth): guard Meet and Trip channel authority",
-        "sha": "0cf582ade9b35304a30b41a91fff1fb9151a709a",
-        "updatedAt": "2026-10-24T21:10:21Z"
-      },
-      {
-        "number": 571,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): reconcile current head and QA ownership",
-        "sha": "8957e2b325d2f696fae951eb8cdebd9a4c8e535b",
-        "updatedAt": "2026-10-24T21:02:33Z"
       }
     ],
     "headCheck": {
-      "sha": "7ccf541248c06023368543df297ade1ddfd26758",
+      "sha": "52e515be2a3cf33a4213b7dabb1099e132dafd34",
       "status": "in_progress",
-      "note": "CI #580 is in_progress on exact agent-dev HEAD 7ccf5412."
+      "note": "CI #588 is in_progress on exact agent-dev HEAD 52e515be."
     }
   }
 }
