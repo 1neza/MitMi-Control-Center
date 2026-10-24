@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "idle",
-  "currentTask": "CORE-POSTMIG-01 remains DEVICE_VERIFY; waiting for new code evidence or physical two-account results.",
-  "latestReport": "No new MitMi commit since the completed post-migration access audit at 90f8144c; CI #544 remains green. No application mutation or duplicate QA run was needed.",
-  "blocker": "Physical/two-account evidence or a new specialist delivery is required before this lane can advance safely.",
-  "updatedAt": "2026-10-12T18:08:00Z",
+  "status": "blocked",
+  "currentTask": "CORE-TRIP-02: local Trip lifecycle harness committed; waiting for execution against a disposable local migrated database.",
+  "latestReport": "MitMi agent-dev commit f1719a30 passed CI #593: npm test, lint, TypeScript, Android Expo export, and bash syntax validation for the local-only runner. The SQL harness covers creator protection, pending/accepted membership synchronization, caller departure cleanup, generic-channel-only denial, and re-acceptance; fixtures are rolled back. Runtime execution is blocked because this runner has no psql/local migrated database. Migration 20261024201000 remains undeployed; no production mutation.",
+  "blocker": "No local psql/Postgres instance is available in this runtime. Run npm run test:trip-local only against a disposable loopback database after all agent-dev migrations are applied. Live two-account proof still requires an explicitly authorized migration rollout.",
+  "updatedAt": "2026-10-24T23:23:34Z",
   "activity": [
     {
       "type": "working",
@@ -235,6 +235,12 @@
       "title": "Core gate remains idle",
       "detail": "No delivery after audited head 90f8144c and CI #544 remains successful; application code was not changed.",
       "at": "2026-10-12T18:08:00Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Local Trip lifecycle harness delivered",
+      "detail": "Commit f1719a30 / CI #593 passed source, lint, TypeScript and Android export gates. Local SQL execution remains blocked without psql and a disposable migrated database; no production mutation.",
+      "at": "2026-10-24T23:23:34Z"
     }
   ]
 }
