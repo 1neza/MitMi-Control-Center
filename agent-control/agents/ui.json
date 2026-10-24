@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "Slot 5 Profile/Create: continue source-level audit of the single profile-photo path and Create Trip flow, one concrete defect per run.",
-  "latestReport": "Committed MitMi agent-dev 07a18832: Trip date defaults now use local calendar components rather than UTC ISO slicing. CI #569 passed authorization regression tests, lint, TypeScript and Android Expo export. Physical native date-picker, Create Trip route, avatar picker persistence/replacement/removal, keyboard and local sign-out checks remain DEVICE_VERIFY.",
-  "blocker": "Physical Android/iOS verification remains outstanding for native date picker, Create Trip routing, avatar picker persistence/replacement/removal, keyboard behavior and current-session sign-out; this does not block source-level audit work.",
-  "updatedAt": "2026-10-24T20:25:11.258Z",
+  "currentTask": "Slot 5 Profile/Create: verify CI for avatar type detection when Expo omits MIME and file extension, then continue the Create Trip route audit.",
+  "latestReport": "Committed MitMi agent-dev 90520696: profile-photo uploads now detect JPEG/PNG/WebP from the local file signature when picker MIME metadata and filename/URI extension are absent. The upload service still validates the signature before storage upload; static regression assertions were added. CI is pending; physical picker persistence remains DEVICE_VERIFY.",
+  "blocker": "Physical Android/iOS picker persistence and Create Trip routing remain DEVICE_VERIFY; source-level audit work is not blocked.",
+  "updatedAt": "2026-10-24T21:19:18.623Z",
   "activity": [
     {
       "type": "working",
@@ -79,6 +79,12 @@
       "title": "Trip local-date fix verified",
       "detail": "MitMi agent-dev commit 07a18832 replaces UTC ISO date slicing with local calendar formatting for Trip defaults. CI #569 passed authorization regression tests, lint, TypeScript and Android Expo export; physical-device verification remains open.",
       "at": "2026-10-24T20:25:11.258Z"
+    },
+    {
+      "type": "working",
+      "title": "Profile photo metadata fallback committed",
+      "detail": "MitMi agent-dev commit 90520696 adds signature-based JPEG/PNG/WebP detection for picker assets without MIME metadata or a usable extension, plus static regression assertions. CI pending; physical picker persistence remains DEVICE_VERIFY.",
+      "at": "2026-10-24T21:19:18.623Z"
     }
   ]
 }
