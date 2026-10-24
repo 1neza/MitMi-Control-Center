@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "blocked",
-  "currentTask": "CORE-TRIP-01 QA: verify live leave_trip behavior, creator protection, accepted-member chat access and the generic channel_members boundary.",
-  "latestReport": "At MitMi agent-dev HEAD 7ccf541 (docs-only; code baseline df4e867, CI #578 recorded green), read-only live inspection confirms leave_trip uses caller-scoped composite-key updates and chat cleanup; capacity trigger does not reject leave transitions. The sync_trip_chat_membership trigger and creator guard are absent live; migration 20261024201000 remains unapplied. No matching leave_trip/trip_members logs in 2026-10-24 21:00–22:01Z. Static authorization checks passed in CI #573 and documentation follow-up #574; latest-head CI #580 was recorded in progress. Found a creator-facing Join/Leave CTA in src/app/travel.tsx when no pending requests; handed off to the active screen owner to avoid editing their shared file. No MitMi application code pushed.",
-  "blocker": "The corrective Trip migration is not deployed, and runtime leave/chat cleanup has not been reproduced or verified with two accounts. The active Travel screen owner should also remove the creator's invalid Join/Leave CTA; no source edit was made to avoid a concurrent-file conflict.",
-  "updatedAt": "2026-10-24T22:01:03Z",
+  "currentTask": "QA-GATE: review new Chat inbox-load invalidation and continue CORE-TRIP-01 live authorization gate.",
+  "latestReport": "FAILED_QA on MitMi commit 5e1b869 (fix(chat): ignore stale inbox loads after close): closeConversation invalidates pending loads, but on /chat without a channelId it starts no replacement load and does not clear loading/refreshing; the stale request's finally skips those flags, so the inbox can remain stuck loading. Regression assertions do not cover this branch. Exact reproduction returned to active Chat UI owner; no MitMi app code pushed. Trip follow-up migration 20261024201000 remains unapplied. Live leave_trip is caller-scoped and the capacity trigger does not reject leave transitions; creator guard and Trip sync trigger are still missing live. CI status for 5e1b869 is not exposed by connected status tools.",
+  "blocker": "Slot 3 must repair the no-channelId close path so invalidating an in-flight inbox load cannot leave loading/refreshing stuck. Separately, Trip migration 20261024201000 is unapplied and two-account leave/chat-access verification remains outstanding.",
+  "updatedAt": "2026-10-24T22:14:40.989Z",
   "activity": [
     {
       "type": "working",
@@ -96,6 +96,12 @@
       "title": "Trip lifecycle QA remains blocked",
       "detail": "Reviewed live Trip RPCs, trigger state, grants and migration history read-only; identified creator CTA mismatch for handoff. Migration remains undeployed; no application code pushed.",
       "at": "2026-10-24T22:01:03Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Chat close race failed QA gate",
+      "detail": "Reviewed new commit 5e1b869. Found stale load invalidation can leave /chat inbox loading state stuck when closing without a channelId; handed exact reproduction to the active Chat UI owner. Trip migration remains undeployed; no MitMi app code pushed.",
+      "at": "2026-10-24T22:14:40.989Z"
     }
   ]
 }
