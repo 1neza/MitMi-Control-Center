@@ -3,16 +3,32 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "df4e8677bf9c92b9ab86a8fc2bc80bb1d7603b53",
-  "latestCommit": "docs(backlog): record profile photo fallback verification",
+  "head": "7ccf541248c06023368543df297ade1ddfd26758",
+  "latestCommit": "docs(coordination): clarify code baseline and live head telemetry",
   "syncedAt": "2026-10-24T22:00:26.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 578,
-    "latestConclusion": "success",
+    "latestRun": 580,
+    "latestConclusion": "in_progress",
     "latestFailure": null,
-    "successRate": 90,
+    "successRate": 89,
     "history": [
+      {
+        "number": 580,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): clarify code baseline and live head telemetry",
+        "sha": "7ccf541248c06023368543df297ade1ddfd26758",
+        "updatedAt": "2026-10-24T22:05:47Z"
+      },
+      {
+        "number": 579,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): reconcile exact head and CI evidence",
+        "sha": "0bb0ef6537e00acb883f69468c66f191c9259ee6",
+        "updatedAt": "2026-10-24T22:05:33Z"
+      },
       {
         "number": 578,
         "status": "completed",
@@ -76,28 +92,12 @@
         "title": "docs(backlog): reconcile current head and QA ownership",
         "sha": "8957e2b325d2f696fae951eb8cdebd9a4c8e535b",
         "updatedAt": "2026-10-24T21:02:33Z"
-      },
-      {
-        "number": 570,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record trip date fix verification",
-        "sha": "297c1c4395762fe7b3c7abab03df22686773a18f",
-        "updatedAt": "2026-10-24T20:26:50Z"
-      },
-      {
-        "number": 569,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(travel): use local calendar dates for trip defaults",
-        "sha": "07a18832db0dc29b01dd02e61ce96d9ff641c5d0",
-        "updatedAt": "2026-10-24T20:24:14Z"
       }
     ],
     "headCheck": {
-      "sha": "df4e8677bf9c92b9ab86a8fc2bc80bb1d7603b53",
-      "status": "success",
-      "note": "CI #578 is completed/success on exact agent-dev HEAD df4e8677."
+      "sha": "7ccf541248c06023368543df297ade1ddfd26758",
+      "status": "in_progress",
+      "note": "CI #580 is in_progress on exact agent-dev HEAD 7ccf5412."
     }
   }
 }
