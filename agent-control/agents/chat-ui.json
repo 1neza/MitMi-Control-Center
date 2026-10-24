@@ -3,10 +3,10 @@
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
   "status": "working",
-  "currentTask": "CHAT-UI-07: continue inbox/deep-link routing audit; source fixes are green, physical route/realtime verification remains open.",
-  "latestReport": "Fixed a race where pending inbox hydration/deep-link resolution could apply after a close or newer request: request-generation guards discard stale results, and closing clears stale loading/refresh indicators. Commits 5e1b8699 and df9e8781 passed exact-head CI #581/#582; backlog follow-up 914065f8 passed CI #583. Physical route/newest-message/two-account realtime remains DEVICE_VERIFY. Voice messaging remains BLOCKED pending secure end-to-end capture/upload/send/playback.",
-  "blocker": "Physical-device/two-account route and realtime evidence is unavailable in this run; voice messaging remains blocked until secure end-to-end capture, private upload, authorized send, and playback are implemented.",
-  "updatedAt": "2026-10-24T22:19:10.761Z",
+  "currentTask": "CHAT-UI-07: keep inbox/person conversation opening race-safe; physical route and two-account realtime verification remain open.",
+  "latestReport": "Fixed stale direct-chat opens and inbox blur races in MitMi at 1cda69a4 and 3e225314; corrected the added regression guards at 22422636. CI #590 and #591 passed authorization regression tests, lint, TypeScript and Android Expo export. Backlog updated at d4612918. Physical route/keyboard/two-account realtime remains DEVICE_VERIFY; voice messaging remains BLOCKED pending secure end-to-end capture/upload/send/playback.",
+  "blocker": "Physical-device route, keyboard and two-account realtime evidence is unavailable. Voice messaging remains blocked until secure end-to-end capture, private upload, authorized send and playback are implemented.",
+  "updatedAt": "2026-10-24T23:19:33.482Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -67,6 +67,11 @@
       "at": "2026-10-24T22:19:10.761Z",
       "status": "working",
       "summary": "Committed race-safe Chat inbox/deep-link load invalidation at 5e1b8699 and stale refresh-state cleanup at df9e8781; exact-head CI #581/#582 passed. Backlog follow-up 914065f8 passed CI #583. Physical route/two-account realtime remains DEVICE_VERIFY."
+    },
+    {
+      "at": "2026-10-24T23:19:33.482Z",
+      "status": "working",
+      "summary": "Fixed stale direct-chat selection and Chat blur races at 1cda69a4/3e225314; corrected regression-guard escaping at 22422636. CI #590/#591 passed tests, lint, TypeScript and Android Expo export. Physical route/realtime remains DEVICE_VERIFY; voice remains blocked."
     }
   ]
 }
