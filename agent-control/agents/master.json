@@ -6,14 +6,8 @@
   "currentTask": "Gate the navigation-shell head and await device evidence without overlapping lane ownership.",
   "latestReport": "No repository change: agent-dev remains 118474ed with CI #561 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. The Agent Command queue is empty. No physical result has been received, so runtime behavior remains DEVICE_VERIFY.",
   "blocker": null,
-  "updatedAt": "2026-10-24T12:55:34.000Z",
+  "updatedAt": "2026-10-24T13:58:15.000Z",
   "activity": [
-    {
-      "type": "working",
-      "title": "Navigation head and lanes stable",
-      "detail": "agent-dev remains 118474ed with CI #561 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. No Agent Command issues are open; device behavior remains unproven.",
-      "at": "2026-10-20T03:01:12.000Z"
-    },
     {
       "type": "working",
       "title": "Navigation head and lanes stable",
@@ -607,6 +601,12 @@
       "title": "Exact head remains ready for device testing",
       "detail": "agent-dev remains 118474ed with CI #561 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. No Agent Command issues or device results are present.",
       "timestamp": "2026-10-24T12:55:34.000Z"
+    },
+    {
+      "type": "working",
+      "title": "Exact head remains ready for device testing",
+      "detail": "agent-dev remains 118474ed with CI #561 successful. Slots 1, 2, 3 and 5 remain enabled; Slot 4 remains paused at READY_FOR_QA. No Agent Command issues or device results are present.",
+      "timestamp": "2026-10-24T13:58:15.000Z"
     }
   ]
 }
