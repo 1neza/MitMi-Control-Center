@@ -3,23 +3,30 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "ff8fd1e164cfaac80f1c0d7d921642e374e4dcb6",
-  "latestCommit": "docs(coordination): reconcile agent-dev head and lane ownership",
-  "syncedAt": "2026-10-24T20:06:16.201Z",
+  "head": "8957e2b325d2f696fae951eb8cdebd9a4c8e535b",
+  "latestCommit": "docs(backlog): reconcile current head and QA ownership",
+  "syncedAt": "2026-10-24T21:02:10.683Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 562,
-    "latestConclusion": null,
+    "latestRun": 570,
+    "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
     "history": [
       {
-        "number": 562,
-        "status": "in_progress",
-        "conclusion": null,
-        "title": "docs(coordination): reconcile agent-dev head and lane ownership",
-        "sha": "ff8fd1e164cfaac80f1c0d7d921642e374e4dcb6",
-        "updatedAt": "2026-10-24T20:06:16.201Z"
+        "number": 570,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): record trip date fix verification",
+        "sha": "297c1c4395762fe7b3c7abab03df22686773a18f",
+        "updatedAt": "2026-10-24T20:27:36.565Z"
+      },
+      {
+        "number": 569,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(travel): use local calendar dates for trip defaults",
+        "sha": "07a18832db0dc29b01dd02e61ce96d9ff641c5d0"
       },
       {
         "number": 561,
@@ -61,6 +68,11 @@
         "sha": "58329143b10b5f00d20f593874231f093d4748a8",
         "updatedAt": "2026-10-13T12:20:42Z"
       }
-    ]
+    ],
+    "headCheck": {
+      "sha": "8957e2b325d2f696fae951eb8cdebd9a4c8e535b",
+      "status": "not_exposed",
+      "note": "Latest visible CI run #570 passed on parent 297c1c43; no check result was exposed for this new documentation-only head at sync time."
+    }
   }
 }
