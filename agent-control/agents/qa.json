@@ -2,11 +2,11 @@
   "id": "qa",
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
-  "status": "success",
-  "currentTask": "QA-GATE-02: Meet participant-add authorization passed static/security validation; deployment and creator/admin/member device behavior remain DEVICE_VERIFY.",
-  "latestReport": "DEVICE_VERIFY at exact agent-dev head 0a97b6b5. Application commit f4d257d1 enforces authenticated manager-only participant add, active/upcoming state, block/duplicate checks, capacity enforcement and accepted-member chat sync; CI #546 and coordination-only exact-head CI #547 passed npm test, lint, TypeScript and Android Expo export. No application code was changed or pushed by QA.",
-  "blocker": "Migration 20261012181314 is not proven deployed. Physical two-account verification is required for creator/admin authorization, unauthorized member rejection, capacity/duplicate/block failures, participant count, and derived conversation access.",
-  "updatedAt": "2026-10-12T19:05:00Z",
+  "status": "blocked",
+  "currentTask": "CORE-TRIP-01 QA: verify live leave_trip behavior, creator protection, accepted-member chat access and the generic channel_members boundary.",
+  "latestReport": "At MitMi agent-dev HEAD 7ccf541 (docs-only; code baseline df4e867, CI #578 recorded green), read-only live inspection confirms leave_trip uses caller-scoped composite-key updates and chat cleanup; capacity trigger does not reject leave transitions. The sync_trip_chat_membership trigger and creator guard are absent live; migration 20261024201000 remains unapplied. No matching leave_trip/trip_members logs in 2026-10-24 21:00–22:01Z. Static authorization checks passed in CI #573 and documentation follow-up #574; latest-head CI #580 was recorded in progress. Found a creator-facing Join/Leave CTA in src/app/travel.tsx when no pending requests; handed off to the active screen owner to avoid editing their shared file. No MitMi application code pushed.",
+  "blocker": "The corrective Trip migration is not deployed, and runtime leave/chat cleanup has not been reproduced or verified with two accounts. The active Travel screen owner should also remove the creator's invalid Join/Leave CTA; no source edit was made to avoid a concurrent-file conflict.",
+  "updatedAt": "2026-10-24T22:01:03Z",
   "activity": [
     {
       "type": "working",
@@ -90,6 +90,12 @@
       "title": "Meet participant add passed static QA",
       "detail": "Reviewed f4d257d1 at exact head 0a97b6b5; CI #546/#547 passed npm test, lint, TypeScript and Android export. Migration deployment and two-account behavior remain DEVICE_VERIFY.",
       "at": "2026-10-12T19:05:00Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Trip lifecycle QA remains blocked",
+      "detail": "Reviewed live Trip RPCs, trigger state, grants and migration history read-only; identified creator CTA mismatch for handoff. Migration remains undeployed; no application code pushed.",
+      "at": "2026-10-24T22:01:03Z"
     }
   ]
 }
