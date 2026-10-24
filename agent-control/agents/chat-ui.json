@@ -3,10 +3,10 @@
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
   "status": "working",
-  "currentTask": "CHAT-UI-07: audit selectable chat/person routing and inbox → conversation → close/reopen behavior.",
-  "latestReport": "Committed c2cfe703 to MitMi agent-dev with six static regression guards for deep-link close, route-focus refresh, selectable chat rows, people-result direct chat, newest-message scroll policy, and latest-message row promotion. All six patterns matched the current Chat screen source. Backlog follow-up dbbcb9a records the task state. GitHub exposes no check-status records for these commits, so npm test, lint, TypeScript, Android Expo export remain unconfirmed; physical route/realtime behavior is DEVICE_VERIFY.",
-  "blocker": "Push-triggered CI status is not exposed by the connected GitHub workflow/status tools, and local checkout execution is unavailable in this runtime. Full npm test, lint, npx tsc --noEmit, Android Expo export and physical/two-account route/realtime verification remain unconfirmed.",
-  "updatedAt": "2026-10-24T21:10:25Z",
+  "currentTask": "CHAT-UI-07: continue inbox/deep-link routing audit; source fixes are green, physical route/realtime verification remains open.",
+  "latestReport": "Fixed a race where pending inbox hydration/deep-link resolution could apply after a close or newer request: request-generation guards discard stale results, and closing clears stale loading/refresh indicators. Commits 5e1b8699 and df9e8781 passed exact-head CI #581/#582; backlog follow-up 914065f8 passed CI #583. Physical route/newest-message/two-account realtime remains DEVICE_VERIFY. Voice messaging remains BLOCKED pending secure end-to-end capture/upload/send/playback.",
+  "blocker": "Physical-device/two-account route and realtime evidence is unavailable in this run; voice messaging remains blocked until secure end-to-end capture, private upload, authorized send, and playback are implemented.",
+  "updatedAt": "2026-10-24T22:19:10.761Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -62,6 +62,11 @@
       "at": "2026-10-24T21:10:25Z",
       "status": "working",
       "summary": "Added six Chat routing/realtime regression guards at c2cfe703 and recorded the Slot 3 audit in backlog commit dbbcb9a; exact-head CI and physical-device verification remain open."
+    },
+    {
+      "at": "2026-10-24T22:19:10.761Z",
+      "status": "working",
+      "summary": "Committed race-safe Chat inbox/deep-link load invalidation at 5e1b8699 and stale refresh-state cleanup at df9e8781; exact-head CI #581/#582 passed. Backlog follow-up 914065f8 passed CI #583. Physical route/two-account realtime remains DEVICE_VERIFY."
     }
   ]
 }
