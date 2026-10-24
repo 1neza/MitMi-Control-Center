@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "blocked",
-  "currentTask": "QA-GATE: review new Chat inbox-load invalidation and continue CORE-TRIP-01 live authorization gate.",
-  "latestReport": "FAILED_QA on MitMi commit 5e1b869 (fix(chat): ignore stale inbox loads after close): closeConversation invalidates pending loads, but on /chat without a channelId it starts no replacement load and does not clear loading/refreshing; the stale request's finally skips those flags, so the inbox can remain stuck loading. Regression assertions do not cover this branch. Exact reproduction returned to active Chat UI owner; no MitMi app code pushed. Trip follow-up migration 20261024201000 remains unapplied. Live leave_trip is caller-scoped and the capacity trigger does not reject leave transitions; creator guard and Trip sync trigger are still missing live. CI status for 5e1b869 is not exposed by connected status tools.",
-  "blocker": "Slot 3 must repair the no-channelId close path so invalidating an in-flight inbox load cannot leave loading/refreshing stuck. Separately, Trip migration 20261024201000 is unapplied and two-account leave/chat-access verification remains outstanding.",
-  "updatedAt": "2026-10-24T22:14:40.989Z",
+  "currentTask": "QA-GATE: validate df9e878 close-state repair and continue CORE-TRIP-01 live authorization gate.",
+  "latestReport": "The stale inbox-load defect found in 5e1b869 is addressed by Slot 3 commit df9e878: closeConversation now invalidates pending loads and clears loading/refreshing, with a new regression assertion. Seven targeted source-pattern checks pass. GitHub status/workflow tools expose no CI records for df9e878, and local checkout execution is unavailable, so npm test, lint, TypeScript and Android export are not independently verified. Separate finding for the active Travel screen owner: src/app/travel.tsx still renders the creator a Join/Leave CTA when there are no pending requests; exact condition is the isCreator && pending.length > 0 branch, whose else renders the member CTA. Trip migration 20261024201000 remains unapplied; no MitMi application code pushed by QA.",
+  "blocker": "Full CI checks for df9e878 are not independently visible. Trip migration 20261024201000 remains unapplied and two-account behavior is unverified. The creator Join/Leave CTA finding should be handled by the active Travel/Meet-Trip owner without conflicting edits to their shared screen.",
+  "updatedAt": "2026-10-24T22:16:20.389Z",
   "activity": [
     {
       "type": "working",
@@ -102,6 +102,12 @@
       "title": "Chat close race failed QA gate",
       "detail": "Reviewed new commit 5e1b869. Found stale load invalidation can leave /chat inbox loading state stuck when closing without a channelId; handed exact reproduction to the active Chat UI owner. Trip migration remains undeployed; no MitMi app code pushed.",
       "at": "2026-10-24T22:14:40.989Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Close-state repair passed targeted review; full gate blocked",
+      "detail": "Verified df9e878 clears stale loading/refreshing after close and adds a regression assertion; seven targeted source-pattern checks passed. Full CI remains unconfirmed and Trip lifecycle runtime gate is still blocked.",
+      "at": "2026-10-24T22:16:20.389Z"
     }
   ]
 }
