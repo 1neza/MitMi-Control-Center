@@ -3,76 +3,101 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "8957e2b325d2f696fae951eb8cdebd9a4c8e535b",
-  "latestCommit": "docs(backlog): reconcile current head and QA ownership",
-  "syncedAt": "2026-10-24T21:02:10.683Z",
+  "head": "df4e8677bf9c92b9ab86a8fc2bc80bb1d7603b53",
+  "latestCommit": "docs(backlog): record profile photo fallback verification",
+  "syncedAt": "2026-10-24T22:00:26.000Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 570,
+    "latestRun": 578,
     "latestConclusion": "success",
     "latestFailure": null,
-    "successRate": 100,
+    "successRate": 90,
     "history": [
+      {
+        "number": 578,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): record profile photo fallback verification",
+        "sha": "df4e8677bf9c92b9ab86a8fc2bc80bb1d7603b53",
+        "updatedAt": "2026-10-24T21:22:37Z"
+      },
+      {
+        "number": 577,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(profile): infer avatar type from file signature",
+        "sha": "9052069614c845bc5ea7ac9ead4766fb6eb1f37a",
+        "updatedAt": "2026-10-24T21:20:23Z"
+      },
+      {
+        "number": 576,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): record chat routing regression guards",
+        "sha": "dbbcb9a15c3a8bc833d3a360ac5147bf978b4132",
+        "updatedAt": "2026-10-24T21:14:43Z"
+      },
+      {
+        "number": 575,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(chat): guard conversation routing and realtime UX",
+        "sha": "c2cfe7038a5ae5edc2fab5dc464cb6080162ac6e",
+        "updatedAt": "2026-10-24T21:14:28Z"
+      },
+      {
+        "number": 574,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(qa): record Trip lifecycle gate evidence",
+        "sha": "d789611a87bb30249e0bffa85b96aa1676c9f6cc",
+        "updatedAt": "2026-10-24T21:13:38Z"
+      },
+      {
+        "number": 573,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(test): correct domain channel contract regexes",
+        "sha": "91c256f4ec4baee544a8c9f01376f670a5979c3e",
+        "updatedAt": "2026-10-24T21:12:36Z"
+      },
+      {
+        "number": 572,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "test(auth): guard Meet and Trip channel authority",
+        "sha": "0cf582ade9b35304a30b41a91fff1fb9151a709a",
+        "updatedAt": "2026-10-24T21:10:21Z"
+      },
+      {
+        "number": 571,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): reconcile current head and QA ownership",
+        "sha": "8957e2b325d2f696fae951eb8cdebd9a4c8e535b",
+        "updatedAt": "2026-10-24T21:02:33Z"
+      },
       {
         "number": 570,
         "status": "completed",
         "conclusion": "success",
         "title": "docs(backlog): record trip date fix verification",
         "sha": "297c1c4395762fe7b3c7abab03df22686773a18f",
-        "updatedAt": "2026-10-24T20:27:36.565Z"
+        "updatedAt": "2026-10-24T20:26:50Z"
       },
       {
         "number": 569,
         "status": "completed",
         "conclusion": "success",
         "title": "fix(travel): use local calendar dates for trip defaults",
-        "sha": "07a18832db0dc29b01dd02e61ce96d9ff641c5d0"
-      },
-      {
-        "number": 561,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(navigation): align web tabs with app shell",
-        "sha": "118474edb15332d62dda23ab169561fb96a8ec47",
-        "updatedAt": "2026-10-18T05:22:59Z"
-      },
-      {
-        "number": 560,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate creator leave guard",
-        "sha": "5ff98087cfcd1d6de8142521ae3407da82471c38",
-        "updatedAt": "2026-10-13T17:00:46Z"
-      },
-      {
-        "number": 559,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(meets): prevent creator departure",
-        "sha": "46145df0391464bc10b702e8a06c9bb31dbbaa5c",
-        "updatedAt": "2026-10-13T16:12:22Z"
-      },
-      {
-        "number": 558,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): gate Meet departure coverage",
-        "sha": "cfe78a4fb16254ece606e3ac2a41386845bfdef9",
-        "updatedAt": "2026-10-13T13:10:18Z"
-      },
-      {
-        "number": 557,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(domain): guard Meet departure synchronization",
-        "sha": "58329143b10b5f00d20f593874231f093d4748a8",
-        "updatedAt": "2026-10-13T12:20:42Z"
+        "sha": "07a18832db0dc29b01dd02e61ce96d9ff641c5d0",
+        "updatedAt": "2026-10-24T20:24:14Z"
       }
     ],
     "headCheck": {
-      "sha": "8957e2b325d2f696fae951eb8cdebd9a4c8e535b",
-      "status": "not_exposed",
-      "note": "Latest visible CI run #570 passed on parent 297c1c43; no check result was exposed for this new documentation-only head at sync time."
+      "sha": "df4e8677bf9c92b9ab86a8fc2bc80bb1d7603b53",
+      "status": "success",
+      "note": "CI #578 is completed/success on exact agent-dev HEAD df4e8677."
     }
   }
 }
