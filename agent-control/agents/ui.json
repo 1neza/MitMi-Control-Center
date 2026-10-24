@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "Slot 5 Navigation/Discovery: align the Home discovery category label with the requested Local Discovery wording while preserving the existing Local Match route.",
-  "latestReport": "MitMi agent-dev source commit c2affd55 limits foreground location permission requests to Android for Trip route-country geocoding; iOS geocoding no longer asks for device-location permission. Static guard commit 3c2b303e was checked against the source patterns. GitHub commit-status lookup returned no status records, so CI is not independently confirmed. Slot 5 continues with NAV-DISC-01.",
-  "blocker": "Physical iOS/Android Trip creation and permission behavior remain DEVICE_VERIFY; source-level work is not blocked.",
-  "updatedAt": "2026-10-24T22:19:23.000Z",
+  "currentTask": "Slot 5 Profile/Create: audit profile-photo add/replace/remove failure paths for a concrete source defect; preserve the single-photo flow and visible sign-out.",
+  "latestReport": "MitMi agent-dev commits 03c9d1a7 and cb4c64b8 change the Home category label to Local Discovery while preserving /local-match and add a focused route/label regression guard. The targeted regex passes against fetched branch source. Full CI (npm test, lint, TypeScript, Android Expo export) is not independently visible through the available GitHub status/workflow tools. The current travel.tsx source already hides Join/Leave for Trip creators while retaining request management and cancellation. Next: profile-photo add/replace/remove source audit.",
+  "blocker": "Physical Android/iOS profile-photo persistence and current-session sign-out remain DEVICE_VERIFY; source-level audit is not blocked.",
+  "updatedAt": "2026-10-24T23:21:52.000Z",
   "activity": [
     {
       "type": "working",
@@ -103,6 +103,12 @@
       "title": "Trip geocoding permission scope fixed",
       "detail": "MitMi agent-dev commits c2affd55 and 3c2b303e limit the device-location permission prompt to Android geocoding and add a static regression guard. Source-pattern validation passes; CI status is not exposed by the connector and device verification remains pending. Next: NAV-DISC-01 category label alignment.",
       "at": "2026-10-24T22:19:23.000Z"
+    },
+    {
+      "type": "working",
+      "title": "Local Discovery label and route guard committed",
+      "detail": "MitMi agent-dev commit 03c9d1a7 changes only the Home discovery category text; cb4c64b8 adds a static guard that the Local Discovery label remains adjacent to the existing /local-match route. Focused source regex passes. Full CI is not independently visible; the backlog now rotates Slot 5 to the profile-photo failure-path audit.",
+      "at": "2026-10-24T23:21:52.000Z"
     }
   ]
 }
