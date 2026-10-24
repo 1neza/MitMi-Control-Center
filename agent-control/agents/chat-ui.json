@@ -3,10 +3,10 @@
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
   "status": "working",
-  "currentTask": "CHAT-UI-06: clear stale channelId deep-link state when closing a conversation; verify source/CI.",
-  "latestReport": "Pushed ecd201bd to MitMi agent-dev: closeConversation replaces /chat when a channelId deep-link is present, so refocusing the route returns to the inbox instead of reopening the conversation. Backlog records the fix at 43fb5fd. GitHub combined-status lookup currently returns no checks; physical route behavior remains DEVICE_VERIFY.",
-  "blocker": "CI checks for ecd201bd/43fb5fd are not exposed by the connected GitHub status/run tools, and this runtime cannot reach GitHub from a local checkout to run npm test, lint, TypeScript, or Android export directly.",
-  "updatedAt": "2026-10-24T20:18:02.415Z",
+  "currentTask": "CHAT-UI-06: close stale channelId deep-links and verify Chat UI route behavior.",
+  "latestReport": "Pushed ecd201bd to MitMi agent-dev: closeConversation replaces /chat only when a channelId deep-link is present, preventing a later route-focus refresh from reopening the closed conversation. The backlog evidence is recorded at 43fb5fd and its Markdown cleanup at 2649882. Source assertions confirm chat/person selection, newest-message tracking, and compact composer hooks remain present. GitHub combined-status lookup still returns no checks; physical route behavior remains DEVICE_VERIFY.",
+  "blocker": "The connected GitHub status/run tools do not expose the push-triggered CI checks for the current agent-dev head; direct local validation is unavailable because this runtime cannot resolve github.com. npm test, lint, TypeScript, and Android Expo export remain unconfirmed.",
+  "updatedAt": "2026-10-24T20:19:10.639Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -52,6 +52,11 @@
       "at": "2026-10-24T20:18:02.415Z",
       "status": "working",
       "summary": "Fixed stale Chat channelId deep-link on close at ecd201bd; updated private backlog at 43fb5fd. CI status visibility and physical route verification remain open."
+    },
+    {
+      "at": "2026-10-24T20:19:10.639Z",
+      "status": "working",
+      "summary": "Recorded Chat deep-link close fix ecd201bd and backlog updates through 2649882; source-level assertions pass, CI and device verification remain open."
     }
   ]
 }
