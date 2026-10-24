@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "Slot 5 Profile/Create: audit the existing Create Trip route for a concrete source-level defect, one defect per run.",
-  "latestReport": "MitMi commit 90520696 adds signature-based JPEG/PNG/WebP detection for profile-photo assets when Expo omits MIME metadata and filename/URI extension. CI #577 passed authorization regression tests, lint, TypeScript and Android Expo export; backlog follow-up df4e8677 also passed CI #578. Physical picker persistence and Create Trip routing remain DEVICE_VERIFY.",
-  "blocker": "Physical Android/iOS picker persistence and Create Trip routing remain DEVICE_VERIFY; source-level audit work is not blocked.",
-  "updatedAt": "2026-10-24T21:22:46.708Z",
+  "currentTask": "Slot 5 Navigation/Discovery: align the Home discovery category label with the requested Local Discovery wording while preserving the existing Local Match route.",
+  "latestReport": "MitMi agent-dev source commit c2affd55 limits foreground location permission requests to Android for Trip route-country geocoding; iOS geocoding no longer asks for device-location permission. Static guard commit 3c2b303e was checked against the source patterns. GitHub commit-status lookup returned no status records, so CI is not independently confirmed. Slot 5 continues with NAV-DISC-01.",
+  "blocker": "Physical iOS/Android Trip creation and permission behavior remain DEVICE_VERIFY; source-level work is not blocked.",
+  "updatedAt": "2026-10-24T22:19:23.000Z",
   "activity": [
     {
       "type": "working",
@@ -97,6 +97,12 @@
       "title": "Profile photo fix and backlog verification green",
       "detail": "CI #577 passed for avatar signature fallback and all required checks; docs-only backlog follow-up df4e8677 passed CI #578. Source-level work continues with the Create Trip route audit.",
       "at": "2026-10-24T21:22:46.708Z"
+    },
+    {
+      "type": "working",
+      "title": "Trip geocoding permission scope fixed",
+      "detail": "MitMi agent-dev commits c2affd55 and 3c2b303e limit the device-location permission prompt to Android geocoding and add a static regression guard. Source-pattern validation passes; CI status is not exposed by the connector and device verification remains pending. Next: NAV-DISC-01 category label alignment.",
+      "at": "2026-10-24T22:19:23.000Z"
     }
   ]
 }
