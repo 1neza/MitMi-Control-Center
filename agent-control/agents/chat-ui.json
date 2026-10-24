@@ -3,10 +3,10 @@
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
   "status": "working",
-  "currentTask": "CHAT-UI-06: close stale channelId deep-links and verify Chat UI route behavior.",
-  "latestReport": "Pushed ecd201bd to MitMi agent-dev: closeConversation replaces /chat only when a channelId deep-link is present, preventing a later route-focus refresh from reopening the closed conversation. The backlog evidence is recorded at 43fb5fd and its Markdown cleanup at 2649882. Source assertions confirm chat/person selection, newest-message tracking, and compact composer hooks remain present. GitHub combined-status lookup still returns no checks; physical route behavior remains DEVICE_VERIFY.",
-  "blocker": "The connected GitHub status/run tools do not expose the push-triggered CI checks for the current agent-dev head; direct local validation is unavailable because this runtime cannot resolve github.com. npm test, lint, TypeScript, and Android Expo export remain unconfirmed.",
-  "updatedAt": "2026-10-24T20:19:10.639Z",
+  "currentTask": "CHAT-UI-07: audit selectable chat/person routing and inbox → conversation → close/reopen behavior.",
+  "latestReport": "Committed c2cfe703 to MitMi agent-dev with six static regression guards for deep-link close, route-focus refresh, selectable chat rows, people-result direct chat, newest-message scroll policy, and latest-message row promotion. All six patterns matched the current Chat screen source. Backlog follow-up dbbcb9a records the task state. GitHub exposes no check-status records for these commits, so npm test, lint, TypeScript, Android Expo export remain unconfirmed; physical route/realtime behavior is DEVICE_VERIFY.",
+  "blocker": "Push-triggered CI status is not exposed by the connected GitHub workflow/status tools, and local checkout execution is unavailable in this runtime. Full npm test, lint, npx tsc --noEmit, Android Expo export and physical/two-account route/realtime verification remain unconfirmed.",
+  "updatedAt": "2026-10-24T21:10:25Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -57,6 +57,11 @@
       "at": "2026-10-24T20:19:10.639Z",
       "status": "working",
       "summary": "Recorded Chat deep-link close fix ecd201bd and backlog updates through 2649882; source-level assertions pass, CI and device verification remain open."
+    },
+    {
+      "at": "2026-10-24T21:10:25Z",
+      "status": "working",
+      "summary": "Added six Chat routing/realtime regression guards at c2cfe703 and recorded the Slot 3 audit in backlog commit dbbcb9a; exact-head CI and physical-device verification remain open."
     }
   ]
 }
