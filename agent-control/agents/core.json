@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "working",
-  "currentTask": "CORE-TRIP-04 ACTIVE: reproduce the original ordinary-member Trip leave RPC failure without production writes; preserve creator safety and verify the domain-aware chat access fix.",
-  "latestReport": "Core commit 42e3ff0db9e8c1326cd33d0ee1ff3f6e2bac41ae passed exact-head CI #667, including npm test, lint, TypeScript, Android Expo export, fresh local Supabase migrations, and Trip/Local Match SQL regressions with rollback. It closes the stale generic membership read bypass at source by requiring accepted Meet/Trip membership for linked channel/message reads. The previous QA failure is resolved for source/disposable CI. The new backlog/runbook handoff is in 6ddc659. Highest-priority remaining issue is the original normal-member Trip leave failure, which is still unreproduced; production remains untouched and NO-GO.",
-  "blocker": "No verified staging environment/two-account test path or matching production leave error trace is available. Production rollout remains blocked pending explicit owner approval, backup/PITR confirmation and staging evidence. Do not mutate production.",
-  "updatedAt": "2026-10-25T06:59:39.175Z",
+  "status": "blocked",
+  "currentTask": "CORE-TRIP-04 ACTIVE: reproduce the original ordinary-member Trip leave failure without production writes; preserve creator safety and verify accepted-member/departed-member Chat authorization.",
+  "latestReport": "Read-only audit at MitMi agent-dev HEAD 6cc9e2ed (documentation-only successor to CI #668-passing code head 6ddc659) reconfirmed live leave_trip is postgres-owned SECURITY DEFINER with empty search_path and authenticated EXECUTE; it uses the composite key, updates only the caller, and deletes only the caller's Trip channel_members row. Live capacity and notification triggers do not reject accepted-to-left. No leave_trip API request or matching database error appeared in the 24h log window; only a list_visible_trip_members request matched the broad Trip-members search. Live domain-chat sync trigger is absent; 2 of 4 accepted Trip memberships lack derived channel_members. Corrective migrations remain unapplied. No production RPC invocation, writes, or deployment; no MitMi code pushed.",
+  "blocker": "The reported ordinary-member leave failure remains unreproduced because no matching leave_trip request/error exists in the available 24-hour logs and no staging branch/two-account path is available. Obtain a client-side error/failed-request timestamp or authorized disposable staging reproduction. Production migrations remain NO-GO pending explicit owner approval, backup/PITR confirmation, and staging evidence.",
+  "updatedAt": "2026-10-25T07:06:00Z",
   "activity": [
     {
       "type": "working",
@@ -289,6 +289,12 @@
       "title": "Core resumed on Trip leave root cause",
       "detail": "After QA passed commit 42e3ff0 / CI #667, Core resumes CORE-TRIP-04. Need a controlled non-production reproduction of the original normal-member leave error; no production writes or deployment.",
       "at": "2026-10-25T06:59:39.175Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Trip leave remains unreproduced after fresh read-only audit",
+      "detail": "At agent-dev HEAD 6cc9e2ed, live leave_trip still uses caller-scoped composite-key updates and cleanup; capacity/notification triggers do not block accepted-to-left. No leave_trip request/error appeared in the last 24h logs. The Trip chat-sync trigger is absent and 2/4 accepted Trip memberships lack derived chat rows. Corrective migrations remain unapplied; no production RPC invocation, writes, deployment, or MitMi code push. Slot 2 remains ACTIVE pending an actual failed-request trace or authorized disposable staging reproduction.",
+      "at": "2026-10-25T07:06:00Z"
     }
   ]
 }
