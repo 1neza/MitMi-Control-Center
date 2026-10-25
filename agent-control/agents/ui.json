@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "NAV-DISC-03: audit/fix the initial horizontal discovery-category size/layout jump; keep first-render pill dimensions stable.",
-  "latestReport": "MitMi agent-dev exact head c798d292968253c9d30b3db8c77cedd677767948 passed CI #615. Profile/Create fix 3fd9cf54 routes a no-history /profile back action to /(tabs)/me instead of retired /more; guard commit 3c1dc6f7 covers the fallback. Exact-head CI #614 passed validate and trip-lifecycle; code CI #613 also passed. Focused route assertions pass. Physical back/deep-link behavior and avatar persistence/current-session Sign Out remain DEVICE_VERIFY. Navigation/Discovery is now active on NAV-DISC-03 for stable first-render category dimensions.",
+  "currentTask": "PROFILE-CREATE-04: audit profile-photo add/replace/remove failure paths for one concrete source defect.",
+  "latestReport": "MitMi agent-dev NAV-DISC-03: commit af8e1101 fixes the Home discovery category scroller/pills at a stable 42px with non-shrinking layout and fixed text metrics; follow-up 81f4a1bb corrected over-escaped regression guard patterns. Exact-head CI #627 validate job passed authorization regression tests, lint, TypeScript and Android Expo export; disposable trip-lifecycle SQL job remains in progress. First-render/scroll behavior remains DEVICE_VERIFY. Slot 5 rotated to Profile/Create PROFILE-CREATE-04.",
   "blocker": null,
-  "updatedAt": "2026-10-25T02:19:39.146Z",
+  "updatedAt": "2026-10-25T03:27:44.729Z",
   "activity": [
     {
       "type": "working",
@@ -127,6 +127,12 @@
       "title": "Profile fallback fix passed CI",
       "detail": "MitMi agent-dev exact head c798d292 passed CI #615 (validate plus disposable Trip lifecycle). Source fix 3fd9cf54 and regression guard 3c1dc6f7 redirect no-history /profile back navigation to /(tabs)/me and forbid the retired /more fallback. Next: NAV-DISC-03.",
       "at": "2026-10-25T02:19:39.146Z"
+    },
+    {
+      "type": "working",
+      "title": "Discovery category sizing stabilized",
+      "detail": "MitMi agent-dev commits af8e1101 and 81f4a1bb fix the initial category sizing and its regression guards. CI #627 validate passed authorization tests, lint, TypeScript and Android Expo export; disposable Trip/Local Match SQL validation is still running. Physical first-render/scroll remains DEVICE_VERIFY; next role is Profile/Create PROFILE-CREATE-04.",
+      "at": "2026-10-25T03:27:44.729Z"
     }
   ]
 }
