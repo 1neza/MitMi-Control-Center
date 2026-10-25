@@ -4,9 +4,9 @@
   "role": "UI / UX",
   "status": "working",
   "currentTask": "NAV-DISC-03: audit/fix the initial horizontal discovery-category size/layout jump; keep first-render pill dimensions stable.",
-  "latestReport": "Profile/Create audit found a direct-link navigation defect: src/app/profile.tsx returned to the retired /more hub when no back history existed. MitMi agent-dev commits 3fd9cf54 (fallback to /(tabs)/me) and 3c1dc6f7 (regression guard forbidding /more fallback) are pushed. Focused source assertions pass; exact-head CI #613/#614 is still running, and the backlog records the next Navigation/Discovery task NAV-DISC-03. Physical-device deep-link/back, avatar persistence and Sign Out remain DEVICE_VERIFY.",
+  "latestReport": "MitMi agent-dev exact head c798d292968253c9d30b3db8c77cedd677767948 passed CI #615. Profile/Create fix 3fd9cf54 routes a no-history /profile back action to /(tabs)/me instead of retired /more; guard commit 3c1dc6f7 covers the fallback. Exact-head CI #614 passed validate and trip-lifecycle; code CI #613 also passed. Focused route assertions pass. Physical back/deep-link behavior and avatar persistence/current-session Sign Out remain DEVICE_VERIFY. Navigation/Discovery is now active on NAV-DISC-03 for stable first-render category dimensions.",
   "blocker": null,
-  "updatedAt": "2026-10-25T02:17:37.730Z",
+  "updatedAt": "2026-10-25T02:19:39.146Z",
   "activity": [
     {
       "type": "working",
@@ -121,6 +121,12 @@
       "title": "Profile edit fallback repaired",
       "detail": "MitMi agent-dev 3fd9cf54 sends no-history /profile back navigation to /(tabs)/me instead of the retired /more hub; 3c1dc6f7 adds a regression guard. Focused source assertions pass; CI pending. Next: NAV-DISC-03 discovery-category first-render layout audit.",
       "at": "2026-10-25T02:17:37.730Z"
+    },
+    {
+      "type": "success",
+      "title": "Profile fallback fix passed CI",
+      "detail": "MitMi agent-dev exact head c798d292 passed CI #615 (validate plus disposable Trip lifecycle). Source fix 3fd9cf54 and regression guard 3c1dc6f7 redirect no-history /profile back navigation to /(tabs)/me and forbid the retired /more fallback. Next: NAV-DISC-03.",
+      "at": "2026-10-25T02:19:39.146Z"
     }
   ]
 }
