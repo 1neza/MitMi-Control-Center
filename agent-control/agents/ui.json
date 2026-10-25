@@ -4,9 +4,9 @@
   "role": "UI / UX",
   "status": "working",
   "currentTask": "NAV-DISC-06: audit Home search result de-duplication for casing/spacing variants without changing raw query/display names or the server search contract.",
-  "latestReport": "PROFILE-CREATE-06 corrected the stale Profile Back accessibility hint to describe the actual Profile-tab fallback. MitMi agent-dev code commit 24c824677c4d75f6ad187255334d43504927ceda; regression-guard correction 60a207dd6826dc5ac8234dfa95e24b6b20b39b38. Focused source assertions pass. CI #680 is still running at the last read: authorization tests, lint, TypeScript and Android Expo export passed; disposable migration/SQL job remains in progress. Backlog rotates to NAV-DISC-06. Profile Back runtime remains DEVICE_VERIFY; Slot 5 remains ACTIVE and enabled.",
+  "latestReport": "PROFILE-CREATE-06 completed: src/app/profile.tsx now describes the direct-entry fallback as returning to the Profile tab; navigation logic is unchanged. Code commit 24c824677c4d75f6ad187255334d43504927ceda; regression-guard correction 60a207dd6826dc5ac8234dfa95e24b6b20b39b38. Focused assertions passed. Exact-head CI #680 (run 40176449231) passed both validate and trip-lifecycle, including authorization regression tests, lint, TypeScript, Android Expo export, fresh disposable migrations, Trip lifecycle SQL and Local Match SQL. Backlog rotates to NAV-DISC-06. Current docs-only agent-dev head ba7e49dd has a CI run in progress; physical Profile Back behavior remains DEVICE_VERIFY. Slot 5 remains ACTIVE and enabled.",
   "blocker": null,
-  "updatedAt": "2026-10-25T08:26:18.139Z",
+  "updatedAt": "2026-10-25T08:27:12.662Z",
   "activity": [
     {
       "type": "working",
@@ -181,6 +181,12 @@
       "title": "Profile Back hint corrected; Home search audit active",
       "detail": "MitMi agent-dev commits 24c82467 and 60a207dd correct the stale Profile-tab accessibility hint and regression guard. Focused source assertions pass. CI #680 validate checks passed through Android Expo export; disposable migration/SQL checks were still running at last read. Next: NAV-DISC-06 Home search deduplication audit. Profile Back runtime remains DEVICE_VERIFY.",
       "at": "2026-10-25T08:26:18.139Z"
+    },
+    {
+      "type": "success",
+      "title": "Profile Back hint fix passed full CI",
+      "detail": "MitMi agent-dev code/test commit 60a207dd passed CI #680 validate and trip-lifecycle: npm test, lint, TypeScript, Android Expo export, fresh disposable migrations and both SQL regression suites. Backlog records NAV-DISC-06 as the next active task. Physical Back behavior remains DEVICE_VERIFY.",
+      "at": "2026-10-25T08:27:12.662Z"
     }
   ]
 }
