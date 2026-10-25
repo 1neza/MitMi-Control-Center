@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "PROFILE-CREATE-04: audit profile-photo add/replace/remove failure paths for one concrete source defect.",
-  "latestReport": "At current agent-dev HEAD 3093c4fde29c7c58349c6533c2a752093f101cc7, exact-head CI #634 passed both validation and disposable Trip/Local Match SQL jobs. Latest app-code change remains NAV-DISC-03 at af8e1101 with guard correction 81f4a1bb; CI #627 passed. Slot 5 remains ACTIVE on PROFILE-CREATE-04. Profile-photo persistence, Sign Out and first-render/scroll behavior remain DEVICE_VERIFY.",
+  "currentTask": "PROFILE-CREATE-04: handle Supabase signOut returned errors in ProfileScreen; exact-head CI unconfirmed.",
+  "latestReport": "MitMi agent-dev commits 3f1c1cbd9c56c1dc99a4d8b46e6ae018a08365e7 and 4247f8b314006a29f6ca0708253891b0a48e08a9 now check the Supabase signOut result and guard that returned errors reach the visible error handler with the busy flag reset. Avatar add/replace/remove source audit found no additional concrete defect. The regression guard was manually matched against fetched source. GitHub combined-status/workflow lookups returned no records, so full CI is UNCONFIRMED. Profile photo persistence and actual sign-out remain DEVICE_VERIFY; Slot 5 stays ACTIVE and enabled.",
   "blocker": null,
-  "updatedAt": "2026-10-25T04:12:51.789Z",
+  "updatedAt": "2026-10-25T04:18:30.000Z",
   "activity": [
     {
       "type": "working",
@@ -145,6 +145,12 @@
       "title": "Profile/Create continues after CI #634",
       "detail": "No feature code from Slot 1; PROFILE-CREATE-04 remains active and scoped to profile-photo failure paths.",
       "at": "2026-10-25T04:12:51.789Z"
+    },
+    {
+      "type": "working",
+      "title": "Profile sign-out returned errors handled",
+      "detail": "MitMi agent-dev 3f1c1cbd checks Supabase signOut's returned error and sends it through the existing visible error state; 4247f8b3 adds a regression guard. Manual source assertion passes; exact-head CI is unconfirmed. Avatar flow audit found no additional defect; device persistence/sign-out remain DEVICE_VERIFY.",
+      "at": "2026-10-25T04:18:30.000Z"
     }
   ]
 }
