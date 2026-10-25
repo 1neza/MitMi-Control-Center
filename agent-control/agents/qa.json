@@ -2,11 +2,11 @@
   "id": "qa",
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
-  "status": "idle",
-  "currentTask": "QA Gate RESTING after exact-head CI #660 PASS; Core Integrator ACTIVE on CORE-TRIP-04.",
-  "latestReport": "Exact pre-update agent-dev head 54b9ded2a314f6b8638728a6915ce3c8432c1528 passed CI #660: validate and trip-lifecycle both succeeded. Checks included npm test, lint, TypeScript, Android Expo export, fresh disposable Supabase migrations, Trip lifecycle SQL and Local Match chat SQL with fixture rollback. Source/CI QA is PASS. Fresh read-only production audit still shows pending domain-chat migrations, direct-chat RPC invoker/RLS mismatch, missing Meet/Trip sync triggers and accepted memberships without derived Chat rows. Production remains NO-GO; the original ordinary-member Trip leave failure is still unreproduced. No production writes or deployment.",
-  "blocker": "Production rollout remains NO-GO pending authorized staging, backup/PITR confirmation, owner approval and two-account evidence; original Trip leave failure remains unreproduced.",
-  "updatedAt": "2026-10-25T06:44:24.115Z",
+  "status": "blocked",
+  "currentTask": "QA Gate FAILED_QA: domain-linked channel/message RLS trusts stale generic channel_members; Core remediation required.",
+  "latestReport": "CI #659 on code-bearing 9cc77643 and CI #660 on pre-update head 54b9ded passed validate and trip-lifecycle, including npm test, lint, TypeScript, Android Expo export and fresh local Supabase SQL regressions. Deeper read-only RLS review found an acceptance/security gap: private.is_channel_member only checks channel_members, and channels/messages SELECT policies trust it. A stale generic row can therefore restore reads for a departed/non-accepted Meet/Trip member even though get_or_create_trip_channel rejects that caller. Existing regression covers RPC denial but not channel/message reads. Overall QA is FAILED_QA; Core must add domain-aware RLS and stale-row read-denial tests. Production remains NO-GO; no production writes/deployment.",
+  "blocker": "FAILED_QA: stale generic channel_members rows still authorize channels/messages reads for domain-linked Meet/Trip channels. Core must fix RLS and add regression assertions; staging/PITR/owner authorization and original Trip leave failure reproduction remain pending.",
+  "updatedAt": "2026-10-25T06:47:51.207Z",
   "activity": [
     {
       "type": "working",
@@ -138,6 +138,12 @@
       "title": "Exact-head domain chat QA passed",
       "detail": "CI #660 passed both validate and trip-lifecycle on 54b9ded2a314f6b8638728a6915ce3c8432c1528. Source/disposable SQL gate is PASS; production Local Discovery/Meet/Trip rollout remains NO-GO and Trip leave runtime is unreproduced. QA Gate rests; Core Integrator resumes CORE-TRIP-04. No production mutation.",
       "at": "2026-10-25T06:44:24.115Z"
+    },
+    {
+      "type": "blocked",
+      "title": "FAILED_QA: stale generic membership can read domain chat",
+      "detail": "CI #660 passed, but source review found channels/messages SELECT policies trust private.is_channel_member, which checks only channel_members. A stale row can restore reads after Trip/Meet departure even though the domain RPC denies access. Core remediation and RLS regression required; no production mutation.",
+      "at": "2026-10-25T06:47:51.207Z"
     }
   ]
 }
