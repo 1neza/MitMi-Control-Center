@@ -3,16 +3,48 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "3093c4fde29c7c58349c6533c2a752093f101cc7",
-  "latestCommit": "docs(coordination): record Local Discovery live drift and next gate",
-  "syncedAt": "2026-10-25T04:12:51.789Z",
+  "head": "843bcd073abb111abe8a60c78849433eb4fff412",
+  "latestCommit": "docs(coordination): reconcile inbox CI and rotate Slot 5",
+  "syncedAt": "2026-10-25T06:07:04.400Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 634,
-    "latestConclusion": "success",
-    "latestFailure": "Historical CI #626 failed on the first NAV-DISC-03 regex guard; correction at 81f4a1bb passed CI #627. Exact-head CI #630–#634 passed both validation and disposable lifecycle jobs.",
+    "latestRun": 645,
+    "latestConclusion": "in_progress",
+    "latestFailure": "Historical CI #642 failed on the first inbox-route regex guard; correction passed CI #643 and exact-head CI #644 passed. CI #645 is running on the coordination-only backlog reconciliation.",
     "successRate": 80,
     "history": [
+      {
+        "number": 645,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): reconcile inbox CI and rotate Slot 5",
+        "sha": "843bcd073abb111abe8a60c78849433eb4fff412",
+        "updatedAt": "2026-10-25T06:07:04.400Z"
+      },
+      {
+        "number": 644,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): verify inbox icon and rotate Slot 5",
+        "sha": "f10a0e6f2de0699dd9ffcc1c9c99985c23ea3a5e",
+        "updatedAt": "2026-10-25T05:32:31Z"
+      },
+      {
+        "number": 643,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(navigation): correct inbox route guard escaping",
+        "sha": "b13cb6ce913cfa0968d2ffaa41ecdebc678bc1a5",
+        "updatedAt": "2026-10-25T05:28:56Z"
+      },
+      {
+        "number": 642,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "test(navigation): guard Home inbox message icon",
+        "sha": "7a27f2f5a9662fa905d01c5416c4e9a02ade2885",
+        "updatedAt": "2026-10-25T05:28:14Z"
+      },
       {
         "number": 634,
         "status": "completed",
@@ -60,45 +92,13 @@
         "title": "docs(backlog): record Slot 5 discovery CI pass",
         "sha": "78de59fd15bd97fdf8476b34bdd78e2759a00ed3",
         "updatedAt": "2026-10-25T03:30:42Z"
-      },
-      {
-        "number": 628,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record discovery sizing and rotate Slot 5",
-        "sha": "80680364646efcdd3c9ad3b1e7d4a3bcb933bc8c",
-        "updatedAt": "2026-10-25T03:30:01Z"
-      },
-      {
-        "number": 627,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(navigation): correct discovery sizing guard patterns",
-        "sha": "81f4a1bba901e9e005d35cd773446dfece052a0f",
-        "updatedAt": "2026-10-25T03:27:47Z"
-      },
-      {
-        "number": 626,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "fix(navigation): stabilize discovery category sizing",
-        "sha": "af8e11015b505e684124f9af92c7b9e12ad90e58",
-        "updatedAt": "2026-10-25T03:27:26Z"
-      },
-      {
-        "number": 625,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(core): record read-only Trip leave diagnosis",
-        "sha": "acd8b9d8aa590cff2195aa344034a95df2803091",
-        "updatedAt": "2026-10-25T03:11:13Z"
       }
     ],
     "headCheck": {
-      "sha": "3093c4fde29c7c58349c6533c2a752093f101cc7",
-      "status": "completed",
-      "conclusion": "success",
-      "note": "Exact-head CI #634 passed both jobs. validate passed runner syntax checks, authorization regression tests, lint, TypeScript and Android Expo export; trip-lifecycle applied migrations to a fresh disposable local Supabase database and passed Trip lifecycle plus Local Match chat SQL regressions. These are branch/disposable-DB checks only: no production migration deployed and no physical-device/two-account behavior certified."
+      "sha": "843bcd073abb111abe8a60c78849433eb4fff412",
+      "status": "in_progress",
+      "conclusion": null,
+      "note": "Coordination-only backlog update; exact-head CI #645 is still running. Parent exact-head CI #644 passed validate and trip-lifecycle. Device and production behavior are not certified by CI."
     }
   }
 }
