@@ -3,102 +3,102 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "52e515be2a3cf33a4213b7dabb1099e132dafd34",
-  "latestCommit": "docs(coordination): reconcile exact head and rotate Trip UI ownership",
-  "syncedAt": "2026-10-24T23:01:14.316Z",
+  "head": "418136261e874384b4a0c85af2e09053e7096c88",
+  "latestCommit": "docs(qa): record Trip lifecycle integration PASS",
+  "syncedAt": "2026-10-25T00:14:26.991Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 588,
-    "latestConclusion": "success",
+    "latestRun": 599,
+    "latestConclusion": "in_progress",
     "latestFailure": null,
-    "successRate": 90,
+    "successRate": 100,
     "history": [
       {
-        "number": 588,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): reconcile exact head and rotate Trip UI ownership",
-        "sha": "52e515be2a3cf33a4213b7dabb1099e132dafd34",
-        "updatedAt": "2026-10-24T23:00:47Z"
+        "number": 599,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(qa): record Trip lifecycle integration PASS",
+        "sha": "418136261e874384b4a0c85af2e09053e7096c88",
+        "updatedAt": "2026-10-25T00:12:25Z"
       },
       {
-        "number": 587,
+        "number": 598,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(backlog): rotate Slot 5 to discovery label audit",
-        "sha": "3780573844d1bde9842dbd9b6461bfeaedd9ba80",
-        "updatedAt": "2026-10-24T22:28:31Z"
+        "title": "docs(coordination): reconcile lifecycle CI and rotate paired roles",
+        "sha": "cf01de9804e915ffd936956b124ccf5b637c1f4f",
+        "updatedAt": "2026-10-25T00:13:17Z"
       },
       {
-        "number": 586,
+        "number": 597,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(test): correct Trip geocoding guard regex",
-        "sha": "3c2b303ebae0698cee5885e2afa0e3e78764f223",
-        "updatedAt": "2026-10-24T22:26:08Z"
+        "title": "test(travel): execute Trip lifecycle harness in local Supabase CI",
+        "sha": "bdd1f0fe71e0160ab4b1dd6cce8588fc48d6c9ff",
+        "updatedAt": "2026-10-25T00:08:51Z"
       },
       {
-        "number": 585,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "test(travel): guard Android-only geocoding permission",
-        "sha": "08a07198aa1ebfc191cce76f1dc1cdb1319dc05a",
-        "updatedAt": "2026-10-24T22:24:36Z"
-      },
-      {
-        "number": 584,
+        "number": 596,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(travel): request geocoding permission only on Android",
-        "sha": "c2affd55832b48881d2b6edf445b428e88d9c4b9",
-        "updatedAt": "2026-10-24T22:25:27Z"
+        "title": "docs(backlog): rotate Slot 5 to profile photo audit",
+        "sha": "bc6a56c6aaa1b74f51847209d850078d3fb512f7",
+        "updatedAt": "2026-10-24T23:29:19Z"
       },
       {
-        "number": 583,
+        "number": 595,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(chat): record stale inbox load race fix",
-        "sha": "914065f8a7fe080e126be63bb7df63cbff919d1e",
-        "updatedAt": "2026-10-24T22:18:55Z"
+        "title": "test(discovery): guard Local Discovery route label",
+        "sha": "cb4c64b81d91836d964ea46bed31c3c69f6bd25c",
+        "updatedAt": "2026-10-24T23:25:25Z"
       },
       {
-        "number": 582,
+        "number": 594,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(chat): clear stale refresh state on close",
-        "sha": "df9e878108f90ae5ac12302b06bb404df48040bd",
-        "updatedAt": "2026-10-24T22:16:29Z"
+        "title": "fix(discovery): label Home category Local Discovery",
+        "sha": "03c9d1a79ddcf59e65932d7341c13d0eaa0d93cc",
+        "updatedAt": "2026-10-24T23:25:56Z"
       },
       {
-        "number": 581,
+        "number": 593,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(chat): ignore stale inbox loads after close",
-        "sha": "5e1b8699924dce778c64e3395fb86a50136c4a67",
-        "updatedAt": "2026-10-24T22:13:37Z"
+        "title": "test(travel): add isolated local trip lifecycle harness",
+        "sha": "f1719a30680038ed97f5621f215a12585c1978dc",
+        "updatedAt": "2026-10-24T23:22:46Z"
       },
       {
-        "number": 580,
+        "number": 592,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): clarify code baseline and live head telemetry",
-        "sha": "7ccf541248c06023368543df297ade1ddfd26758",
-        "updatedAt": "2026-10-24T22:07:03Z"
+        "title": "docs(backlog): record Chat routing race verification",
+        "sha": "d461291849212633ea916c9421f2e65a8c588c62",
+        "updatedAt": "2026-10-24T23:21:01Z"
       },
       {
-        "number": 579,
+        "number": 591,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): reconcile exact head and CI evidence",
-        "sha": "0bb0ef6537e00acb883f69468c66f191c9259ee6",
-        "updatedAt": "2026-10-24T22:05:33Z"
+        "title": "fix(chat): cancel pending opens on inbox blur",
+        "sha": "3e225314751106965359461c40fc8b251f0f5ad7",
+        "updatedAt": "2026-10-24T23:18:44Z"
+      },
+      {
+        "number": 590,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(chat): correct stale-open regression guards",
+        "sha": "22422636896dba787a2151bcb2d63d70419229f8",
+        "updatedAt": "2026-10-24T23:16:19Z"
       }
     ],
     "headCheck": {
-      "sha": "52e515be2a3cf33a4213b7dabb1099e132dafd34",
-      "status": "completed",
-      "conclusion": "success",
-      "note": "CI #588 passed on exact agent-dev HEAD 52e515be."
+      "sha": "418136261e874384b4a0c85af2e09053e7096c88",
+      "status": "in_progress",
+      "conclusion": null,
+      "note": "CI #599 is running on exact agent-dev HEAD 41813626 (coordination-only QA evidence). CI #597 on ancestor bdd1f0fe passed both validation and the fresh-local-Supabase Trip lifecycle regression. Do not treat disposable CI as production deployment."
     }
   }
 }
