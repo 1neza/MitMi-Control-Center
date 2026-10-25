@@ -5,21 +5,21 @@
   "branch": "agent-dev",
   "head": "418136261e874384b4a0c85af2e09053e7096c88",
   "latestCommit": "docs(qa): record Trip lifecycle integration PASS",
-  "syncedAt": "2026-10-25T00:14:26.991Z",
+  "syncedAt": "2026-10-25T00:15:39.130Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 599,
-    "latestConclusion": "in_progress",
+    "latestConclusion": "success",
     "latestFailure": null,
-    "successRate": 90,
+    "successRate": 100,
     "history": [
       {
         "number": 599,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(qa): record Trip lifecycle integration PASS",
         "sha": "418136261e874384b4a0c85af2e09053e7096c88",
-        "updatedAt": "2026-10-25T00:12:25Z"
+        "updatedAt": "2026-10-25T00:15:10Z"
       },
       {
         "number": 598,
@@ -96,9 +96,9 @@
     ],
     "headCheck": {
       "sha": "418136261e874384b4a0c85af2e09053e7096c88",
-      "status": "in_progress",
-      "conclusion": null,
-      "note": "CI #599 is running on exact agent-dev HEAD 41813626 (coordination-only QA evidence). CI #597 on ancestor bdd1f0fe passed both validation and the fresh-local-Supabase Trip lifecycle regression. Success rate is 90% across the latest 10 completed runs; the earlier #589 test-assertion failure was corrected and later runs passed."
+      "status": "completed",
+      "conclusion": "success",
+      "note": "CI #599 passed on exact agent-dev HEAD 41813626. Both validate and trip-lifecycle passed; the latter started a fresh local Supabase DB, applied the branch migrations and ran the Trip lifecycle SQL regression. This is disposable CI proof only, not production deployment or live-device evidence."
     }
   }
 }
