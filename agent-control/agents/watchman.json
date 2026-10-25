@@ -4,9 +4,9 @@
   "role": "Branch and coordination watchdog",
   "status": "working",
   "currentTask": "Reconcile exact agent-dev HEAD/CI, preserve single-owner lanes, and enforce the active automation cap.",
-  "latestReport": "Exact agent-dev HEAD 3093c4fde29c7c58349c6533c2a752093f101cc7 (docs(coordination): record Local Discovery live drift and next gate) passed exact-head CI #634. Both validate and trip-lifecycle passed: authorization regression tests, lint, TypeScript, Android Expo export, runner syntax checks, fresh disposable local Supabase migrations, Trip lifecycle SQL and Local Match SQL. Core's read-only audit confirmed live Local Discovery channel creation can fail when no channel exists because the live RPC omits required direct_pair_key; branch migration 20261025022300 fixes the branch contract but is absent from production migration history. Slot 2 now owns CORE-DISC-05 rollout readiness; Trip production rollout remains separately NO-GO. Three automations enabled (Slots 1, 2, 5); Slot 3 remains paused BLOCKED because the scheduler rejected prompt/enable updates for the unsupported hourly cadence, with CHAT-UI-09 queued. Slot 4 remains paused READY_FOR_QA. No feature code or production mutation by Slot 1.",
-  "blocker": "Local Discovery production contract is behind the branch: live get_or_create_local_match_channel(uuid) omits direct_pair_key when creating a missing direct channel; branch migration 20261025022300 is not deployed. Trip production rollout also remains NO-GO: migration 20261024201000, creator protection and the Trip chat-sync trigger are absent/unproven, and the original leave failure is unreproduced. Owner authorization, backup/PITR and staging two-account evidence are required. Slot 3 reactivation is blocked by the unsupported hourly-schedule restriction.",
-  "updatedAt": "2026-10-25T04:12:51.789Z",
+  "latestReport": "Exact agent-dev HEAD 843bcd073abb111abe8a60c78849433eb4fff412 (docs(coordination): reconcile inbox CI and rotate Slot 5) has CI #645 in progress. Parent HEAD f10a0e6f2de0699dd9ffcc1c9c99985c23ea3a5e passed exact-head CI #644, both validate and trip-lifecycle. NAV-DISC-04 inbox icon code eca80790 and corrected guard b13cb6ce passed CI #643; initial guard 7a27f2f5 failed CI #642 due over-escaped route assertion. Slot 2 ACTIVE on CORE-DISC-05 non-mutating Local Match rollout readiness; Slot 3 BLOCKED/paused with CHAT-UI-09 queued because the existing hourly schedule cannot be updated on this plan; Slot 4 READY_FOR_QA/paused; Slot 5 ACTIVE on PROFILE-CREATE-05 audit of obsolete cover-image client helpers only if no active callers exist. Three automations enabled (Slots 1, 2, 5). Local Match migration 20261025022300 and Trip migration 20261024201000 remain absent from production; both rollouts NO-GO. No feature code or production mutation by Slot 1. Device and two-account behavior remains DEVICE_VERIFY.",
+  "blocker": "Local Discovery direct-channel contract fix 20261025022300 and Trip leave repair 20261024201000 are not deployed; owner authorization, backup/PITR, staging and rollback gates are required. Current exact-head CI #645 is still in progress. Slot 3 remains paused because the scheduler does not support the existing hourly schedule update.",
+  "updatedAt": "2026-10-25T06:07:04.400Z",
   "activity": [
     {
       "type": "success",
@@ -37,6 +37,12 @@
       "title": "Exact-head CI #634 passed",
       "detail": "Verified 3093c4fde29c7c58349c6533c2a752093f101cc7, exact-head CI #634 PASS, backlog and automation count. Local Discovery and Trip live migrations remain gated. Slot 3 is paused because the scheduler rejected updates for the unsupported hourly schedule. No feature-code edit or production mutation.",
       "timestamp": "2026-10-25T04:12:51.789Z"
+    },
+    {
+      "type": "working",
+      "title": "Exact-head CI #645 running",
+      "detail": "Verified agent-dev HEAD 843bcd073abb111abe8a60c78849433eb4fff412; parent exact-head CI #644 passed both validation and disposable Trip/Local Match lifecycle jobs. CI #645 is running on the coordination-only backlog update. Three automations enabled (1, 2, 5); no feature code or production mutation.",
+      "timestamp": "2026-10-25T06:07:04.400Z"
     }
   ]
 }
