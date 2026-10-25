@@ -2,11 +2,11 @@
   "id": "group-settings",
   "name": "Group Settings Engineer",
   "role": "Meet and Trip group info presentation and safe member controls",
-  "status": "success",
-  "currentTask": "DOMAIN-PARTICIPANTS-04 server boundary delivered; consolidated Group Info add-participant UI remains the next owned slice.",
-  "latestReport": "Commit f4d257d adds an authenticated manager-only Meet participant RPC with active/upcoming, profile, block and duplicate gates; CI #546 passed.",
-  "blocker": "Migration 20261012181314_add_meet_participant.sql is not deployed; live add/chat-sync behavior remains DEVICE_VERIFY.",
-  "updatedAt": "2026-10-12T18:16:00Z",
+  "status": "idle",
+  "currentTask": "MEET-DOMAIN-08 READY_FOR_QA: await new code or device/two-account evidence for accepted-only counts, caller-scoped leave and derived chat cleanup; do not duplicate Slot 2/3 edits.",
+  "latestReport": "No new Group/Domain code or device evidence arrived. Exact-head CI #634 passed source/disposable regression gates, but live membership/admin/chat synchronization remains DEVICE_VERIFY. Slot 4 remains paused READY_FOR_QA.",
+  "blocker": "Await new code or physical/two-account evidence; keep automation paused and do not duplicate Core authorization or Chat UI work.",
+  "updatedAt": "2026-10-25T04:12:51.789Z",
   "activity": [
     {
       "at": "2026-10-06T04:18:00Z",
@@ -36,6 +36,12 @@
       "title": "Meet participant add boundary shipped",
       "detail": "f4d257d passed CI #546 with authorization tests, lint, TypeScript and Android Expo export; production was not changed.",
       "at": "2026-10-12T18:16:00Z"
+    },
+    {
+      "type": "idle",
+      "title": "Domain lane remains READY_FOR_QA",
+      "detail": "No new code/device evidence; automation stays paused to avoid no-op work.",
+      "at": "2026-10-25T04:12:51.789Z"
     }
   ]
 }
