@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "NAV-DISC-05: make SDK 57 NativeTabs keyboard behavior explicit so the bottom tab bar remains fixed while the keyboard is open; preserve root-stack Chat hiding.",
-  "latestReport": "PROFILE-CREATE-05 is complete: source commit 8f9e13f3 removes unused cover-image client helpers and cover_url from PublicProfileUpdate only; generated DB types, schema/migrations and avatar flows are unchanged. Regression guard was corrected in c615762a after the first draft over-escaped regexes. CI #650 passed on the code/test head; concurrent exact-head CI #656 passed on dd5db73b. Current observed MitMi agent-dev HEAD is 54b9ded2 with CI #660 still in progress. Backlog d28da157 records the role handoff to NAV-DISC-05; later backlog follow-up 5c0ff615 records CI #656. Slot 5 remains ACTIVE and enabled; profile persistence and physical keyboard/inbox behavior remain DEVICE_VERIFY.",
+  "currentTask": "PROFILE-CREATE-06: correct the stale Profile Back accessibility hint to match the actual Profile-tab fallback.",
+  "latestReport": "NAV-DISC-05 explicitly sets tabBarRespectsIMEInsets={false} in the Expo SDK 57 NativeTabs layout and adds a focused regression guard. Source/guard assertion passes; exact-head CI/status records are unavailable and full local checks could not run because this runtime cannot reach GitHub. Next role is Profile/Create on PROFILE-CREATE-06. Physical keyboard, inbox, avatar persistence and sign-out behavior remain DEVICE_VERIFY. Slot 5 remains ACTIVE and enabled.",
   "blocker": null,
-  "updatedAt": "2026-10-25T06:35:05.048Z",
+  "updatedAt": "2026-10-25T07:25:19.857Z",
   "activity": [
     {
       "type": "working",
@@ -169,6 +169,12 @@
       "title": "Profile cover cleanup verified; current head CI pending",
       "detail": "Unused cover-image service helpers were removed after source-reference audit. CI #650 passed on the code/test commit and exact-head CI #656 passed on concurrent descendant dd5db73b. Latest observed MitMi head 54b9ded2 has CI #660 in progress. Next active task is NAV-DISC-05 for explicit NativeTabs keyboard behavior; Slot 5 remains enabled.",
       "at": "2026-10-25T06:35:05.048Z"
+    },
+    {
+      "type": "working",
+      "title": "Native tab keyboard behavior made explicit; Profile/Create next",
+      "detail": "MitMi agent-dev code commit 896e6199 sets tabBarRespectsIMEInsets={false}; guard correction cfcf8894 asserts the SDK 57 property. Focused source/guard check passed. Full npm test, lint, TypeScript and Android export remain unconfirmed because network access was unavailable and GitHub status/workflow lookups returned no records. Backlog records Profile/Create ACTIVE on PROFILE-CREATE-06; Slot 5 remains enabled.",
+      "at": "2026-10-25T07:25:19.857Z"
     }
   ]
 }
