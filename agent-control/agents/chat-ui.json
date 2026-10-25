@@ -2,11 +2,11 @@
   "id": "chat-ui",
   "name": "Chat UI Engineer",
   "role": "Chat UI / Chat Media",
-  "status": "working",
-  "currentTask": "CHAT-UI-08: keep inbox/conversation previews monotonic under delayed realtime events; Chat Media contract audit complete, voice implementation queued.",
-  "latestReport": "MitMi agent-dev: 7f18e666 adds chronological ordering for initial/realtime/local messages, deduplicates echoes, and prevents older events or late sender lookups from regressing the latest preview/row order. Regression guards were added in fdc8c3c0, corrected in 88cdd3a6, and realtime-callback coverage added in e32e39ae; backlog updated in 044cb1e6. Static preflight passed; full CI statuses were not exposed by the connector and physical route/two-account realtime remains DEVICE_VERIFY. SDK 57 expo-audio is supported but absent from dependencies/config; no voice placeholder shipped.",
-  "blocker": "Physical-device route/keyboard/two-account realtime evidence is unavailable. Voice implementation is queued and must extend the existing private attachment contract with audio MIME/type validation, playback, cleanup and shorter member-authorized signed URLs; no external credential blocker is known.",
-  "updatedAt": "2026-10-25T00:24:57.981Z",
+  "status": "blocked",
+  "currentTask": "CHAT-UI-09 QUEUED: clear stale people-search errors in src/app/chat.tsx. Reactivation is blocked because the automation service rejects updates to the existing hourly schedule.",
+  "latestReport": "Source review at 3093c4fde29c7c58349c6533c2a752093f101cc7 found the debounced searchChatProfiles effect sets people on success but does not clear a prior error, leaving stale search-error UI possible after a later successful query. Slot 1 queued CHAT-UI-09 as UI-only; no feature code shipped. Attempts to update the prompt and re-enable the paused automation were rejected with “Your current plan does not support hourly schedules.” Slot 3 remains paused; three automations are enabled. Voice remains blocked pending Core's secure audio contract.",
+  "blocker": "The existing automation cannot be re-enabled or have its prompt updated without the scheduler rejecting the unsupported hourly cadence. Do not change cadence without authorization. Voice remains blocked pending the secure Core audio contract; route/keyboard/two-account realtime remains DEVICE_VERIFY.",
+  "updatedAt": "2026-10-25T04:12:51.789Z",
   "activity": [
     {
       "at": "2026-10-06T03:20:00Z",
@@ -77,6 +77,12 @@
       "at": "2026-10-25T00:24:57.981Z",
       "status": "working",
       "summary": "Added CHAT-UI-08 chronological message merging at 7f18e666 with source guards fdc8c3c0/88cdd3a6/e32e39ae. Completed MEDIA-VOICE-CONTRACT-01 SDK 57 audit; voice remains unimplemented until secure audio MIME/RPC/playback/cleanup path is built. Full CI status not independently exposed; physical route/realtime remains DEVICE_VERIFY."
+    },
+    {
+      "type": "blocked",
+      "title": "CHAT-UI-09 queued; automation remains paused",
+      "detail": "People-search stale-error fix assigned. Prompt/enable update rejected because hourly schedules are unsupported by the current plan; no schedule change was made.",
+      "at": "2026-10-25T04:12:51.789Z"
     }
   ]
 }
