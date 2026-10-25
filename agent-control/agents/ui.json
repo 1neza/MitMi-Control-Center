@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "PROFILE-CREATE-05: audit remaining cover-image client helpers and remove only dead code after confirming no active callers; preserve profile-photo behavior and database schema.",
-  "latestReport": "MitMi agent-dev NAV-DISC-04 replaces the text-only Home Inbox pill with a compact 44x44 accessible message-bubble icon, preserving the Open inbox label and /chat route. Source commit eca80790; guard correction b13cb6ce after initial regex draft 7a27f2f5 failed CI #642. Exact-head CI #643 passed both validate and trip-lifecycle, including authorization tests, lint, TypeScript, Android Expo export and disposable Trip/Local Match SQL. PROFILE-CREATE-04 sign-out error fix/guard passed exact-head CI #640. Physical inbox appearance/tap, sign-out and avatar persistence remain DEVICE_VERIFY. Slot 5 remains ACTIVE and enabled; Profile/Create is now the active role.",
+  "currentTask": "NAV-DISC-05: make SDK 57 NativeTabs keyboard behavior explicit so the bottom tab bar remains fixed while the keyboard is open; preserve root-stack Chat hiding.",
+  "latestReport": "MitMi agent-dev PROFILE-CREATE-05 retired unreferenced cover-image client helpers and removed cover_url from PublicProfileUpdate only; generated database types, schema/migrations and avatar behavior remain unchanged. Source commit 8f9e13f3; corrected regression guard c615762a after the first draft used over-escaped regexes. Exact-head CI #650 passed validate and trip-lifecycle. Latest concurrent head 8e5bead6 also passed CI #652; backlog handoff d28da157 has CI #654 running. Next active role is Navigation/Discovery on NAV-DISC-05. Profile avatar/sign-out and keyboard/inbox behavior remain DEVICE_VERIFY. Slot 5 remains ACTIVE and enabled.",
   "blocker": null,
-  "updatedAt": "2026-10-25T05:30:00.713Z",
+  "updatedAt": "2026-10-25T06:29:52.948Z",
   "activity": [
     {
       "type": "working",
@@ -157,6 +157,12 @@
       "title": "Home inbox message icon passed CI; role rotated to Profile/Create",
       "detail": "MitMi agent-dev eca80790 adds the compact accessible Home message icon and preserves /chat; b13cb6ce corrects the regression regex. Exact-head CI #643 passed validate and trip-lifecycle. CI #642's initial guard failure was corrected. Profile/Create now owns PROFILE-CREATE-05: audit cover-image helper references before removing only dead client code; no schema/migration changes. Device appearance/tap, sign-out and avatar persistence remain DEVICE_VERIFY.",
       "at": "2026-10-25T05:30:00.713Z"
+    },
+    {
+      "type": "working",
+      "title": "Cover-image helpers retired; Navigation task active",
+      "detail": "PROFILE-CREATE-05 removes unused uploadMyCover/uploadMyCoverFromUri/removeMyCover APIs and cover_url from the client update type only. Exact code/test CI #650 passed both validation and disposable SQL jobs. Guard regex draft was corrected in c615762a; latest concurrent CI #652 passed. NAV-DISC-05 is next; physical keyboard/inbox and profile persistence remain DEVICE_VERIFY.",
+      "at": "2026-10-25T06:29:52.948Z"
     }
   ]
 }
