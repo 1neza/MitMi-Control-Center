@@ -3,10 +3,10 @@
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
   "status": "idle",
-  "currentTask": "QA Gate RESTING until Core delivers a code-bearing fix or staging evidence; then gate the exact commit. Current branch/disposable CI passed #634.",
-  "latestReport": "Exact-head CI #634 passed on 3093c4fde29c7c58349c6533c2a752093f101cc7: authorization regression tests, lint, TypeScript, Android Expo export, fresh disposable Supabase migrations, Trip lifecycle SQL and Local Match SQL. No new Core feature-code delivery occurred in this Slot 1 run; QA Gate rests until a code-bearing change or staging evidence arrives. Production Local Discovery/Trip behavior remains DEVICE_VERIFY.",
-  "blocker": null,
-  "updatedAt": "2026-10-25T04:12:51.789Z",
+  "currentTask": "QA Gate RESTING after exact-head CI #660 PASS; Core Integrator ACTIVE on CORE-TRIP-04.",
+  "latestReport": "Exact pre-update agent-dev head 54b9ded2a314f6b8638728a6915ce3c8432c1528 passed CI #660: validate and trip-lifecycle both succeeded. Checks included npm test, lint, TypeScript, Android Expo export, fresh disposable Supabase migrations, Trip lifecycle SQL and Local Match chat SQL with fixture rollback. Source/CI QA is PASS. Fresh read-only production audit still shows pending domain-chat migrations, direct-chat RPC invoker/RLS mismatch, missing Meet/Trip sync triggers and accepted memberships without derived Chat rows. Production remains NO-GO; the original ordinary-member Trip leave failure is still unreproduced. No production writes or deployment.",
+  "blocker": "Production rollout remains NO-GO pending authorized staging, backup/PITR confirmation, owner approval and two-account evidence; original Trip leave failure remains unreproduced.",
+  "updatedAt": "2026-10-25T06:44:24.115Z",
   "activity": [
     {
       "type": "working",
@@ -132,6 +132,12 @@
       "title": "QA Gate resting after CI #634",
       "detail": "Exact-head source/disposable CI passed; no new code commit to review. Resume when Core delivers a concrete change or staging evidence.",
       "at": "2026-10-25T04:12:51.789Z"
+    },
+    {
+      "type": "success",
+      "title": "Exact-head domain chat QA passed",
+      "detail": "CI #660 passed both validate and trip-lifecycle on 54b9ded2a314f6b8638728a6915ce3c8432c1528. Source/disposable SQL gate is PASS; production Local Discovery/Meet/Trip rollout remains NO-GO and Trip leave runtime is unreproduced. QA Gate rests; Core Integrator resumes CORE-TRIP-04. No production mutation.",
+      "at": "2026-10-25T06:44:24.115Z"
     }
   ]
 }
