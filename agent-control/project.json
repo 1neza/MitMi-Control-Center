@@ -3,16 +3,56 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "29c1d7f83bd56fc50068b2332911c10327b3b016",
-  "latestCommit": "docs(coordination): rotate Core to Local Discovery contract",
-  "syncedAt": "2026-10-25T00:20:05.872Z",
+  "head": "9f73cb65f74ca4e2413a6edf57d96b865f624423",
+  "latestCommit": "docs(backlog): record chat chronology fix and media contract audit",
+  "syncedAt": "2026-10-25T00:24:01.507Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 600,
-    "latestConclusion": "success",
-    "latestFailure": null,
-    "successRate": 100,
+    "latestRun": 605,
+    "latestConclusion": "in_progress",
+    "latestFailure": "CI #602 validate job failed on the new Chat chronology history-order assertion; the assertion was corrected in 88cdd3a6. CI #603/#604/#605 remain in progress, so the correction is not yet fully gated.",
+    "successRate": 90,
     "history": [
+      {
+        "number": 605,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(backlog): record chat chronology fix and media contract audit",
+        "sha": "9f73cb65f74ca4e2413a6edf57d96b865f624423",
+        "updatedAt": "2026-10-25T00:22:52Z"
+      },
+      {
+        "number": 604,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): activate Chat chronology QA gate",
+        "sha": "b299495d7ff176ba42c94fefddb161919e205d04",
+        "updatedAt": "2026-10-25T00:22:23Z"
+      },
+      {
+        "number": 603,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "test(chat): correct chronology assertion escaping",
+        "sha": "88cdd3a64b87f0002c5b647c34f4baddbc209f7f",
+        "updatedAt": "2026-10-25T00:21:21Z"
+      },
+      {
+        "number": 602,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "test(chat): guard chronological realtime message merging",
+        "sha": "fdc8c3c0b09c988abfa76dcc405a49a70db67d11",
+        "updatedAt": "2026-10-25T00:23:37Z"
+      },
+      {
+        "number": 601,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "fix(chat): keep realtime messages chronologically ordered",
+        "sha": "7f18e666e4eeb53ccfd9c0ce384ed90fa308908c",
+        "updatedAt": "2026-10-25T00:22:54Z"
+      },
       {
         "number": 600,
         "status": "completed",
@@ -52,53 +92,13 @@
         "title": "docs(backlog): rotate Slot 5 to profile photo audit",
         "sha": "bc6a56c6aaa1b74f51847209d850078d3fb512f7",
         "updatedAt": "2026-10-24T23:29:19Z"
-      },
-      {
-        "number": 595,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(discovery): guard Local Discovery route label",
-        "sha": "cb4c64b81d91836d964ea46bed31c3c69f6bd25c",
-        "updatedAt": "2026-10-24T23:25:25Z"
-      },
-      {
-        "number": 594,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(discovery): label Home category Local Discovery",
-        "sha": "03c9d1a79ddcf59e65932d7341c13d0eaa0d93cc",
-        "updatedAt": "2026-10-24T23:25:56Z"
-      },
-      {
-        "number": 593,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(travel): add isolated local trip lifecycle harness",
-        "sha": "f1719a30680038ed97f5621f215a12585c1978dc",
-        "updatedAt": "2026-10-24T23:22:46Z"
-      },
-      {
-        "number": 592,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record Chat routing race verification",
-        "sha": "d461291849212633ea916c9421f2e65a8c588c62",
-        "updatedAt": "2026-10-24T23:21:01Z"
-      },
-      {
-        "number": 591,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "fix(chat): cancel pending opens on inbox blur",
-        "sha": "3e225314751106965359461c40fc8b251f0f5ad7",
-        "updatedAt": "2026-10-24T23:18:44Z"
       }
     ],
     "headCheck": {
-      "sha": "29c1d7f83bd56fc50068b2332911c10327b3b016",
-      "status": "completed",
-      "conclusion": "success",
-      "note": "CI #600 passed on exact agent-dev HEAD 29c1d7f8. Authorization regression tests, lint, TypeScript, Android export and the fresh-local-Supabase Trip lifecycle regression all passed."
+      "sha": "9f73cb65f74ca4e2413a6edf57d96b865f624423",
+      "status": "in_progress",
+      "conclusion": null,
+      "note": "CI #605 is in progress on exact agent-dev HEAD 9f73cb65. CI #601 passed for the chronology source fix; #602's validate job failed on an assertion regex and was corrected in 88cdd3a6. The corrected validate job is passing so far in #603, but the trip-lifecycle job and later exact-head checks remain in progress."
     }
   }
 }
