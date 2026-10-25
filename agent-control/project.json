@@ -11,7 +11,7 @@
     "latestRun": 599,
     "latestConclusion": "in_progress",
     "latestFailure": null,
-    "successRate": 100,
+    "successRate": 90,
     "history": [
       {
         "number": 599,
@@ -98,7 +98,7 @@
       "sha": "418136261e874384b4a0c85af2e09053e7096c88",
       "status": "in_progress",
       "conclusion": null,
-      "note": "CI #599 is running on exact agent-dev HEAD 41813626 (coordination-only QA evidence). CI #597 on ancestor bdd1f0fe passed both validation and the fresh-local-Supabase Trip lifecycle regression. Do not treat disposable CI as production deployment."
+      "note": "CI #599 is running on exact agent-dev HEAD 41813626 (coordination-only QA evidence). CI #597 on ancestor bdd1f0fe passed both validation and the fresh-local-Supabase Trip lifecycle regression. Success rate is 90% across the latest 10 completed runs; the earlier #589 test-assertion failure was corrected and later runs passed."
     }
   }
 }
