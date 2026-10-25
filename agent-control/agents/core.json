@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "working",
-  "currentTask": "CORE-DISC-05: prepare non-mutating rollout readiness for migration 20261025022300_reuse_direct_pair_for_local_match_channel.sql; verify staging acceptance, backup/PITR, rollback and owner-approval gates. Keep production NO-GO.",
-  "latestReport": "CORE-DISC-04 completed at 3093c4fde29c7c58349c6533c2a752093f101cc7; exact-head CI #634 passed. Read-only live inspection confirms get_or_create_local_match_channel(uuid) enforces auth, accepted membership and bidirectional blocks but omits required direct_pair_key when creating a direct channel without an existing link. Branch migration 20261025022300 corrects the contract and passes disposable SQL regression, but production history still ends at 20261010161341. No production RPC calls/writes/deployment. Trip leave issue remains separate and unreproduced.",
-  "blocker": "Local Discovery and Trip fixes are present in branch but absent from production migration history. No production rollout without explicit authorization, backup/PITR confirmation and staging two-account evidence. Trip creator protection/chat-sync trigger remain unproven.",
-  "updatedAt": "2026-10-25T04:12:51.789Z",
+  "status": "blocked",
+  "currentTask": "CORE-DISC-05: keep Local Discovery and Trip rollout NO-GO until owner authorization, backup/PITR confirmation, staging two-account acceptance, and exact-head CI are verified.",
+  "latestReport": "MitMi agent-dev pre-update HEAD 4f31b5c8 adds docs/LOCAL_MATCH_ROLLOUT_GATE.md; backlog update f327133e records the read-only gate. Live Supabase migration history ends at 20261010161341 and 20261025022300 is unapplied. The live Local Match RPC omits required direct_pair_key and request-row locking; branch migration fixes both while preserving accepted-participant and bidirectional-block checks. No staging branches were listed, backup/PITR is unverified, and exact-head CI status is empty. No production RPC, write, or deployment. Trip leave remains separate and unreproduced.",
+  "blocker": "No staging environment/branch or two-account evidence is available in the current project view; backup/PITR and explicit production approval are unconfirmed. Current MitMi exact-head CI status lookup returned no records. Keep Local Discovery and Trip production changes NO-GO.",
+  "updatedAt": "2026-10-25T05:10:00Z",
   "activity": [
     {
       "type": "working",
@@ -271,6 +271,12 @@
       "title": "CORE-DISC-05 rollout readiness",
       "detail": "Local Discovery live/branch drift confirmed; prepare only non-mutating staging and rollback readiness. No production changes.",
       "at": "2026-10-25T04:12:51.789Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Local Discovery rollout gate documented",
+      "detail": "Added docs/LOCAL_MATCH_ROLLOUT_GATE.md at MitMi commit 4f31b5c8 and backlog evidence at f327133e. Read-only live inspection reconfirmed the direct_pair_key contract defect and missing migration. No staging branch, backup/PITR confirmation, owner approval or exact-head CI evidence; no production mutation/deployment.",
+      "at": "2026-10-25T05:10:00Z"
     }
   ]
 }
