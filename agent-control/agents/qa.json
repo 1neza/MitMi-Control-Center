@@ -2,11 +2,11 @@
   "id": "qa",
   "name": "MitMi QA Engineer",
   "role": "QA / Integration",
-  "status": "working",
-  "currentTask": "QA Gate ACTIVE: review commit 42e3ff0 domain-aware chat RLS and stale generic membership regression; CI #667 is running.",
-  "latestReport": "Core delivered commit 42e3ff0db9e8c1326cd33d0ee1ff3f6e2bac41ae after QA found that private.is_channel_member trusted only channel_members and allowed stale rows to pass channels/messages SELECT policies. The new migration requires accepted Meet/Trip domain membership for linked channels, blocks generic owner updates to domain channel metadata, and adds positive accepted-member channel/message reads plus stale-row denial assertions for both Meet and Trip. CI #667 is still in progress; QA verdict is pending. Production remains NO-GO and untouched; the original Trip leave failure remains unreproduced.",
-  "blocker": "CI #667 and SQL regression result pending. Production rollout remains NO-GO pending authorized staging, backup/PITR, owner approval and two-account evidence.",
-  "updatedAt": "2026-10-25T06:54:38.631Z",
+  "status": "idle",
+  "currentTask": "QA Gate RESTING after exact-head CI #667 PASS on commit 42e3ff0; resume on the next code-bearing Core/Slot 3-5 delivery.",
+  "latestReport": "The prior FAILED_QA finding is resolved at source/disposable-CI level by commit 42e3ff0db9e8c1326cd33d0ee1ff3f6e2bac41ae / CI #667. The migration makes channel authorization domain-aware for linked Meet/Trip channels, and the regression verifies accepted-member channel/message reads plus denial after departure even when a stale generic channel_members row is seeded. CI validate passed npm test, lint, TypeScript and Android Expo export; trip-lifecycle applied fresh local migrations and passed Trip and Local Match SQL regressions with rollback. Overall source/CI status PASS. Production remains NO-GO, physical two-account behavior remains DEVICE_VERIFY, and the original Trip leave failure is still unreproduced.",
+  "blocker": "Production rollout remains NO-GO pending authorized staging, backup/PITR confirmation, owner approval and two-account evidence; original Trip leave failure remains unreproduced.",
+  "updatedAt": "2026-10-25T06:59:48.437Z",
   "activity": [
     {
       "type": "working",
@@ -150,6 +150,12 @@
       "title": "Reviewing domain-aware chat RLS fix",
       "detail": "QA Gate active on 42e3ff0. Waiting for exact-head CI #667 to complete; verify positive accepted-member reads and stale generic-row denial for Meet/Trip. Production remains untouched.",
       "at": "2026-10-25T06:54:38.631Z"
+    },
+    {
+      "type": "success",
+      "title": "Domain-aware chat RLS passed CI #667",
+      "detail": "Core fix 42e3ff0 passed validate and trip-lifecycle; accepted users retain channel/message reads, stale generic rows cannot restore Meet/Trip reads after departure. QA Gate rests; Core resumes Trip leave root-cause work. Production remains untouched.",
+      "at": "2026-10-25T06:59:48.437Z"
     }
   ]
 }
