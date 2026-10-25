@@ -3,39 +3,55 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "9f73cb65f74ca4e2413a6edf57d96b865f624423",
-  "latestCommit": "docs(backlog): record chat chronology fix and media contract audit",
-  "syncedAt": "2026-10-25T00:24:01.507Z",
+  "head": "044cb1e6d211bf51b607477be5fddf3684d8a1b8",
+  "latestCommit": "docs(backlog): include realtime merge regression guard",
+  "syncedAt": "2026-10-25T00:25:41.755Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 605,
+    "latestRun": 607,
     "latestConclusion": "in_progress",
-    "latestFailure": "CI #602 validate job failed on the new Chat chronology history-order assertion; the assertion was corrected in 88cdd3a6. CI #603/#604/#605 remain in progress, so the correction is not yet fully gated.",
+    "latestFailure": "CI #602 validate failed on the first history-order assertion regex; corrected in 88cdd3a6. CI #603 passed, while #605/#606/#607 remain in progress to fully gate the added realtime-merge assertion and current docs head.",
     "successRate": 90,
     "history": [
       {
-        "number": 605,
+        "number": 607,
         "status": "in_progress",
         "conclusion": null,
+        "title": "docs(backlog): include realtime merge regression guard",
+        "sha": "044cb1e6d211bf51b607477be5fddf3684d8a1b8",
+        "updatedAt": "2026-10-25T00:24:52Z"
+      },
+      {
+        "number": 606,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "test(chat): assert realtime chronological merge is used",
+        "sha": "e32e39ae334a3eafa0726cab0190405bca1c2af1",
+        "updatedAt": "2026-10-25T00:24:13Z"
+      },
+      {
+        "number": 605,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(backlog): record chat chronology fix and media contract audit",
         "sha": "9f73cb65f74ca4e2413a6edf57d96b865f624423",
-        "updatedAt": "2026-10-25T00:22:52Z"
+        "updatedAt": "2026-10-25T00:25:23Z"
       },
       {
         "number": 604,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): activate Chat chronology QA gate",
         "sha": "b299495d7ff176ba42c94fefddb161919e205d04",
-        "updatedAt": "2026-10-25T00:22:23Z"
+        "updatedAt": "2026-10-25T00:24:43Z"
       },
       {
         "number": 603,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "test(chat): correct chronology assertion escaping",
         "sha": "88cdd3a64b87f0002c5b647c34f4baddbc209f7f",
-        "updatedAt": "2026-10-25T00:21:21Z"
+        "updatedAt": "2026-10-25T00:24:05Z"
       },
       {
         "number": 602,
@@ -76,29 +92,13 @@
         "title": "docs(coordination): reconcile lifecycle CI and rotate paired roles",
         "sha": "cf01de9804e915ffd936956b124ccf5b637c1f4f",
         "updatedAt": "2026-10-25T00:13:17Z"
-      },
-      {
-        "number": 597,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(travel): execute Trip lifecycle harness in local Supabase CI",
-        "sha": "bdd1f0fe71e0160ab4b1dd6cce8588fc48d6c9ff",
-        "updatedAt": "2026-10-25T00:08:51Z"
-      },
-      {
-        "number": 596,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): rotate Slot 5 to profile photo audit",
-        "sha": "bc6a56c6aaa1b74f51847209d850078d3fb512f7",
-        "updatedAt": "2026-10-24T23:29:19Z"
       }
     ],
     "headCheck": {
-      "sha": "9f73cb65f74ca4e2413a6edf57d96b865f624423",
+      "sha": "044cb1e6d211bf51b607477be5fddf3684d8a1b8",
       "status": "in_progress",
       "conclusion": null,
-      "note": "CI #605 is in progress on exact agent-dev HEAD 9f73cb65. CI #601 passed for the chronology source fix; #602's validate job failed on an assertion regex and was corrected in 88cdd3a6. The corrected validate job is passing so far in #603, but the trip-lifecycle job and later exact-head checks remain in progress."
+      "note": "CI #607 is in progress on exact agent-dev HEAD 044cb1e6. Chronology source fix 7f18e666 passed CI #601; assertion correction 88cdd3a6 passed CI #603. CI #602's earlier regex failure is corrected; explicit realtime callback merge coverage at e32e39ae is being gated by #606 and later runs."
     }
   }
 }
