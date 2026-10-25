@@ -3,16 +3,24 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f",
-  "latestCommit": "docs(coordination): reconcile exact head and slot states",
-  "syncedAt": "2026-10-25T03:03:33.821Z",
+  "head": "abf173d35a44daa97dc8ec332a50c6faee185c49",
+  "latestCommit": "docs(coordination): record exact-head CI 623 result",
+  "syncedAt": "2026-10-25T03:06:30.233Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 623,
+    "latestRun": 624,
     "latestConclusion": "success",
-    "latestFailure": "Historical CI #616 and #617 failed during Local Match contract/fixture validation; the direct-channel fix and fixture correction passed #618. Current exact-head CI #623 passed both jobs.",
+    "latestFailure": "Historical CI #616 and #617 failed during Local Match contract/fixture validation; the direct-channel fix and fixture correction passed #618. Exact-head CI #624 passed both jobs.",
     "successRate": 80,
     "history": [
+      {
+        "number": 624,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): record exact-head CI 623 result",
+        "sha": "abf173d35a44daa97dc8ec332a50c6faee185c49",
+        "updatedAt": "2026-10-25T03:06:10Z"
+      },
       {
         "number": 623,
         "status": "completed",
@@ -84,21 +92,13 @@
         "title": "docs(backlog): record profile fallback fix and rotate Slot 5",
         "sha": "c798d292968253c9d30b3db8c77cedd677767948",
         "updatedAt": "2026-10-25T02:19:30Z"
-      },
-      {
-        "number": 614,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(profile): guard edit fallback to Profile tab",
-        "sha": "3c1dc6f723fcce11079528f82be6972f0363e3d8",
-        "updatedAt": "2026-10-25T02:18:46Z"
       }
     ],
     "headCheck": {
-      "sha": "8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f",
+      "sha": "abf173d35a44daa97dc8ec332a50c6faee185c49",
       "status": "completed",
       "conclusion": "success",
-      "note": "Exact-head CI #623 passed both validate and trip-lifecycle jobs. Validate passed authorization regression tests, lint, TypeScript and Android Expo export; trip-lifecycle applied migrations to a fresh disposable local Supabase database and passed Trip lifecycle plus Local Match chat SQL regressions. This does not deploy the production Trip migration or prove physical-device/two-account behavior."
+      "note": "Exact-head CI #624 passed both validate and trip-lifecycle jobs. Validate passed authorization regression tests, lint, TypeScript and Android Expo export; trip-lifecycle applied migrations to a fresh disposable local Supabase database and passed Trip lifecycle plus Local Match chat SQL regressions. This does not deploy the production Trip migration or prove physical-device/two-account behavior."
     }
   }
 }
