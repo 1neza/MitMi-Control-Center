@@ -3,10 +3,10 @@
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
   "status": "blocked",
-  "currentTask": "CORE-TRIP-04: keep the Trip leave rollout NO-GO until explicit owner authorization, backup/PITR confirmation, and staging two-account evidence; continue read-only investigation of the unresolved live failure.",
-  "latestReport": "MitMi agent-dev HEAD ebdf92a / CI #622 passed authorization tests (npm test), lint, TypeScript, Android Expo export, both runner syntax checks, fresh local Supabase migration application, and Trip lifecycle plus Local Match SQL regressions. Core delivered docs/TRIP_LEAVE_ROLLOUT_GATE.md with explicit NO-GO, preflight, staging two-account checks, production smoke limits, and recovery criteria. Read-only production audit confirms migration 20261024201000 is absent; trip_members uses a composite key with no id; checked-in migration 20261010161303 contains invalid .id references while the current live leave_trip body uses the composite key but lacks creator protection; sync_trip_chat_membership is absent. The targeted 24-hour leave_trip log query returned no rows, so the current live failure remains unreproduced. No production writes or deployment.",
-  "blocker": "Production rollout is not authorized; backup/PITR availability and staging two-account evidence are not confirmed. Do not apply the migration or mutate production data.",
-  "updatedAt": "2026-10-25T02:46:08.401Z",
+  "currentTask": "CORE-TRIP-04: keep Trip rollout NO-GO; continue read-only diagnosis until the original leave failure is reproduced or authorized staging evidence is available.",
+  "latestReport": "Read-only follow-through at MitMi agent-dev HEAD acd8b9d8 records that live leave_trip is postgres-owned SECURITY DEFINER, uses auth.uid() and the composite key, transitions pending/accepted membership to left, and deletes only the caller's Trip chat membership. The capacity trigger explicitly skips accepted-to-left updates; the client passes target_trip_id correctly and propagates RPC errors. No matching PostgREST leave_trip request or PostgreSQL error appeared in the inspected 24-hour log window. A TravelScreen refresh error can surface after a successful RPC but is not evidence of the reported failure. Production migration 20261024201000 remains unapplied; no production writes/deployment or app-code changes.",
+  "blocker": "The reported live Trip leave failure remains unreproduced: no matching request/error log was available, and the inspected live RPC path is caller-scoped and internally consistent. Obtain a failed-request trace or authorized staging two-account reproduction; do not mutate production or apply the migration without explicit approval and backup/PITR confirmation.",
+  "updatedAt": "2026-10-25T03:07:00Z",
   "activity": [
     {
       "type": "working",
@@ -253,6 +253,12 @@
       "title": "Trip rollout gate documented",
       "detail": "Runbook committed on agent-dev; exact-head CI #622 passed including disposable Trip and Local Match SQL tests. Production remains NO-GO pending owner authorization, backup/PITR confirmation, staging two-account evidence, and further non-mutating diagnosis.",
       "at": "2026-10-25T02:46:08.401Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Trip leave diagnosis narrowed without production writes",
+      "detail": "Read-only schema/function/log audit ruled out the live capacity trigger and client RPC parameter mismatch as obvious causes; no leave_trip request/error appeared in the inspected 24-hour logs. Backlog records the evidence at MitMi docs commit acd8b9d8. Production rollout remains NO-GO.",
+      "at": "2026-10-25T03:07:00Z"
     }
   ]
 }
