@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "blocked",
-  "currentTask": "CORE-DISC-05: keep Local Discovery and Trip rollout NO-GO until owner authorization, backup/PITR confirmation, staging two-account acceptance, and exact-head CI are verified.",
-  "latestReport": "MitMi agent-dev pre-update HEAD 4f31b5c8 adds docs/LOCAL_MATCH_ROLLOUT_GATE.md; backlog update f327133e records the read-only gate. Live Supabase migration history ends at 20261010161341 and 20261025022300 is unapplied. The live Local Match RPC omits required direct_pair_key and request-row locking; branch migration fixes both while preserving accepted-participant and bidirectional-block checks. No staging branches were listed, backup/PITR is unverified, and exact-head CI status is empty. No production RPC, write, or deployment. Trip leave remains separate and unreproduced.",
-  "blocker": "No staging environment/branch or two-account evidence is available in the current project view; backup/PITR and explicit production approval are unconfirmed. Current MitMi exact-head CI status lookup returned no records. Keep Local Discovery and Trip production changes NO-GO.",
-  "updatedAt": "2026-10-25T05:10:00Z",
+  "status": "idle",
+  "currentTask": "CORE-CHAT-07 domain-aware chat RLS fix delivered; QA Gate is active on commit 42e3ff0 while CI #667 runs. CORE-TRIP-04 remains queued after QA.",
+  "latestReport": "Pushed 42e3ff0db9e8c1326cd33d0ee1ff3f6e2bac41ae: adds migration 20261025065000_domain_aware_chat_membership_rls.sql, makes private.is_channel_member require accepted Meet/Trip domain membership for linked channels, blocks generic owner updates on domain channel metadata, and expands the disposable Trip/Meet regression to assert accepted-member reads and stale-row read denial. GitHub CI #667 is in progress; no production migration, RPC, or data mutation was performed. Local Discovery/Trip production rollout remains NO-GO, and the original Trip leave failure remains unreproduced.",
+  "blocker": "QA must verify CI #667 and the new RLS regression before Core continues. Production staging, backup/PITR, explicit owner authorization and live two-account evidence remain pending.",
+  "updatedAt": "2026-10-25T06:54:28.600Z",
   "activity": [
     {
       "type": "working",
@@ -277,6 +277,12 @@
       "title": "Local Discovery rollout gate documented",
       "detail": "Added docs/LOCAL_MATCH_ROLLOUT_GATE.md at MitMi commit 4f31b5c8 and backlog evidence at f327133e. Read-only live inspection reconfirmed the direct_pair_key contract defect and missing migration. No staging branch, backup/PITR confirmation, owner approval or exact-head CI evidence; no production mutation/deployment.",
       "at": "2026-10-25T05:10:00Z"
+    },
+    {
+      "type": "success",
+      "title": "Domain-aware chat RLS fix delivered",
+      "detail": "Commit 42e3ff0 adds accepted-domain membership checks to channel authorization and stale generic-row read-denial regression coverage. CI #667 pending; production untouched. QA Gate now active.",
+      "at": "2026-10-25T06:54:28.600Z"
     }
   ]
 }
