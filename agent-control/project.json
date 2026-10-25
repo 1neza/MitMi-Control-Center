@@ -5,21 +5,21 @@
   "branch": "agent-dev",
   "head": "29c1d7f83bd56fc50068b2332911c10327b3b016",
   "latestCommit": "docs(coordination): rotate Core to Local Discovery contract",
-  "syncedAt": "2026-10-25T00:18:59.769Z",
+  "syncedAt": "2026-10-25T00:20:05.872Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
     "latestRun": 600,
-    "latestConclusion": "in_progress",
+    "latestConclusion": "success",
     "latestFailure": null,
     "successRate": 100,
     "history": [
       {
         "number": 600,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(coordination): rotate Core to Local Discovery contract",
         "sha": "29c1d7f83bd56fc50068b2332911c10327b3b016",
-        "updatedAt": "2026-10-25T00:16:46Z"
+        "updatedAt": "2026-10-25T00:19:01Z"
       },
       {
         "number": 599,
@@ -96,9 +96,9 @@
     ],
     "headCheck": {
       "sha": "29c1d7f83bd56fc50068b2332911c10327b3b016",
-      "status": "in_progress",
-      "conclusion": null,
-      "note": "CI #600 is in progress on exact agent-dev HEAD 29c1d7f8. Authorization tests have passed so far; Android export and the fresh-local-Supabase lifecycle job are still running. CI #599 passed on the previous exact head."
+      "status": "completed",
+      "conclusion": "success",
+      "note": "CI #600 passed on exact agent-dev HEAD 29c1d7f8. Authorization regression tests, lint, TypeScript, Android export and the fresh-local-Supabase Trip lifecycle regression all passed."
     }
   }
 }
