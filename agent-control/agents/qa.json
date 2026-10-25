@@ -4,9 +4,9 @@
   "role": "QA / Integration",
   "status": "blocked",
   "currentTask": "QA-TRIP-REFRESH-01 ACTIVE: verify the Trip leave-success/refresh-failure correction; original live RPC cause remains queued for Core after QA.",
-  "latestReport": "MitMi agent-dev HEAD 257af877. Core commit dc5e814 distinguishes successful membership transition from subsequent list-refresh failure, updates local membership, clears departed participant details, and preserves the actual refresh error. Guard commits c89c039, af485a99, and 257af877 correct and cover the source assertions. Targeted checks pass: guard script syntax, both new source-pattern assertions, direct leave RPC invocation, unchanged error propagation, and no redundant auth preflight. Exact-head CI/status results are unavailable through the connected GitHub tools, so npm test, lint, TypeScript and Android Expo export are not independently verified. Gate BLOCKED; live leave failure remains unreproduced; no production writes or deployment.",
-  "blocker": "Exact-head CI cannot be independently verified: combined-status and workflow-run tools returned no records for the current commit (workflow wrapper is PR-only), and no local checkout is available. Need the current head to pass npm test, lint, npx tsc --noEmit, Android Expo export, and the disposable Trip/Local Match SQL jobs. Original production leave failure remains unreproduced; production rollout remains NO-GO.",
-  "updatedAt": "2026-10-25T09:00:00Z",
+  "latestReport": "MitMi code-bearing agent-dev HEAD 5ecdd203. Core's dc5e814 change distinguishes successful membership transition from subsequent list-refresh failure, updates local membership, clears departed participant details, and preserves the actual refresh error. Core then fixed the over-escaped join_trip capacity assertion in 5ecdd203. Targeted checks PASS: guard script syntax, both refresh assertions, join_trip/decide_trip_request capacity assertions against the migration, direct leave RPC invocation, unchanged error propagation and no Auth preflight. Exact-head CI/status queries returned no records; npm test, lint, TypeScript, Android Expo export and disposable SQL suites are not independently verified. QA Gate BLOCKED; original live leave failure remains unreproduced; no production writes or deployment.",
+  "blocker": "Exact-head CI cannot be independently verified through connected GitHub status/workflow tools: combined status returned no records and the workflow-run wrapper only returns PR-triggered runs. Need verifiable current-head npm test, lint, npx tsc --noEmit, Android Expo export, and disposable Trip/Local Match SQL jobs. The original production leave failure remains unreproduced; production rollout stays NO-GO.",
+  "updatedAt": "2026-10-25T09:00:13Z",
   "activity": [
     {
       "type": "working",
@@ -162,6 +162,12 @@
       "title": "Trip refresh-state fix is in QA; exact-head CI unconfirmed",
       "detail": "Reviewed agent-dev HEAD 257af877. Targeted source/guard checks pass for leave success versus refresh failure, while backend RPC errors still propagate. Full CI cannot be independently verified through available GitHub status/workflow tools. Original leave failure remains unreproduced; no production writes or deployment.",
       "at": "2026-10-25T09:00:00Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Trip refresh-state QA gate awaiting full CI",
+      "detail": "Core corrected the over-escaped join_trip capacity guard at code-bearing HEAD 5ecdd203. Targeted source/guard checks pass, but exact-head CI results are unavailable through the connected status/workflow tools. Original live Trip leave failure remains unreproduced; no production mutation or deployment.",
+      "at": "2026-10-25T09:00:13Z"
     }
   ]
 }
