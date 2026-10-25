@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "NAV-DISC-06: audit Home search result de-duplication for casing/spacing variants without changing raw query/display names or the server search contract.",
-  "latestReport": "PROFILE-CREATE-06 completed: src/app/profile.tsx now describes the direct-entry fallback as returning to the Profile tab; navigation logic is unchanged. Code commit 24c824677c4d75f6ad187255334d43504927ceda; regression-guard correction 60a207dd6826dc5ac8234dfa95e24b6b20b39b38. Focused assertions passed. Exact-head CI #680 (run 40176449231) passed both validate and trip-lifecycle, including authorization regression tests, lint, TypeScript, Android Expo export, fresh disposable migrations, Trip lifecycle SQL and Local Match SQL. Backlog rotates to NAV-DISC-06. Current docs-only agent-dev head ba7e49dd has a CI run in progress; physical Profile Back behavior remains DEVICE_VERIFY. Slot 5 remains ACTIVE and enabled.",
+  "currentTask": "PROFILE-CREATE-07: remove the duplicate Sign Out control from the non-onboarding Edit Profile form while keeping Sign Out visible on the Profile tab and available during onboarding.",
+  "latestReport": "NAV-DISC-06 source work is committed on MitMi agent-dev: Home deduplicates Meet cards by normalized title/place/city/description and start instant on initial load and refresh, without changing the raw search query or displayed names. Source commits d6021e85 and d5ed8e51; focused regression guard 5dbe0bfa. Focused source assertions and a behavior simulation pass; GitHub status/workflow queries returned no records, so full CI remains unconfirmed. Next active role is Profile/Create on PROFILE-CREATE-07. Slot 5 remains active and enabled; no production changes.",
   "blocker": null,
-  "updatedAt": "2026-10-25T08:27:12.662Z",
+  "updatedAt": "2026-10-25T09:26:00.858Z",
   "activity": [
     {
       "type": "working",
@@ -187,6 +187,12 @@
       "title": "Profile Back hint fix passed full CI",
       "detail": "MitMi agent-dev code/test commit 60a207dd passed CI #680 validate and trip-lifecycle: npm test, lint, TypeScript, Android Expo export, fresh disposable migrations and both SQL regression suites. Backlog records NAV-DISC-06 as the next active task. Physical Back behavior remains DEVICE_VERIFY.",
       "at": "2026-10-25T08:27:12.662Z"
+    },
+    {
+      "type": "working",
+      "title": "Home search deduplication committed; Profile/Create active next",
+      "detail": "NAV-DISC-06 commits d6021e85 and d5ed8e51 add normalized composite Meet deduplication to initial and refresh paths; regression guard 5dbe0bfa adds four source assertions. Focused checks and simulation pass. Full CI is unconfirmed because GitHub status/workflow tools returned no records. Backlog rotates to PROFILE-CREATE-07; automation remains enabled.",
+      "at": "2026-10-25T09:26:00.858Z"
     }
   ]
 }
