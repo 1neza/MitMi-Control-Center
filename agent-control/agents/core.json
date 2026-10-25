@@ -3,10 +3,10 @@
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
   "status": "blocked",
-  "currentTask": "CORE-TRIP-04 ACTIVE: reproduce the original ordinary-member Trip leave failure without production writes; preserve creator safety and verify accepted-member/departed-member Chat authorization.",
-  "latestReport": "Read-only audit at MitMi agent-dev HEAD 6cc9e2ed (documentation-only successor to CI #668-passing code head 6ddc659) reconfirmed live leave_trip is postgres-owned SECURITY DEFINER with empty search_path and authenticated EXECUTE; it uses the composite key, updates only the caller, and deletes only the caller's Trip channel_members row. Live capacity and notification triggers do not reject accepted-to-left. No leave_trip API request or matching database error appeared in the 24h log window; only a list_visible_trip_members request matched the broad Trip-members search. Live domain-chat sync trigger is absent; 2 of 4 accepted Trip memberships lack derived channel_members. Corrective migrations remain unapplied. No production RPC invocation, writes, or deployment; no MitMi code pushed.",
-  "blocker": "The reported ordinary-member leave failure remains unreproduced because no matching leave_trip request/error exists in the available 24-hour logs and no staging branch/two-account path is available. Obtain a client-side error/failed-request timestamp or authorized disposable staging reproduction. Production migrations remain NO-GO pending explicit owner approval, backup/PITR confirmation, and staging evidence.",
-  "updatedAt": "2026-10-25T07:06:00Z",
+  "currentTask": "CORE-TRIP-04 ACTIVE: diagnose the original ordinary-member Trip leave failure without production writes; preserve creator safety and accepted-member/departed-member Chat authorization.",
+  "latestReport": "MitMi agent-dev code-bearing commit 53d538492e0820685d4cc243dabe5f4f985e088e passed exact-head CI #677 (run 40175417289: validate + trip-lifecycle). Removed the redundant client auth.getUser preflight from leaveTrip; the server RPC remains the auth.uid() authority and RPC errors propagate unchanged. Fresh read-only live SQL confirms leave_trip uses the composite key and caller-scoped left transition/chat cleanup; capacity and notification triggers do not block accepted-to-left. No /rpc/leave_trip request or matching PostgreSQL error appeared in the inspected 24-hour window. This is a mitigation for a possible pre-RPC client abort, not proof of the reported root cause. Corrective migrations remain unapplied; no production RPC, writes, or deployment.",
+  "blocker": "The original Trip leave failure remains unreproduced: no matching leave_trip request/error appeared in the available 24-hour logs. Need an actual member retest with a timestamp/redacted client error or an authorized disposable staging reproduction. Production migrations remain NO-GO pending owner authorization, backup/PITR confirmation, and staging evidence.",
+  "updatedAt": "2026-10-25T08:10:49.367Z",
   "activity": [
     {
       "type": "working",
@@ -295,6 +295,12 @@
       "title": "Trip leave remains unreproduced after fresh read-only audit",
       "detail": "At agent-dev HEAD 6cc9e2ed, live leave_trip still uses caller-scoped composite-key updates and cleanup; capacity/notification triggers do not block accepted-to-left. No leave_trip request/error appeared in the last 24h logs. The Trip chat-sync trigger is absent and 2/4 accepted Trip memberships lack derived chat rows. Corrective migrations remain unapplied; no production RPC invocation, writes, deployment, or MitMi code push. Slot 2 remains ACTIVE pending an actual failed-request trace or authorized disposable staging reproduction.",
       "at": "2026-10-25T07:06:00Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Trip leave preflight removed; root cause still unconfirmed",
+      "detail": "MitMi commits be4478d, 299c555 and 53d538 remove the redundant client auth preflight and guard direct RPC/error propagation. Exact code-bearing CI #677 passed validate and trip-lifecycle. Live leave RPC remains unreproduced; no production writes or deployment. Backlog note committed at 359ede0.",
+      "at": "2026-10-25T08:10:49.367Z"
     }
   ]
 }
