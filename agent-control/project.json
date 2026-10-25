@@ -3,16 +3,48 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "d2204bf8f61e7b3b759f1eb51495d4354f12cc46",
-  "latestCommit": "docs(coordination): reconcile Slot 1 exact-head CI 629",
-  "syncedAt": "2026-10-25T04:01:15.246Z",
+  "head": "3093c4fde29c7c58349c6533c2a752093f101cc7",
+  "latestCommit": "docs(coordination): record Local Discovery live drift and next gate",
+  "syncedAt": "2026-10-25T04:12:51.789Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 630,
+    "latestRun": 634,
     "latestConclusion": "success",
-    "latestFailure": "CI #626 failed on the first NAV-DISC-03 regex guard; correction at 81f4a1bb passed CI #627. Exact-head CI #630 passed after the coordination-only backlog reconciliation.",
+    "latestFailure": "Historical CI #626 failed on the first NAV-DISC-03 regex guard; correction at 81f4a1bb passed CI #627. Exact-head CI #630–#634 passed both validation and disposable lifecycle jobs.",
     "successRate": 80,
     "history": [
+      {
+        "number": 634,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): record Local Discovery live drift and next gate",
+        "sha": "3093c4fde29c7c58349c6533c2a752093f101cc7",
+        "updatedAt": "2026-10-25T04:12:22Z"
+      },
+      {
+        "number": 633,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(core): record live chat contract drift",
+        "sha": "e8369cf9b62f481ff2cb670cc1e1453ac1362cc3",
+        "updatedAt": "2026-10-25T04:08:26Z"
+      },
+      {
+        "number": 632,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): record Slot 3 scheduler block",
+        "sha": "0216c18e8873b8029f14d43b8b8c602be180de76",
+        "updatedAt": "2026-10-25T04:06:52Z"
+      },
+      {
+        "number": 631,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(coordination): rotate Core and Chat UI tasks",
+        "sha": "924cfd666fd95af0522b560ece98d636585b9990",
+        "updatedAt": "2026-10-25T04:06:23Z"
+      },
       {
         "number": 630,
         "status": "completed",
@@ -60,45 +92,13 @@
         "title": "docs(core): record read-only Trip leave diagnosis",
         "sha": "acd8b9d8aa590cff2195aa344034a95df2803091",
         "updatedAt": "2026-10-25T03:11:13Z"
-      },
-      {
-        "number": 624,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): record exact-head CI 623 result",
-        "sha": "abf173d35a44daa97dc8ec332a50c6faee185c49",
-        "updatedAt": "2026-10-25T03:06:10Z"
-      },
-      {
-        "number": 623,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): reconcile exact head and slot states",
-        "sha": "8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f",
-        "updatedAt": "2026-10-25T03:02:54Z"
-      },
-      {
-        "number": 622,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record Trip rollout gate and drift",
-        "sha": "ebdf92a9600bea40742d57bc6f3a1d04d054267d",
-        "updatedAt": "2026-10-25T02:45:32Z"
-      },
-      {
-        "number": 621,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(travel): clarify Trip rollback baselines",
-        "sha": "a5a881ea87e799b009901e682d209903cd4d0ad3",
-        "updatedAt": "2026-10-25T02:42:01Z"
       }
     ],
     "headCheck": {
-      "sha": "d2204bf8f61e7b3b759f1eb51495d4354f12cc46",
+      "sha": "3093c4fde29c7c58349c6533c2a752093f101cc7",
       "status": "completed",
       "conclusion": "success",
-      "note": "Exact-head CI #630 passed both jobs. validate passed runner syntax checks, authorization regression tests, lint, TypeScript and Android Expo export; trip-lifecycle applied migrations to a fresh disposable local Supabase database and passed Trip lifecycle plus Local Match chat SQL regressions. This does not deploy production migrations or prove physical-device/two-account behavior."
+      "note": "Exact-head CI #634 passed both jobs. validate passed runner syntax checks, authorization regression tests, lint, TypeScript and Android Expo export; trip-lifecycle applied migrations to a fresh disposable local Supabase database and passed Trip lifecycle plus Local Match chat SQL regressions. These are branch/disposable-DB checks only: no production migration deployed and no physical-device/two-account behavior certified."
     }
   }
 }
