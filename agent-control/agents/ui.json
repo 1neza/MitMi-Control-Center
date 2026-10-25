@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "PROFILE-CREATE-04: handle Supabase signOut returned errors in ProfileScreen; exact-head CI unconfirmed.",
-  "latestReport": "MitMi agent-dev commits 3f1c1cbd9c56c1dc99a4d8b46e6ae018a08365e7 and 4247f8b314006a29f6ca0708253891b0a48e08a9 now check the Supabase signOut result and guard that returned errors reach the visible error handler with the busy flag reset. Avatar add/replace/remove source audit found no additional concrete defect. The regression guard was manually matched against fetched source. GitHub combined-status/workflow lookups returned no records, so full CI is UNCONFIRMED. Profile photo persistence and actual sign-out remain DEVICE_VERIFY; Slot 5 stays ACTIVE and enabled.",
+  "currentTask": "PROFILE-CREATE-05: audit remaining cover-image client helpers and remove only dead code after confirming no active callers; preserve profile-photo behavior and database schema.",
+  "latestReport": "MitMi agent-dev NAV-DISC-04 replaces the text-only Home Inbox pill with a compact 44x44 accessible message-bubble icon, preserving the Open inbox label and /chat route. Source commit eca80790; guard correction b13cb6ce after initial regex draft 7a27f2f5 failed CI #642. Exact-head CI #643 passed both validate and trip-lifecycle, including authorization tests, lint, TypeScript, Android Expo export and disposable Trip/Local Match SQL. PROFILE-CREATE-04 sign-out error fix/guard passed exact-head CI #640. Physical inbox appearance/tap, sign-out and avatar persistence remain DEVICE_VERIFY. Slot 5 remains ACTIVE and enabled; Profile/Create is now the active role.",
   "blocker": null,
-  "updatedAt": "2026-10-25T04:18:30.000Z",
+  "updatedAt": "2026-10-25T05:30:00.713Z",
   "activity": [
     {
       "type": "working",
@@ -151,6 +151,12 @@
       "title": "Profile sign-out returned errors handled",
       "detail": "MitMi agent-dev 3f1c1cbd checks Supabase signOut's returned error and sends it through the existing visible error state; 4247f8b3 adds a regression guard. Manual source assertion passes; exact-head CI is unconfirmed. Avatar flow audit found no additional defect; device persistence/sign-out remain DEVICE_VERIFY.",
       "at": "2026-10-25T04:18:30.000Z"
+    },
+    {
+      "type": "working",
+      "title": "Home inbox message icon passed CI; role rotated to Profile/Create",
+      "detail": "MitMi agent-dev eca80790 adds the compact accessible Home message icon and preserves /chat; b13cb6ce corrects the regression regex. Exact-head CI #643 passed validate and trip-lifecycle. CI #642's initial guard failure was corrected. Profile/Create now owns PROFILE-CREATE-05: audit cover-image helper references before removing only dead client code; no schema/migration changes. Device appearance/tap, sign-out and avatar persistence remain DEVICE_VERIFY.",
+      "at": "2026-10-25T05:30:00.713Z"
     }
   ]
 }
