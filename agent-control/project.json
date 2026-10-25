@@ -3,102 +3,102 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "5736942a209bd4aa66c3f80c185d081b0b79e23f",
-  "latestCommit": "docs(coordination): repair backlog header and reconcile slot board",
-  "syncedAt": "2026-10-25T02:05:14.629Z",
+  "head": "8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f",
+  "latestCommit": "docs(coordination): reconcile exact head and slot states",
+  "syncedAt": "2026-10-25T03:03:33.821Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 610,
+    "latestRun": 623,
     "latestConclusion": "success",
-    "latestFailure": "Historical CI #602 failed on an overescaped chronology assertion and was corrected in #603; no current failure remains on the exact head.",
-    "successRate": 90,
+    "latestFailure": "Historical CI #616 and #617 failed during Local Match contract/fixture validation; the direct-channel fix and fixture correction passed #618. Current exact-head CI #623 passed both jobs.",
+    "successRate": 80,
     "history": [
       {
-        "number": 610,
+        "number": 623,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): repair backlog header and reconcile slot board",
-        "sha": "5736942a209bd4aa66c3f80c185d081b0b79e23f",
-        "updatedAt": "2026-10-25T02:04:54Z"
+        "title": "docs(coordination): reconcile exact head and slot states",
+        "sha": "8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f",
+        "updatedAt": "2026-10-25T03:02:54Z"
       },
       {
-        "number": 609,
+        "number": 622,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(coordination): reconcile Chat QA and rotate blocked media lane",
-        "sha": "d749fd69f50a25973db60dfd5678a9594012e19c",
-        "updatedAt": "2026-10-25T02:05:00Z"
+        "title": "docs(backlog): record Trip rollout gate and drift",
+        "sha": "ebdf92a9600bea40742d57bc6f3a1d04d054267d",
+        "updatedAt": "2026-10-25T02:45:32Z"
       },
       {
-        "number": 608,
+        "number": 621,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(backlog): record Slot 5 discovery audit and rotate role",
-        "sha": "e3ed943fa0ef8ebe9cffc9b19474f3335a9724bb",
-        "updatedAt": "2026-10-25T00:29:28Z"
+        "title": "docs(travel): clarify Trip rollback baselines",
+        "sha": "a5a881ea87e799b009901e682d209903cd4d0ad3",
+        "updatedAt": "2026-10-25T02:42:01Z"
       },
       {
-        "number": 607,
+        "number": 620,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(backlog): include realtime merge regression guard",
-        "sha": "044cb1e6d211bf51b607477be5fddf3684d8a1b8",
-        "updatedAt": "2026-10-25T00:27:27Z"
+        "title": "docs(travel): define gated Trip leave rollout",
+        "sha": "ab25d01976f79978eb1604406e7d34a2a13fb027",
+        "updatedAt": "2026-10-25T02:41:05Z"
       },
       {
-        "number": 606,
+        "number": 619,
         "status": "completed",
         "conclusion": "success",
-        "title": "test(chat): assert realtime chronological merge is used",
-        "sha": "e32e39ae334a3eafa0726cab0190405bca1c2af1",
-        "updatedAt": "2026-10-25T00:26:38Z"
+        "title": "docs(backlog): record Local Match QA pass and Trip drift",
+        "sha": "6f5a70aec802e99979f50de230eb876ba56e9816",
+        "updatedAt": "2026-10-25T02:33:11Z"
       },
       {
-        "number": 605,
+        "number": 618,
         "status": "completed",
         "conclusion": "success",
-        "title": "docs(backlog): record chat chronology fix and media contract audit",
-        "sha": "9f73cb65f74ca4e2413a6edf57d96b865f624423",
-        "updatedAt": "2026-10-25T00:25:23Z"
+        "title": "test(local-match): fix fixture insert columns",
+        "sha": "a44e45f4c34b6602df9552b1db725909001ae9be",
+        "updatedAt": "2026-10-25T02:29:40Z"
       },
       {
-        "number": 604,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): activate Chat chronology QA gate",
-        "sha": "b299495d7ff176ba42c94fefddb161919e205d04",
-        "updatedAt": "2026-10-25T00:24:43Z"
-      },
-      {
-        "number": 603,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(chat): correct chronology assertion escaping",
-        "sha": "88cdd3a64b87f0002c5b647c34f4baddbc209f7f",
-        "updatedAt": "2026-10-25T00:24:05Z"
-      },
-      {
-        "number": 602,
+        "number": 617,
         "status": "completed",
         "conclusion": "failure",
-        "title": "test(chat): guard chronological realtime message merging",
-        "sha": "fdc8c3c0b09c988abfa76dcc405a49a70db67d11",
-        "updatedAt": "2026-10-25T00:23:37Z"
+        "title": "fix(local-match): honor direct channel pair contract",
+        "sha": "d3a3796a3b86826defdb3466242086cd5efdaa19",
+        "updatedAt": "2026-10-25T02:26:47Z"
       },
       {
-        "number": 601,
+        "number": 616,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "test(local-match): cover accepted conversation lifecycle",
+        "sha": "2b5af25e72b1fbdc0b385e0665e30eda3e52b050",
+        "updatedAt": "2026-10-25T02:22:31Z"
+      },
+      {
+        "number": 615,
         "status": "completed",
         "conclusion": "success",
-        "title": "fix(chat): keep realtime messages chronologically ordered",
-        "sha": "7f18e666e4eeb53ccfd9c0ce384ed90fa308908c",
-        "updatedAt": "2026-10-25T00:22:54Z"
+        "title": "docs(backlog): record profile fallback fix and rotate Slot 5",
+        "sha": "c798d292968253c9d30b3db8c77cedd677767948",
+        "updatedAt": "2026-10-25T02:19:30Z"
+      },
+      {
+        "number": 614,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(profile): guard edit fallback to Profile tab",
+        "sha": "3c1dc6f723fcce11079528f82be6972f0363e3d8",
+        "updatedAt": "2026-10-25T02:18:46Z"
       }
     ],
     "headCheck": {
-      "sha": "5736942a209bd4aa66c3f80c185d081b0b79e23f",
+      "sha": "8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f",
       "status": "completed",
       "conclusion": "success",
-      "note": "Exact-head CI #610 passed both jobs: authorization regression tests, lint, TypeScript, Android Expo export, and fresh disposable local Supabase migration application plus Trip lifecycle SQL regression. CI #609 also passed on a superseded coordination-only commit. Production migration 20261024201000 remains undeployed."
+      "note": "Exact-head CI #623 passed both validate and trip-lifecycle jobs. Validate passed authorization regression tests, lint, TypeScript and Android Expo export; trip-lifecycle applied migrations to a fresh disposable local Supabase database and passed Trip lifecycle plus Local Match chat SQL regressions. This does not deploy the production Trip migration or prove physical-device/two-account behavior."
     }
   }
 }
