@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "working",
-  "currentTask": "CORE-DISC-02: add disposable SQL integration coverage for Local Match channel open/reuse and block/pending/nonparticipant denial.",
-  "latestReport": "MitMi agent-dev code-bearing commit eb5365b / CI #611 passed: authorization regression tests, lint, TypeScript, Android Expo export, fresh local Supabase migration application and Trip lifecycle SQL regression. The new migration serializes concurrent first opens by locking the accepted Local Match request row before channel lookup/creation. QA Gate passed source/CI; Core is active on a disposable Local Match SQL regression. Production Trip migration 20261024201000 remains undeployed; live Local Discovery concurrency and Trip two-account behavior remain DEVICE_VERIFY.",
-  "blocker": null,
-  "updatedAt": "2026-10-25T02:14:30Z",
+  "status": "blocked",
+  "currentTask": "CORE-TRIP-04: keep the Trip leave rollout NO-GO until explicit owner authorization, backup/PITR confirmation, and staging two-account evidence; continue read-only investigation of the unresolved live failure.",
+  "latestReport": "MitMi agent-dev HEAD ebdf92a / CI #622 passed authorization tests (npm test), lint, TypeScript, Android Expo export, both runner syntax checks, fresh local Supabase migration application, and Trip lifecycle plus Local Match SQL regressions. Core delivered docs/TRIP_LEAVE_ROLLOUT_GATE.md with explicit NO-GO, preflight, staging two-account checks, production smoke limits, and recovery criteria. Read-only production audit confirms migration 20261024201000 is absent; trip_members uses a composite key with no id; checked-in migration 20261010161303 contains invalid .id references while the current live leave_trip body uses the composite key but lacks creator protection; sync_trip_chat_membership is absent. The targeted 24-hour leave_trip log query returned no rows, so the current live failure remains unreproduced. No production writes or deployment.",
+  "blocker": "Production rollout is not authorized; backup/PITR availability and staging two-account evidence are not confirmed. Do not apply the migration or mutate production data.",
+  "updatedAt": "2026-10-25T02:46:08.401Z",
   "activity": [
     {
       "type": "working",
@@ -247,6 +247,12 @@
       "title": "Local Discovery channel creation serialized",
       "detail": "Commit eb5365b / CI #611 passed the full validation and disposable Trip lifecycle jobs; Core is adding Local Match SQL integration coverage next. No production migration or data mutation.",
       "at": "2026-10-25T02:14:30Z"
+    },
+    {
+      "type": "blocked",
+      "title": "Trip rollout gate documented",
+      "detail": "Runbook committed on agent-dev; exact-head CI #622 passed including disposable Trip and Local Match SQL tests. Production remains NO-GO pending owner authorization, backup/PITR confirmation, staging two-account evidence, and further non-mutating diagnosis.",
+      "at": "2026-10-25T02:46:08.401Z"
     }
   ]
 }
