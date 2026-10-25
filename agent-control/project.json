@@ -3,16 +3,64 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "abf173d35a44daa97dc8ec332a50c6faee185c49",
-  "latestCommit": "docs(coordination): record exact-head CI 623 result",
-  "syncedAt": "2026-10-25T03:06:30.233Z",
+  "head": "d2204bf8f61e7b3b759f1eb51495d4354f12cc46",
+  "latestCommit": "docs(coordination): reconcile Slot 1 exact-head CI 629",
+  "syncedAt": "2026-10-25T03:59:12.189Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 624,
-    "latestConclusion": "success",
-    "latestFailure": "Historical CI #616 and #617 failed during Local Match contract/fixture validation; the direct-channel fix and fixture correction passed #618. Exact-head CI #624 passed both jobs.",
+    "latestRun": 630,
+    "latestConclusion": "in_progress",
+    "latestFailure": "CI #626 failed on the first NAV-DISC-03 regex guard; correction at 81f4a1bb passed CI #627. Exact-head CI #630 is currently running after the coordination-only backlog reconciliation.",
     "successRate": 80,
     "history": [
+      {
+        "number": 630,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): reconcile Slot 1 exact-head CI 629",
+        "sha": "d2204bf8f61e7b3b759f1eb51495d4354f12cc46",
+        "updatedAt": "2026-10-25T03:57:41Z"
+      },
+      {
+        "number": 629,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): record Slot 5 discovery CI pass",
+        "sha": "78de59fd15bd97fdf8476b34bdd78e2759a00ed3",
+        "updatedAt": "2026-10-25T03:30:42Z"
+      },
+      {
+        "number": 628,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): record discovery sizing and rotate Slot 5",
+        "sha": "80680364646efcdd3c9ad3b1e7d4a3bcb933bc8c",
+        "updatedAt": "2026-10-25T03:30:01Z"
+      },
+      {
+        "number": 627,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "test(navigation): correct discovery sizing guard patterns",
+        "sha": "81f4a1bba901e9e005d35cd773446dfece052a0f",
+        "updatedAt": "2026-10-25T03:27:47Z"
+      },
+      {
+        "number": 626,
+        "status": "completed",
+        "conclusion": "failure",
+        "title": "fix(navigation): stabilize discovery category sizing",
+        "sha": "af8e11015b505e684124f9af92c7b9e12ad90e58",
+        "updatedAt": "2026-10-25T03:27:26Z"
+      },
+      {
+        "number": 625,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(core): record read-only Trip leave diagnosis",
+        "sha": "acd8b9d8aa590cff2195aa344034a95df2803091",
+        "updatedAt": "2026-10-25T03:11:13Z"
+      },
       {
         "number": 624,
         "status": "completed",
@@ -44,61 +92,13 @@
         "title": "docs(travel): clarify Trip rollback baselines",
         "sha": "a5a881ea87e799b009901e682d209903cd4d0ad3",
         "updatedAt": "2026-10-25T02:42:01Z"
-      },
-      {
-        "number": 620,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(travel): define gated Trip leave rollout",
-        "sha": "ab25d01976f79978eb1604406e7d34a2a13fb027",
-        "updatedAt": "2026-10-25T02:41:05Z"
-      },
-      {
-        "number": 619,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record Local Match QA pass and Trip drift",
-        "sha": "6f5a70aec802e99979f50de230eb876ba56e9816",
-        "updatedAt": "2026-10-25T02:33:11Z"
-      },
-      {
-        "number": 618,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(local-match): fix fixture insert columns",
-        "sha": "a44e45f4c34b6602df9552b1db725909001ae9be",
-        "updatedAt": "2026-10-25T02:29:40Z"
-      },
-      {
-        "number": 617,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "fix(local-match): honor direct channel pair contract",
-        "sha": "d3a3796a3b86826defdb3466242086cd5efdaa19",
-        "updatedAt": "2026-10-25T02:26:47Z"
-      },
-      {
-        "number": 616,
-        "status": "completed",
-        "conclusion": "failure",
-        "title": "test(local-match): cover accepted conversation lifecycle",
-        "sha": "2b5af25e72b1fbdc0b385e0665e30eda3e52b050",
-        "updatedAt": "2026-10-25T02:22:31Z"
-      },
-      {
-        "number": 615,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(backlog): record profile fallback fix and rotate Slot 5",
-        "sha": "c798d292968253c9d30b3db8c77cedd677767948",
-        "updatedAt": "2026-10-25T02:19:30Z"
       }
     ],
     "headCheck": {
-      "sha": "abf173d35a44daa97dc8ec332a50c6faee185c49",
-      "status": "completed",
-      "conclusion": "success",
-      "note": "Exact-head CI #624 passed both validate and trip-lifecycle jobs. Validate passed authorization regression tests, lint, TypeScript and Android Expo export; trip-lifecycle applied migrations to a fresh disposable local Supabase database and passed Trip lifecycle plus Local Match chat SQL regressions. This does not deploy the production Trip migration or prove physical-device/two-account behavior."
+      "sha": "d2204bf8f61e7b3b759f1eb51495d4354f12cc46",
+      "status": "in_progress",
+      "conclusion": null,
+      "note": "Exact-head CI #630 is running on the coordination-only backlog commit. validate has passed runner syntax checks, authorization regression tests and lint so far; typecheck/Android export and disposable Trip/Local Match SQL regressions are still pending. Do not claim exact-head CI green until both jobs complete."
     }
   }
 }
