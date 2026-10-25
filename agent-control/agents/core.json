@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "blocked",
-  "currentTask": "CORE-TRIP-04: keep Trip rollout NO-GO; continue read-only diagnosis until the original leave failure is reproduced or authorized staging evidence is available.",
-  "latestReport": "Read-only follow-through at MitMi agent-dev HEAD acd8b9d8 records that live leave_trip is postgres-owned SECURITY DEFINER, uses auth.uid() and the composite key, transitions pending/accepted membership to left, and deletes only the caller's Trip chat membership. The capacity trigger explicitly skips accepted-to-left updates; the client passes target_trip_id correctly and propagates RPC errors. No matching PostgREST leave_trip request or PostgreSQL error appeared in the inspected 24-hour log window. A TravelScreen refresh error can surface after a successful RPC but is not evidence of the reported failure. Production migration 20261024201000 remains unapplied; no production writes/deployment or app-code changes.",
-  "blocker": "The reported live Trip leave failure remains unreproduced: no matching request/error log was available, and the inspected live RPC path is caller-scoped and internally consistent. Obtain a failed-request trace or authorized staging two-account reproduction; do not mutate production or apply the migration without explicit approval and backup/PITR confirmation.",
-  "updatedAt": "2026-10-25T03:07:00Z",
+  "status": "working",
+  "currentTask": "CORE-DISC-04: audit live Local Discovery conversation authorization and record migration drift; keep Trip rollout NO-GO pending authorized evidence.",
+  "latestReport": "Read-only live Supabase audit confirmed a production Local Match open failure for accepted requests without an existing channel: live get_or_create_local_match_channel inserts kind='direct' without direct_pair_key, violating the channels_direct_pair_shape CHECK. The corrected migration 20261025022300 is on agent-dev but absent from live migration history. Trip leave remains unreproduced; the live RPC uses the composite key and caller-scoped cleanup, but creator protection and the Trip chat-sync trigger are absent, and no matching leave_trip request/error appeared in the last 24 hours. Backlog evidence committed at MitMi e8369cf9. No RPC invocation, production writes, or deployment.",
+  "blocker": "The confirmed Local Match fix and Trip repair are not deployed to production; no production rollout is authorized in this run. Trip leave's reported runtime failure remains unreproduced, so do not claim it is fixed or apply migrations without explicit approval and backup/PITR confirmation.",
+  "updatedAt": "2026-10-25T04:05:50.375Z",
   "activity": [
     {
       "type": "working",
@@ -259,6 +259,12 @@
       "title": "Trip leave diagnosis narrowed without production writes",
       "detail": "Read-only schema/function/log audit ruled out the live capacity trigger and client RPC parameter mismatch as obvious causes; no leave_trip request/error appeared in the inspected 24-hour logs. Backlog records the evidence at MitMi docs commit acd8b9d8. Production rollout remains NO-GO.",
       "at": "2026-10-25T03:07:00Z"
+    },
+    {
+      "type": "working",
+      "title": "Confirmed live Local Match channel contract drift",
+      "detail": "Read-only Supabase catalog inspection found the live Local Match RPC omits required direct_pair_key on new direct-channel inserts; the corrective migration is present on agent-dev but absent from production history. Trip leave remains unreproduced and production rollout remains NO-GO. MitMi backlog evidence: e8369cf9. No production writes/deployment.",
+      "at": "2026-10-25T04:05:50.375Z"
     }
   ]
 }
