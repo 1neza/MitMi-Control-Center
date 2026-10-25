@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "Slot 5 Profile/Create: inspect the unified profile-edit path and visible current-session Sign Out for a concrete source defect; do not repeat the completed avatar audit.",
-  "latestReport": "Navigation/Discovery audit on MitMi agent-dev exact observed HEAD 044cb1e6: Home search preserves raw query text and normalizes only matching keys (NFKD, diacritic removal, case folding, whitespace collapse, common Latin-letter folds). Trips routes to /travel; the Home + button opens /create; the chooser routes Create Trip to /travel?create=trip, and TravelScreen opens the existing form then clears the param. Offers/Places and Local Discovery routes are connected. Twelve focused source assertions passed; no reproducible disconnected route/search defect was found, so no app code change was made. Exact-head GitHub status endpoint returned no status records; full CI is not independently confirmed. Next logical role: Profile/Create source audit.",
-  "blocker": "Physical-device keyboard/navigation and profile-photo persistence/current-session Sign Out remain DEVICE_VERIFY; no source-level blocker identified.",
-  "updatedAt": "2026-10-25T00:25:23.302Z",
+  "currentTask": "NAV-DISC-03: audit/fix the initial horizontal discovery-category size/layout jump; keep first-render pill dimensions stable.",
+  "latestReport": "Profile/Create audit found a direct-link navigation defect: src/app/profile.tsx returned to the retired /more hub when no back history existed. MitMi agent-dev commits 3fd9cf54 (fallback to /(tabs)/me) and 3c1dc6f7 (regression guard forbidding /more fallback) are pushed. Focused source assertions pass; exact-head CI #613/#614 is still running, and the backlog records the next Navigation/Discovery task NAV-DISC-03. Physical-device deep-link/back, avatar persistence and Sign Out remain DEVICE_VERIFY.",
+  "blocker": null,
+  "updatedAt": "2026-10-25T02:17:37.730Z",
   "activity": [
     {
       "type": "working",
@@ -115,6 +115,12 @@
       "title": "Home search and Trip routing audit passed",
       "detail": "Inspected current agent-dev Home, Create chooser, and Travel source. Raw search text remains untouched while normalized keys drive matching; Trips, Offers/Places, Local Discovery, and Create Meet/Trip routes are connected. Twelve focused source assertions passed. No app code change was warranted; exact-head CI status was not exposed. Next: Profile/Create edit-path and Sign Out source audit.",
       "at": "2026-10-25T00:25:23.302Z"
+    },
+    {
+      "type": "working",
+      "title": "Profile edit fallback repaired",
+      "detail": "MitMi agent-dev 3fd9cf54 sends no-history /profile back navigation to /(tabs)/me instead of the retired /more hub; 3c1dc6f7 adds a regression guard. Focused source assertions pass; CI pending. Next: NAV-DISC-03 discovery-category first-render layout audit.",
+      "at": "2026-10-25T02:17:37.730Z"
     }
   ]
 }
