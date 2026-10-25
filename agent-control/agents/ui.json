@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "Slot 5 Profile/Create: audit profile-photo add/replace/remove failure paths for a concrete source defect; preserve the single-photo flow and visible sign-out.",
-  "latestReport": "MitMi agent-dev commits 03c9d1a7 and cb4c64b8 change the Home category label to Local Discovery while preserving /local-match and add a focused route/label regression guard. The targeted regex passes against fetched branch source. Full CI (npm test, lint, TypeScript, Android Expo export) is not independently visible through the available GitHub status/workflow tools. The current travel.tsx source already hides Join/Leave for Trip creators while retaining request management and cancellation. Next: profile-photo add/replace/remove source audit.",
-  "blocker": "Physical Android/iOS profile-photo persistence and current-session sign-out remain DEVICE_VERIFY; source-level audit is not blocked.",
-  "updatedAt": "2026-10-24T23:21:52.000Z",
+  "currentTask": "Slot 5 Profile/Create: inspect the unified profile-edit path and visible current-session Sign Out for a concrete source defect; do not repeat the completed avatar audit.",
+  "latestReport": "Navigation/Discovery audit on MitMi agent-dev exact observed HEAD 044cb1e6: Home search preserves raw query text and normalizes only matching keys (NFKD, diacritic removal, case folding, whitespace collapse, common Latin-letter folds). Trips routes to /travel; the Home + button opens /create; the chooser routes Create Trip to /travel?create=trip, and TravelScreen opens the existing form then clears the param. Offers/Places and Local Discovery routes are connected. Twelve focused source assertions passed; no reproducible disconnected route/search defect was found, so no app code change was made. Exact-head GitHub status endpoint returned no status records; full CI is not independently confirmed. Next logical role: Profile/Create source audit.",
+  "blocker": "Physical-device keyboard/navigation and profile-photo persistence/current-session Sign Out remain DEVICE_VERIFY; no source-level blocker identified.",
+  "updatedAt": "2026-10-25T00:25:23.302Z",
   "activity": [
     {
       "type": "working",
@@ -109,6 +109,12 @@
       "title": "Local Discovery label and route guard committed",
       "detail": "MitMi agent-dev commit 03c9d1a7 changes only the Home discovery category text; cb4c64b8 adds a static guard that the Local Discovery label remains adjacent to the existing /local-match route. Focused source regex passes. Full CI is not independently visible; the backlog now rotates Slot 5 to the profile-photo failure-path audit.",
       "at": "2026-10-24T23:21:52.000Z"
+    },
+    {
+      "type": "success",
+      "title": "Home search and Trip routing audit passed",
+      "detail": "Inspected current agent-dev Home, Create chooser, and Travel source. Raw search text remains untouched while normalized keys drive matching; Trips, Offers/Places, Local Discovery, and Create Meet/Trip routes are connected. Twelve focused source assertions passed. No app code change was warranted; exact-head CI status was not exposed. Next: Profile/Create edit-path and Sign Out source audit.",
+      "at": "2026-10-25T00:25:23.302Z"
     }
   ]
 }
