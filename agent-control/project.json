@@ -3,16 +3,24 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "418136261e874384b4a0c85af2e09053e7096c88",
-  "latestCommit": "docs(qa): record Trip lifecycle integration PASS",
-  "syncedAt": "2026-10-25T00:15:39.130Z",
+  "head": "29c1d7f83bd56fc50068b2332911c10327b3b016",
+  "latestCommit": "docs(coordination): rotate Core to Local Discovery contract",
+  "syncedAt": "2026-10-25T00:18:59.769Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 599,
-    "latestConclusion": "success",
+    "latestRun": 600,
+    "latestConclusion": "in_progress",
     "latestFailure": null,
     "successRate": 100,
     "history": [
+      {
+        "number": 600,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): rotate Core to Local Discovery contract",
+        "sha": "29c1d7f83bd56fc50068b2332911c10327b3b016",
+        "updatedAt": "2026-10-25T00:16:46Z"
+      },
       {
         "number": 599,
         "status": "completed",
@@ -84,21 +92,13 @@
         "title": "fix(chat): cancel pending opens on inbox blur",
         "sha": "3e225314751106965359461c40fc8b251f0f5ad7",
         "updatedAt": "2026-10-24T23:18:44Z"
-      },
-      {
-        "number": 590,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "test(chat): correct stale-open regression guards",
-        "sha": "22422636896dba787a2151bcb2d63d70419229f8",
-        "updatedAt": "2026-10-24T23:16:19Z"
       }
     ],
     "headCheck": {
-      "sha": "418136261e874384b4a0c85af2e09053e7096c88",
-      "status": "completed",
-      "conclusion": "success",
-      "note": "CI #599 passed on exact agent-dev HEAD 41813626. Both validate and trip-lifecycle passed; the latter started a fresh local Supabase DB, applied the branch migrations and ran the Trip lifecycle SQL regression. This is disposable CI proof only, not production deployment or live-device evidence."
+      "sha": "29c1d7f83bd56fc50068b2332911c10327b3b016",
+      "status": "in_progress",
+      "conclusion": null,
+      "note": "CI #600 is in progress on exact agent-dev HEAD 29c1d7f8. Authorization tests have passed so far; Android export and the fresh-local-Supabase lifecycle job are still running. CI #599 passed on the previous exact head."
     }
   }
 }
