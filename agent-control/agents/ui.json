@@ -3,10 +3,10 @@
   "name": "MitMi UI Engineer",
   "role": "UI / UX",
   "status": "working",
-  "currentTask": "PROFILE-CREATE-06: correct the stale Profile Back accessibility hint to match the actual Profile-tab fallback.",
-  "latestReport": "NAV-DISC-05 explicitly sets tabBarRespectsIMEInsets={false} in the Expo SDK 57 NativeTabs layout and adds a focused regression guard. Source/guard assertion passes; exact-head CI/status records are unavailable and full local checks could not run because this runtime cannot reach GitHub. Next role is Profile/Create on PROFILE-CREATE-06. Physical keyboard, inbox, avatar persistence and sign-out behavior remain DEVICE_VERIFY. Slot 5 remains ACTIVE and enabled.",
+  "currentTask": "NAV-DISC-06: audit Home search result de-duplication for casing/spacing variants without changing raw query/display names or the server search contract.",
+  "latestReport": "PROFILE-CREATE-06 corrected the stale Profile Back accessibility hint to describe the actual Profile-tab fallback. MitMi agent-dev code commit 24c824677c4d75f6ad187255334d43504927ceda; regression-guard correction 60a207dd6826dc5ac8234dfa95e24b6b20b39b38. Focused source assertions pass. CI #680 is still running at the last read: authorization tests, lint, TypeScript and Android Expo export passed; disposable migration/SQL job remains in progress. Backlog rotates to NAV-DISC-06. Profile Back runtime remains DEVICE_VERIFY; Slot 5 remains ACTIVE and enabled.",
   "blocker": null,
-  "updatedAt": "2026-10-25T07:25:19.857Z",
+  "updatedAt": "2026-10-25T08:26:18.139Z",
   "activity": [
     {
       "type": "working",
@@ -175,6 +175,12 @@
       "title": "Native tab keyboard behavior made explicit; Profile/Create next",
       "detail": "MitMi agent-dev code commit 896e6199 sets tabBarRespectsIMEInsets={false}; guard correction cfcf8894 asserts the SDK 57 property. Focused source/guard check passed. Full npm test, lint, TypeScript and Android export remain unconfirmed because network access was unavailable and GitHub status/workflow lookups returned no records. Backlog records Profile/Create ACTIVE on PROFILE-CREATE-06; Slot 5 remains enabled.",
       "at": "2026-10-25T07:25:19.857Z"
+    },
+    {
+      "type": "working",
+      "title": "Profile Back hint corrected; Home search audit active",
+      "detail": "MitMi agent-dev commits 24c82467 and 60a207dd correct the stale Profile-tab accessibility hint and regression guard. Focused source assertions pass. CI #680 validate checks passed through Android Expo export; disposable migration/SQL checks were still running at last read. Next: NAV-DISC-06 Home search deduplication audit. Profile Back runtime remains DEVICE_VERIFY.",
+      "at": "2026-10-25T08:26:18.139Z"
     }
   ]
 }
