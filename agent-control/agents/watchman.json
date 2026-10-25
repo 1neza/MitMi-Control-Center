@@ -1,0 +1,18 @@
+{
+  "id": "watchman",
+  "name": "MitMi Watchman",
+  "role": "Branch and coordination watchdog",
+  "status": "working",
+  "currentTask": "Reconcile exact agent-dev HEAD/CI, preserve single-owner lanes, and enforce the active automation cap.",
+  "latestReport": "Exact agent-dev HEAD 8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f passed CI #623 on the same SHA. Both validate and trip-lifecycle jobs passed, including the disposable Trip lifecycle and Local Match SQL regressions. Slot board reconciled: Slots 1, 2 and 5 enabled; Slot 3 paused BLOCKED pending secure audio contract; Slot 4 paused READY_FOR_QA. Trip production rollout remains NO-GO; no feature code or production change by Watchman.",
+  "blocker": "Trip production migration 20261024201000 is not deployed; live creator protection and Trip chat synchronization remain unproven. Voice implementation is blocked pending Core's secure audio contract.",
+  "updatedAt": "2026-10-25T03:03:33.821Z",
+  "activity": [
+    {
+      "type": "success",
+      "title": "Exact-head CI #623 verified",
+      "detail": "Verified agent-dev HEAD 8a2ac20bc6909ded8c0d7e3d4e29d3614f35892f, exact-head CI #623 success, current backlog, and three enabled automations. No production mutation or feature-code edit performed.",
+      "timestamp": "2026-10-25T03:03:33.821Z"
+    }
+  ]
+}
