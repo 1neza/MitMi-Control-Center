@@ -3,10 +3,10 @@
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
   "status": "working",
-  "currentTask": "CORE-DISC-04: audit live Local Discovery conversation authorization and record migration drift; keep Trip rollout NO-GO pending authorized evidence.",
-  "latestReport": "Read-only live Supabase audit confirmed a production Local Match open failure for accepted requests without an existing channel: live get_or_create_local_match_channel inserts kind='direct' without direct_pair_key, violating the channels_direct_pair_shape CHECK. The corrected migration 20261025022300 is on agent-dev but absent from live migration history. Trip leave remains unreproduced; the live RPC uses the composite key and caller-scoped cleanup, but creator protection and the Trip chat-sync trigger are absent, and no matching leave_trip request/error appeared in the last 24 hours. Backlog evidence committed at MitMi e8369cf9. No RPC invocation, production writes, or deployment.",
-  "blocker": "The confirmed Local Match fix and Trip repair are not deployed to production; no production rollout is authorized in this run. Trip leave's reported runtime failure remains unreproduced, so do not claim it is fixed or apply migrations without explicit approval and backup/PITR confirmation.",
-  "updatedAt": "2026-10-25T04:05:50.375Z",
+  "currentTask": "CORE-DISC-05: prepare non-mutating rollout readiness for migration 20261025022300_reuse_direct_pair_for_local_match_channel.sql; verify staging acceptance, backup/PITR, rollback and owner-approval gates. Keep production NO-GO.",
+  "latestReport": "CORE-DISC-04 completed at 3093c4fde29c7c58349c6533c2a752093f101cc7; exact-head CI #634 passed. Read-only live inspection confirms get_or_create_local_match_channel(uuid) enforces auth, accepted membership and bidirectional blocks but omits required direct_pair_key when creating a direct channel without an existing link. Branch migration 20261025022300 corrects the contract and passes disposable SQL regression, but production history still ends at 20261010161341. No production RPC calls/writes/deployment. Trip leave issue remains separate and unreproduced.",
+  "blocker": "Local Discovery and Trip fixes are present in branch but absent from production migration history. No production rollout without explicit authorization, backup/PITR confirmation and staging two-account evidence. Trip creator protection/chat-sync trigger remain unproven.",
+  "updatedAt": "2026-10-25T04:12:51.789Z",
   "activity": [
     {
       "type": "working",
@@ -265,6 +265,12 @@
       "title": "Confirmed live Local Match channel contract drift",
       "detail": "Read-only Supabase catalog inspection found the live Local Match RPC omits required direct_pair_key on new direct-channel inserts; the corrective migration is present on agent-dev but absent from production history. Trip leave remains unreproduced and production rollout remains NO-GO. MitMi backlog evidence: e8369cf9. No production writes/deployment.",
       "at": "2026-10-25T04:05:50.375Z"
+    },
+    {
+      "type": "working",
+      "title": "CORE-DISC-05 rollout readiness",
+      "detail": "Local Discovery live/branch drift confirmed; prepare only non-mutating staging and rollback readiness. No production changes.",
+      "at": "2026-10-25T04:12:51.789Z"
     }
   ]
 }
