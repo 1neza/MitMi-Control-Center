@@ -2,11 +2,11 @@
   "id": "core",
   "name": "MitMi Core Engineer",
   "role": "Meets · Chat · Travel · Local Match",
-  "status": "idle",
-  "currentTask": "CORE-CHAT-07 domain-aware chat RLS fix delivered; QA Gate is active on commit 42e3ff0 while CI #667 runs. CORE-TRIP-04 remains queued after QA.",
-  "latestReport": "Pushed 42e3ff0db9e8c1326cd33d0ee1ff3f6e2bac41ae: adds migration 20261025065000_domain_aware_chat_membership_rls.sql, makes private.is_channel_member require accepted Meet/Trip domain membership for linked channels, blocks generic owner updates on domain channel metadata, and expands the disposable Trip/Meet regression to assert accepted-member reads and stale-row read denial. GitHub CI #667 is in progress; no production migration, RPC, or data mutation was performed. Local Discovery/Trip production rollout remains NO-GO, and the original Trip leave failure remains unreproduced.",
-  "blocker": "QA must verify CI #667 and the new RLS regression before Core continues. Production staging, backup/PITR, explicit owner authorization and live two-account evidence remain pending.",
-  "updatedAt": "2026-10-25T06:54:28.600Z",
+  "status": "working",
+  "currentTask": "CORE-TRIP-04 ACTIVE: reproduce the original ordinary-member Trip leave RPC failure without production writes; preserve creator safety and verify the domain-aware chat access fix.",
+  "latestReport": "Core commit 42e3ff0db9e8c1326cd33d0ee1ff3f6e2bac41ae passed exact-head CI #667, including npm test, lint, TypeScript, Android Expo export, fresh local Supabase migrations, and Trip/Local Match SQL regressions with rollback. It closes the stale generic membership read bypass at source by requiring accepted Meet/Trip membership for linked channel/message reads. The previous QA failure is resolved for source/disposable CI. The new backlog/runbook handoff is in 6ddc659. Highest-priority remaining issue is the original normal-member Trip leave failure, which is still unreproduced; production remains untouched and NO-GO.",
+  "blocker": "No verified staging environment/two-account test path or matching production leave error trace is available. Production rollout remains blocked pending explicit owner approval, backup/PITR confirmation and staging evidence. Do not mutate production.",
+  "updatedAt": "2026-10-25T06:59:39.175Z",
   "activity": [
     {
       "type": "working",
@@ -283,6 +283,12 @@
       "title": "Domain-aware chat RLS fix delivered",
       "detail": "Commit 42e3ff0 adds accepted-domain membership checks to channel authorization and stale generic-row read-denial regression coverage. CI #667 pending; production untouched. QA Gate now active.",
       "at": "2026-10-25T06:54:28.600Z"
+    },
+    {
+      "type": "working",
+      "title": "Core resumed on Trip leave root cause",
+      "detail": "After QA passed commit 42e3ff0 / CI #667, Core resumes CORE-TRIP-04. Need a controlled non-production reproduction of the original normal-member leave error; no production writes or deployment.",
+      "at": "2026-10-25T06:59:39.175Z"
     }
   ]
 }
