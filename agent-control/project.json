@@ -3,31 +3,55 @@
   "source": "1neza/MitMi",
   "sourceVisibility": "private",
   "branch": "agent-dev",
-  "head": "044cb1e6d211bf51b607477be5fddf3684d8a1b8",
-  "latestCommit": "docs(backlog): include realtime merge regression guard",
-  "syncedAt": "2026-10-25T00:25:41.755Z",
+  "head": "5736942a209bd4aa66c3f80c185d081b0b79e23f",
+  "latestCommit": "docs(coordination): repair backlog header and reconcile slot board",
+  "syncedAt": "2026-10-25T02:04:10.438Z",
   "milestone": "MitMi 2.0 — Simplify and Connect",
   "ci": {
-    "latestRun": 607,
+    "latestRun": 610,
     "latestConclusion": "in_progress",
-    "latestFailure": "CI #602 validate failed on the first history-order assertion regex; corrected in 88cdd3a6. CI #603 passed, while #605/#606/#607 remain in progress to fully gate the added realtime-merge assertion and current docs head.",
+    "latestFailure": "Historical CI #602 failed on an overescaped chronology assertion and was corrected in #603. Current exact-head CI #610 is in progress; #609 is still running on a superseded documentation commit.",
     "successRate": 90,
     "history": [
       {
-        "number": 607,
+        "number": 610,
         "status": "in_progress",
         "conclusion": null,
+        "title": "docs(coordination): repair backlog header and reconcile slot board",
+        "sha": "5736942a209bd4aa66c3f80c185d081b0b79e23f",
+        "updatedAt": "2026-10-25T02:02:17Z"
+      },
+      {
+        "number": 609,
+        "status": "in_progress",
+        "conclusion": null,
+        "title": "docs(coordination): reconcile Chat QA and rotate blocked media lane",
+        "sha": "d749fd69f50a25973db60dfd5678a9594012e19c",
+        "updatedAt": "2026-10-25T02:02:07Z"
+      },
+      {
+        "number": 608,
+        "status": "completed",
+        "conclusion": "success",
+        "title": "docs(backlog): record Slot 5 discovery audit and rotate role",
+        "sha": "e3ed943fa0ef8ebe9cffc9b19474f3335a9724bb",
+        "updatedAt": "2026-10-25T00:29:28Z"
+      },
+      {
+        "number": 607,
+        "status": "completed",
+        "conclusion": "success",
         "title": "docs(backlog): include realtime merge regression guard",
         "sha": "044cb1e6d211bf51b607477be5fddf3684d8a1b8",
-        "updatedAt": "2026-10-25T00:24:52Z"
+        "updatedAt": "2026-10-25T00:27:27Z"
       },
       {
         "number": 606,
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "title": "test(chat): assert realtime chronological merge is used",
         "sha": "e32e39ae334a3eafa0726cab0190405bca1c2af1",
-        "updatedAt": "2026-10-25T00:24:13Z"
+        "updatedAt": "2026-10-25T00:26:38Z"
       },
       {
         "number": 605,
@@ -68,37 +92,13 @@
         "title": "fix(chat): keep realtime messages chronologically ordered",
         "sha": "7f18e666e4eeb53ccfd9c0ce384ed90fa308908c",
         "updatedAt": "2026-10-25T00:22:54Z"
-      },
-      {
-        "number": 600,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): rotate Core to Local Discovery contract",
-        "sha": "29c1d7f83bd56fc50068b2332911c10327b3b016",
-        "updatedAt": "2026-10-25T00:19:01Z"
-      },
-      {
-        "number": 599,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(qa): record Trip lifecycle integration PASS",
-        "sha": "418136261e874384b4a0c85af2e09053e7096c88",
-        "updatedAt": "2026-10-25T00:15:10Z"
-      },
-      {
-        "number": 598,
-        "status": "completed",
-        "conclusion": "success",
-        "title": "docs(coordination): reconcile lifecycle CI and rotate paired roles",
-        "sha": "cf01de9804e915ffd936956b124ccf5b637c1f4f",
-        "updatedAt": "2026-10-25T00:13:17Z"
       }
     ],
     "headCheck": {
-      "sha": "044cb1e6d211bf51b607477be5fddf3684d8a1b8",
+      "sha": "5736942a209bd4aa66c3f80c185d081b0b79e23f",
       "status": "in_progress",
       "conclusion": null,
-      "note": "CI #607 is in progress on exact agent-dev HEAD 044cb1e6. Chronology source fix 7f18e666 passed CI #601; assertion correction 88cdd3a6 passed CI #603. CI #602's earlier regex failure is corrected; explicit realtime callback merge coverage at e32e39ae is being gated by #606 and later runs."
+      "note": "CI #610 is in progress on exact agent-dev HEAD 5736942a. The validate job has passed authorization regression tests, lint and TypeScript and is bundling Android; trip-lifecycle is applying migrations in a fresh disposable local Supabase database. Previous exact head e3ed943f / CI #608 passed both jobs. Production migration 20261024201000 remains undeployed."
     }
   }
 }
